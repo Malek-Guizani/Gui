@@ -1,0 +1,112 @@
+syntax = "proto3";
+package grpc;
+import "google/protobuf/wrappers.proto";
+
+service refurb {
+    rpc SfwUp (SfwUpRequest) returns (SfwUpResponse);
+    rpc FwUp (FwUpRequest) returns (FwUpResponse);
+    rpc Cmd (CmdRequest) returns (CmdResponse);
+    rpc PpGet (PpGetRequest) returns (PpGetResponse);
+    rpc PpSet (PpSetRequest) returns (PpSetResponse);
+    rpc PpIf (PpIfRequest) returns (PpIfResponse);
+    rpc PpUpdate (PpUpdateRequest) returns (PpUpdateResponse);
+    rpc BackupPart (BackupPartRequest) returns (BackupPartResponse);
+    rpc UpdatePart (UpdatePartRequest) returns (UpdatePartResponse);
+    rpc DeletePart (DeletePartRequest) returns (DeletePartResponse);
+    rpc MakePart (MakePartRequest) returns (MakePartResponse);
+    rpc WifiNvramUpdate (WifiNvramUpdateRequest) returns (WifiNvramUpdateResponse);
+
+}
+message MakePartRequest {
+    string partition=1;
+    string device=2;
+    string size=3;
+}
+message MakePartResponse {
+    string   status = 1;
+}
+message WifiNvramUpdateRequest {
+    string filesrc= 1;
+    google.protobuf.StringValue filedst = 2;
+}
+message WifiNvramUpdateResponse {
+    string   status = 1;
+}
+message SfwUpRequest {
+    string SfwUpSectionKind= 1;
+    string payload = 2;
+    uint32 section=3;
+}
+message SfwUpResponse {
+    string   status = 1;
+}
+message FwUpRequest {
+    string FwUpSection=1;
+    string payload = 2;
+    bool kind_egsdf = 3;
+}
+message FwUpResponse {
+    string   status = 1;
+}
+message PpSetRequest {
+    string param=1;
+    string value = 2;
+
+}
+message PpSetResponse {
+    string   status = 1;
+}
+message CmdRequest {
+    string cmd = 1;
+}
+message CmdResponse {
+    string   status = 1;
+    string   message = 2;
+}
+message PpGetRequest {
+    string param = 1;
+}
+message PpGetResponse {
+    string   status = 1;
+    string   message = 2;
+}
+message PpIfRequest {
+    string param1=1;
+    string condition=2;
+    string value1= 3;
+    string param2=4;
+    string value2=5;
+    google.protobuf.StringValue param3=6;
+    google.protobuf.StringValue value3=7;
+}
+message PpIfResponse {
+    string   status = 1;
+}
+message DeletePartRequest {
+    string partition=1;
+    bool required=2;
+    google.protobuf.StringValue ubipart=3;
+
+}
+message DeletePartResponse {
+    string   status = 1;
+}
+message UpdatePartRequest {
+    string partition=1;
+    string file=2;
+}
+message UpdatePartResponse {
+    string   status = 1;
+}
+message BackupPartRequest {
+    string partition=1;
+}
+message BackupPartResponse {
+    string   status = 1;
+}
+message PpUpdateRequest {
+    string file=1;
+}
+message PpUpdateResponse {
+    string   status = 1;
+}
