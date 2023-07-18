@@ -1,12 +1,6 @@
-import React, { useState } from "react";
-
-const proto = {};
-proto.grpc = require("../../../services/refurb_grpc_web_pb.js");
-const client = new proto.grpc.refurbClient(
-  "http://192.168.1.5:8000",
-  null,
-  null
-);
+import React, { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+const { client, proto } = require("../../../services/grpcClient");
 
 export const Ppset = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -23,10 +17,6 @@ export const Ppset = () => {
     setSelectedValue(e.target.value);
   };
 
-  // deuxieme fonction pour la ppSet
-
-  
-
   const PpSetRequest = () => {
     const request = new proto.grpc.PpSetRequest();
     request.setParam(selectedParam);
@@ -41,9 +31,16 @@ export const Ppset = () => {
       //Pour recuperer la valeur de status , status doit être "Success"
       SetppStatus(response.getStatus());
       console.log(ppStatus);
-
     });
   };
+
+  useEffect(() => {
+    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
+    if (ppStatus == "Success") {
+      toast.success("set new value with successfully!!!"); // Afficher la toast après l'expiration du délai
+    }
+    SetppStatus("Null");
+  }, [ppStatus]);
 
   return (
     <main>
@@ -75,14 +72,20 @@ export const Ppset = () => {
           />
         </div>
         <button
-        onClick={() => {
-              PpSetRequest();
-            }}
-            type="button"
-           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-             Set New Value
+          onClick={() => {
+            PpSetRequest();
+          }}
+          type="button"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Set New Value
         </button>
       </div>
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        autoClose={3000}
+      />
     </main>
   );
-}; 
+};
