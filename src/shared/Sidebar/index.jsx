@@ -4,6 +4,7 @@ import { BiChevronLeft } from "react-icons/bi";
 import SidebarData from "components/Service1/SideBarData";
 import SidebarS2 from "components/Service2/SideBarS2";
 import SideBarUp from "components/Upgrade/SideBarUp";
+import SidebarPartition from "components/Partition/SideBarPartition";
 export const Sidebar = (props) => {
   const [toggle, setToggle] = useState(false);
   const service = props.message;
@@ -16,6 +17,9 @@ export const Sidebar = (props) => {
         <SidebarS2 toggle={toggle} service={service} />
       )}
       {service === "Upgrade" && <SideBarUp toggle={toggle} service={service} />}
+      {service === "Partition" && (
+        <SidebarPartition toggle={toggle} service={service} />
+      )}
       <div
         className="absolute top-[7rem] flex justify-center items-center -left-5 w-10 h-10 bg-glass rounded-full cursor-pointer"
         onClick={() => {

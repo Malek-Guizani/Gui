@@ -9,7 +9,7 @@ import { Cmd } from "components/Service2/Cmd";
 import { Ppget } from "components/Service1/Ppget";
 import { Ppset } from "components/Service1/Ppset";
 import { Service2 } from "components/Service2";
-import { Souservice21 } from "shared/Souservice21";
+import { BackupPartition } from "components/Partition/BackupPartition ";
 import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
 import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
@@ -29,13 +29,14 @@ function App() {
             </Route>
             <Route path="service2" element={<Service2 />}>
               <Route path="cmd" element={<Cmd />} />
-              <Route path="Souservice21" element={<Souservice21 />} />
             </Route>
             <Route path="Upgrade" element={<Upgrade />}>
               <Route path="softwareUpgrade" element={<SoftwareUpgrade />} />
               <Route path="firmwareUpgrade" element={<FirmwareUpgrade />} />
             </Route>
-            <Route path="Partition" element={<Partition />}></Route>
+            <Route path="Partition" element={<Partition />}>
+              <Route path="backupPartition" element={<BackupPartition />} />
+            </Route>
           </Route>
           <Route path="*" element={<Not_found />} />
           <Route path="/" element={<StartPage />} />
