@@ -20,7 +20,7 @@ const Header = () => {
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/home/service1/ppGet" className="flex items-center">
-            <img src={LogoSagemcom} className="h-8 mr-3" alt="Flowbite Logo" />
+            <img src={LogoSagemcom} className="h-8 mr-2" alt="sagem Logo" />
           </Link>
           <div className="flex md:order-2">
             <button
