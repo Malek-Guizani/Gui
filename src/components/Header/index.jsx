@@ -13,8 +13,11 @@ const Header = () => {
     setActiveButton(buttonName);
   };
   return (
-    <div>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <header>
+      <div className="bg-gray-200 w-full fixed py-2 pl-20">
+        let's do something amazing
+      </div>
+      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/home/service1/ppGet" className="flex items-center">
             <img src={LogoSagemcom} className="h-8 mr-3" alt="Flowbite Logo" />
@@ -122,7 +125,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </div>
+    </header>
   );
 };
 

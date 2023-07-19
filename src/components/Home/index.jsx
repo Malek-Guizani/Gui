@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Header />
-      <div className="mt-28 mr-20 pt-20">
+      <div className="mt-36 mr-20 pt-20">
         <Outlet />
       </div>
       <Footer />
