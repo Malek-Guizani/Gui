@@ -27,7 +27,7 @@ code {
     font-family: "Poppins";
   }
   .sidebar-container {
-    @apply bg-zinc-300  h-[70%] w-[15rem] rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass absolute top-[8rem] left-[7.5rem]
+    @apply bg-zinc-300  h-[65%] w-[15rem] rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass absolute top-[8rem] left-[7.5rem]
   }
   .sidebar {
     @apply flex items-center mt-2 p-4 rounded-lg cursor-pointer hover:bg-cyan-500 transition-all duration-300

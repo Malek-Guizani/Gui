@@ -9,7 +9,7 @@ import { Cmd } from "components/Service2/Cmd";
 import { Ppget } from "components/Service1/Ppget";
 import { Ppset } from "components/Service1/Ppset";
 import { Service2 } from "components/Service2";
-import { BackupPartition } from "components/Partition/BackupPartition ";
+import { BackupPartition } from "components/Partition/BackupPartition";
 import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
 import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
