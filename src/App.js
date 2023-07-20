@@ -16,6 +16,9 @@ import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
 import { StartPage } from "components/StartPage";
 import { Loader } from "shared/Loader";
 import { Partition } from "components/Partition";
+import { PpUpdate } from "components/Service1/ppUpdate";
+import { MakePartition } from "components/Partition/MakePartition";
+import { UpdatePartition } from "components/Partition/UpdatePartition";
 
 function App() {
   return (
@@ -26,6 +29,7 @@ function App() {
             <Route path="service1" element={<Service1 />}>
               <Route path="ppGet" element={<Ppget />} />
               <Route path="ppSet" element={<Ppset />} />
+              <Route path="ppUpdate" element={<PpUpdate />} />
             </Route>
             <Route path="service2" element={<Service2 />}>
               <Route path="cmd" element={<Cmd />} />
@@ -36,6 +40,8 @@ function App() {
             </Route>
             <Route path="Partition" element={<Partition />}>
               <Route path="backupPartition" element={<BackupPartition />} />
+              <Route path="MakePartition" element={<MakePartition />} />
+              <Route path="UpdatePartition" element={<UpdatePartition />} />
             </Route>
           </Route>
           <Route path="*" element={<Not_found />} />

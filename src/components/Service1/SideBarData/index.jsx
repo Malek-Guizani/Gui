@@ -45,6 +45,26 @@ const SidebarData = ({ toggle, service }) => {
           ppSet
         </div>
       </Link>
+
+      <Link
+        to={`/home/${service}/ppUpdate`}
+        className={`${
+          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
+        } sidebar last:absolute left-4 bottom-4 ${
+          activeButton === "ppUpdate" ? "bg-cyan-500" : ""
+        }`}
+        onClick={() => {
+          handleClick("ppUpdate");
+        }}
+      >
+        <div
+          className={`${
+            toggle ? "opacity-0 delay-200" : ""
+          } text-[1rem] text-brown whitespace-pre`}
+        >
+          ppUpdate
+        </div>
+      </Link>
     </React.Fragment>
   );
 };

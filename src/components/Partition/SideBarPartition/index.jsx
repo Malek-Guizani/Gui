@@ -26,6 +26,46 @@ const SidebarPartition = ({ toggle, service }) => {
           backup partition
         </div>
       </Link>
+
+      <Link
+        to={`/home/${service}/MakePartition`}
+        className={`${
+          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
+        } sidebar last:absolute left-4 bottom-4 ${
+          activeButton === "Make" ? "bg-cyan-500" : ""
+        }`}
+        onClick={() => {
+          handleClick("Make");
+        }}
+      >
+        <div
+          className={`${
+            toggle ? "opacity-0 delay-200" : ""
+          } text-[1rem] text-brown whitespace-pre`}
+        >
+          MakePartition
+        </div>
+      </Link>
+
+      <Link
+        to={`/home/${service}/UpdatePartition`}
+        className={`${
+          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
+        } sidebar last:absolute left-4 bottom-4 ${
+          activeButton === "UpdateP" ? "bg-cyan-500" : ""
+        }`}
+        onClick={() => {
+          handleClick("UpdateP");
+        }}
+      >
+        <div
+          className={`${
+            toggle ? "opacity-0 delay-200" : ""
+          } text-[1rem] text-brown whitespace-pre`}
+        >
+          UpdatePartition
+        </div>
+      </Link>
     </React.Fragment>
   );
 };

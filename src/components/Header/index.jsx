@@ -14,8 +14,9 @@ const Header = () => {
   };
   return (
     <header>
-      <div className="bg-gray-200 w-full fixed py-2 pl-20">
-        let's do something amazing
+      <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-2">
+        <p>let's do something amazing</p>
+        <p>CPE</p>
       </div>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
