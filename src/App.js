@@ -19,6 +19,9 @@ import { Partition } from "components/Partition";
 import { PpUpdate } from "components/Service1/ppUpdate";
 import { MakePartition } from "components/Partition/MakePartition";
 import { UpdatePartition } from "components/Partition/UpdatePartition";
+import "react-toastify/dist/ReactToastify.min.css";
+import { MSuccess } from "shared/MSuccess";
+import { DeletePartition } from "components/Partition/DeletePartition";
 
 function App() {
   return (
@@ -42,11 +45,12 @@ function App() {
               <Route path="backupPartition" element={<BackupPartition />} />
               <Route path="MakePartition" element={<MakePartition />} />
               <Route path="UpdatePartition" element={<UpdatePartition />} />
+              <Route path="DeletePartition" element={<DeletePartition />} />
             </Route>
           </Route>
           <Route path="*" element={<Not_found />} />
           <Route path="/" element={<StartPage />} />
-          <Route path="/loader" element={<Loader />} />
+          <Route path="/model" element={<MSuccess />} />
         </Routes>
       </div>
     </BrowserRouter>

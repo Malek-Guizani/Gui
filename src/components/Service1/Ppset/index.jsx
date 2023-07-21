@@ -44,8 +44,8 @@ export const Ppset = () => {
 
   return (
     <main>
-      <div className="flex flex-col gap-5">
-        <div className="mb-4">
+      <div className="flex flex-col gap-6">
+        <div className="">
           <select
             className="p-2 border border-gray-300 rounded-md"
             onChange={handleChange1}

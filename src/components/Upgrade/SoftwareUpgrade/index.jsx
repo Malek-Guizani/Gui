@@ -19,13 +19,13 @@ export const SoftwareUpgrade = () => {
     request.setSection(1);
 
     setLoaderActive(true);
+    console.log("name of selected file :",selectedFile?.name);
+    console.log(request);
     client.sfwUp(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         return;
       }
-      console.log(request);
-
       console.log("Software Upgraded");
       setStatus(response.getStatus());
     });
@@ -52,15 +52,24 @@ export const SoftwareUpgrade = () => {
       )}
       <div
         className={
-          isLoaderActive ? "opacity-70 backdrop-blur-sm" : "opacity-100"
+          isLoaderActive ? "opacity-70 backdrop-blur-sm flex flex-col gap-6" : "opacity-100 flex flex-col gap-6"
         }
         style={isLoaderActive ? { filter: "blur(4px)" } : {}}
       >
-        <div>
-          Perform a SoftwareUpgrade <br />
-        </div>
-        <div>
-          <input type="file" className="mb-4" onChange={handleFileChange} />
+        <div className="">
+          <label
+            for="device"
+            className="block text-gray-700 font-semibold mb-2"
+          >
+            Device:
+          </label>
+          <input
+            type="file"
+            id="device"
+            onChange={handleFileChange}
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            placeholder="Enter device"
+          />
         </div>
         <div>
           <button

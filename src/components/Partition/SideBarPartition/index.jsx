@@ -66,6 +66,25 @@ const SidebarPartition = ({ toggle, service }) => {
           UpdatePartition
         </div>
       </Link>
+      <Link
+        to={`/home/${service}/DeletePartition`}
+        className={`${
+          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
+        } sidebar last:absolute left-4 bottom-4 ${
+          activeButton === "DeleteP" ? "bg-cyan-500" : ""
+        }`}
+        onClick={() => {
+          handleClick("DeleteP");
+        }}
+      >
+        <div
+          className={`${
+            toggle ? "opacity-0 delay-200" : ""
+          } text-[1rem] text-brown whitespace-pre`}
+        >
+          DeletePartition
+        </div>
+      </Link>
     </React.Fragment>
   );
 };

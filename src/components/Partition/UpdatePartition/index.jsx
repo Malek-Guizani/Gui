@@ -3,6 +3,30 @@ import React, { useState } from "react";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const UpdatePartition = () => {
+  const [selectedText, setSelectedText] = useState("");
+  const [satus, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setSelectedText(e.target.value);
+  };
+
+  const UpdatePartRequest = () => {
+    const request = new proto.grpc.UpdatePartRequest();
+    request.setPartition("permanent_param");
+    request.setFile("backup-YAAQ2208A052-permanent_param.bin");
+    console.log(request);
+    client.updatePart(request, {}, (err, response) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      console.log(response.getStatus());
+
+      setStatus(response.getStatus());
+    });
+  };
+
   return (
     <div className=" flex items-center flex-col justify-center">
       <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
@@ -25,7 +49,7 @@ export const UpdatePartition = () => {
             for="device"
             className="block text-gray-700 font-semibold mb-2"
           >
-            Device:
+            Img:
           </label>
           <input
             type="file"
@@ -35,8 +59,14 @@ export const UpdatePartition = () => {
           />
         </div>
       </div>
-      <button class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg">
-        Make
+      <button
+        type="button"
+        onClick={() => {
+          UpdatePartRequest();
+        }}
+        class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
+      >
+        Update
       </button>
     </div>
   );

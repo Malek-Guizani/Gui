@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { MSuccess } from "shared/MSuccess";
 
 const { client, proto } = require("../../../services/grpcClient");
 
 export const MakePartition = () => {
+  let [isOpenD, setIsOpenD] = useState(false);
   return (
     <div className=" flex items-center flex-col justify-center">
       <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
@@ -46,9 +48,20 @@ export const MakePartition = () => {
           />
         </div>
       </div>
-      <button class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg">
+      <button
+        type="button"
+        class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
+        onClick={() => {
+          setIsOpenD(true);
+        }}
+      >
         Make
       </button>
+      <MSuccess
+        message="Make done !!!"
+        isOpenM={isOpenD}
+        closeModal={() => setIsOpenD(false)}
+      />
     </div>
   );
 };

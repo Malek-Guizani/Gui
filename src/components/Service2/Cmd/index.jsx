@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/ReactToastify.min.css";
+
+import { Loader } from "shared/Loader";
 const proto = {};
 proto.grpc = require("../../../services/refurb_grpc_web_pb");
 const client = new proto.grpc.refurbClient(
@@ -13,6 +17,8 @@ const client = new proto.grpc.refurbClient(
 export const Cmd = () => {
   const [ppMessage, SetppMessage] = useState(null);
   const [selectedText, setSelectedText] = useState("");
+  const [Status, setStatus] = useState(null);
+  const [isLoaderActive, setLoaderActive] = useState(false);
 
   const handleChange = (e) => {
     setSelectedText(e.target.value);
@@ -21,7 +27,7 @@ export const Cmd = () => {
   const CmdRequest = () => {
     const request = new proto.grpc.CmdRequest();
     request.setCmd(selectedText);
-
+    setLoaderActive(true);
     client.cmd(request, {}, (err, response) => {
       console.log(request);
       if (err) {
@@ -32,12 +38,34 @@ export const Cmd = () => {
       console.log(response.getMessage());
 
       SetppMessage(response.getMessage());
+      setStatus(response.getStatus());
     });
   };
 
+  useEffect(() => {
+    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
+    if (Status == "Success") {
+      setLoaderActive(false);
+      toast.success("cmd applique !!!"); // Afficher la toast après l'expiration du délai
+    }
+    setStatus("Null");
+  }, [Status]);
   return (
     <div>
-      <div className="flex flex-col gap-10 ">
+      {isLoaderActive && (
+        <div>
+          <Loader />
+        </div>
+      )}
+
+      <div
+        className={
+          isLoaderActive
+            ? "opacity-70 backdrop-blur-sm flex flex-col gap-10"
+            : "opacity-100 flex flex-col gap-10"
+        }
+        style={isLoaderActive ? { filter: "blur(4px)" } : {}}
+      >
         <div className="flex flex-row justify-start items-center gap-5">
           <input
             type="text"
@@ -77,6 +105,11 @@ export const Cmd = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-left"
+        hideProgressBar={true}
+        autoClose={2000}
+      />
     </div>
   );
 };
