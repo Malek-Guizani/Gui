@@ -13,7 +13,7 @@ export const SoftwareUpgrade = () => {
   console.log("Selected file:", selectedFile?.name);
   const SfwUpRequest = () => {
     const request = new proto.grpc.SfwUpRequest();
-    request.setSfwupsectionkind("system1");
+    request.setSfwupsectionkind("system");
     //
     request.setPayload(selectedFile?.name);
     request.setSection(1);

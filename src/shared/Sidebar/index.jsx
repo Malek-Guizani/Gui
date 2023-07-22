@@ -11,7 +11,7 @@ export const Sidebar = (props) => {
   return (
     <div className={`${toggle ? "w-[5.8rem]" : ""} sidebar-container`}>
       {service === "service1" && (
-        <SidebarData toggle={toggle} service={service} />
+        <SidebarData service={service} />
       )}
       {service === "service2" && (
         <SidebarS2 toggle={toggle} service={service} />

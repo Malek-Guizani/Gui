@@ -37,7 +37,7 @@ export const Ppset = () => {
   useEffect(() => {
     // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (ppStatus == "Success") {
-      toast.success("set new value with successfully!!!"); // Afficher la toast après l'expiration du délai
+      toast.success("New Value !!! "); // Afficher la toast après l'expiration du délai
     }
     SetppStatus("Null");
   }, [ppStatus]);

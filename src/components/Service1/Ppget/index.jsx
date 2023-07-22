@@ -43,7 +43,15 @@ export const Ppget = () => {
     { value: "WIFI_MAC2", label: "Wifi MAC 2" },
     { value: "COUNTRY_CODE", label: "COUNTRY CODE" },
     { value: "CLIENT_CERTIFICATE", label: "CLIENT CERTIFICATE" },
-    { value: "VENDOR_INFO8", label: "VENDOR INFO8" },
+    { value: "S_HARDWARE_VERSION", label: "S_HARDWARE_VERSION" },
+    { value: "C_HARDWARE_REVISION", label: "C_HARDWARE_REVISION" },
+    { value: "PRIVATE_KEY", label: "PRIVATE_KEY" },
+    { value: "CERTIFICATE", label: "CERTIFICATE" },
+    { value: "DSA", label: "DSA" },
+    { value: "VENDOR_INFO1", label: "VENDOR_INFO1" },
+    { value: "VENDOR_INFO2", label: "VENDOR_INFO2" },
+    { value: "VENDOR_INFO3", label: "VENDOR_INFO3" },
+
   ];
   return (
     <React.Fragment>

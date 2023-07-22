@@ -106,7 +106,7 @@ export const Cmd = () => {
         </div>
       </div>
       <ToastContainer
-        position="top-left"
+        position="top-center"
         hideProgressBar={true}
         autoClose={2000}
       />

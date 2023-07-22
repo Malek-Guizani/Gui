@@ -1,72 +1,48 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 const SidebarData = ({ toggle, service }) => {
-  const [activeButton, setActiveButton] = useState(null);
-  const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
-  };
+  const isActiveLink = useIsActiveLink(service);
+  const activeClasses =
+    "last:w-[17rem] sidebar last:absolute left-4 bottom-4 bg-cyan-500";
+  const pendingClasses = "last:w-[17rem] sidebar last:absolute left-4 bottom-4";
   return (
     <React.Fragment>
-      <Link
+      <NavLink
         to={`/home/${service}/ppGet`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "ppGet" ? "bg-cyan-500" : ""
-        }`}
-        onClick={() => {
-          handleClick("ppGet");
-        }}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
-          ppGet
-        </div>
-      </Link>
-      <Link
+        <div className="text-[1rem] text-brown whitespace-pre">ppGet</div>
+      </NavLink>
+      <NavLink
         to={`/home/${service}/ppSet`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "ppSet" ? "bg-cyan-500" : ""
-        }`}
-        onClick={() => {
-          handleClick("ppSet");
-        }}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
-          ppSet
-        </div>
-      </Link>
+        <div className={` text-[1rem] text-brown whitespace-pre`}>ppSet</div>
+      </NavLink>
 
-      <Link
+      <NavLink
         to={`/home/${service}/ppUpdate`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "ppUpdate" ? "bg-cyan-500" : ""
-        }`}
-        onClick={() => {
-          handleClick("ppUpdate");
-        }}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
-          ppUpdate
-        </div>
-      </Link>
+        <div className={` text-[1rem] text-brown whitespace-pre`}>ppUpdate</div>
+      </NavLink>
     </React.Fragment>
   );
 };
 
 export default SidebarData;
+const useIsActiveLink = (to) => {
+  const location = useLocation();
+  const serviceRegex = new RegExp(`^/home/${to}(\/|$)`);
+
+  return (
+    location.pathname.startsWith(`/home/${to}`) ||
+    serviceRegex.test(location.pathname)
+  );
+};

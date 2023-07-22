@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import { Loader } from "shared/Loader";
 
 const { client, proto } = require("../../../services/grpcClient");
 
 export const BackupPartition = () => {
   const [ppMessage, SetppMessage] = useState(null);
   const [selectedText, setSelectedText] = useState("");
-
-  const [satus, setStatus] = useState(null);
+  const [status, setStatus] = useState(null);
+  const [isLoaderActive, setLoaderActive] = useState(false);
 
   const handleChange = (e) => {
     setSelectedText(e.target.value);
@@ -15,7 +17,7 @@ export const BackupPartition = () => {
   const BackupPartRequest = () => {
     const request = new proto.grpc.BackupPartRequest();
     request.setPartition(selectedText);
-
+    setLoaderActive(true);
     client.backupPart(request, {}, (err, response) => {
       console.log(request);
       if (err) {
@@ -29,8 +31,22 @@ export const BackupPartition = () => {
     });
   };
 
+  useEffect(() => {
+    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
+    if (status == "Success") {
+      setLoaderActive(false);
+      toast.success("Backup completed !!! ");
+    }
+    setStatus("Null");
+  }, [status]);
+
   return (
     <div>
+      {isLoaderActive && (
+        <div>
+          <Loader />
+        </div>
+      )}
       <div className="flex flex-col gap-10 ">
         <div className="flex flex-row justify-start items-center gap-5">
           <input
@@ -51,6 +67,11 @@ export const BackupPartition = () => {
           </button>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        autoClose={3000}
+      />
     </div>
   );
 };
