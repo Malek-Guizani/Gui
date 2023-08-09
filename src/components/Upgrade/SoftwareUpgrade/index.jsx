@@ -13,13 +13,13 @@ export const SoftwareUpgrade = () => {
   console.log("Selected file:", selectedFile?.name);
   const SfwUpRequest = () => {
     const request = new proto.grpc.SfwUpRequest();
-    request.setSfwupsectionkind("system");
+    request.setSfwupsectionkind(selectedOption);
     //
     request.setPayload(selectedFile?.name);
     request.setSection(1);
 
     setLoaderActive(true);
-    console.log("name of selected file :",selectedFile?.name);
+    console.log("name of selected file :", selectedFile?.name);
     console.log(request);
     client.sfwUp(request, {}, (err, response) => {
       if (err) {
@@ -43,6 +43,25 @@ export const SoftwareUpgrade = () => {
     setStatus("Null");
   }, [Status]);
 
+  const [selectedOption, setSelectedOption] = useState("");
+  const Optionchange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+  const options = [
+    { value: "", label: "Sélectionnez une option" },
+    { value: "pkgtb", label: " pkgtb" },
+    { value: "gsdf", label: "gsdf" },
+    { value: "brcm", label: "brcm" },
+    { value: "ipl", label: "ipl" },
+    { value: "modulexfw", label: "modulexfw" },
+    { value: "nvram", label: "nvram" },
+    { value: "pp", label: "pp" },
+    { value: "spl", label: "spl" },
+    { value: "system", label: "system" },
+    { value: "tee", label: "tee" },
+    { value: "tpl", label: "tpl" },
+  ];
+
   return (
     <React.Fragment>
       {isLoaderActive && (
@@ -52,10 +71,24 @@ export const SoftwareUpgrade = () => {
       )}
       <div
         className={
-          isLoaderActive ? "opacity-70 backdrop-blur-sm flex flex-col gap-6" : "opacity-100 flex flex-col gap-6"
+          isLoaderActive
+            ? "opacity-70 backdrop-blur-sm flex flex-col gap-6"
+            : "opacity-100 flex flex-col gap-6"
         }
         style={isLoaderActive ? { filter: "blur(4px)" } : {}}
       >
+        <select
+          id="param-select"
+          className="p-2 border border-gray-300 rounded-md w-1/2 m-auto"
+          onChange={Optionchange}
+          value={selectedOption}
+        >
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
         <div className="">
           <label
             for="device"

@@ -32,6 +32,15 @@ const SidebarData = ({ toggle, service }) => {
       >
         <div className={` text-[1rem] text-brown whitespace-pre`}>ppUpdate</div>
       </NavLink>
+
+      <NavLink
+        to={`/home/${service}/ppIf`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
+      >
+        <div className={` text-[1rem] text-brown whitespace-pre`}>ppIf</div>
+      </NavLink>
     </React.Fragment>
   );
 };

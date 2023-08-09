@@ -22,6 +22,7 @@ import { UpdatePartition } from "components/Partition/UpdatePartition";
 import "react-toastify/dist/ReactToastify.min.css";
 import { MSuccess } from "shared/MSuccess";
 import { DeletePartition } from "components/Partition/DeletePartition";
+import { PpIf } from "components/Service1/PpIf";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="ppGet" element={<Ppget />} />
               <Route path="ppSet" element={<Ppset />} />
               <Route path="ppUpdate" element={<PpUpdate />} />
+              <Route path="ppIf" element={<PpIf />} />
             </Route>
             <Route path="service2" element={<Service2 />}>
               <Route path="cmd" element={<Cmd />} />

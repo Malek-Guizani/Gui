@@ -47,6 +47,7 @@ export const BackupPartition = () => {
           <Loader />
         </div>
       )}
+
       <div className="flex flex-col gap-10 ">
         <div className="flex flex-row justify-start items-center gap-5">
           <input
@@ -67,6 +68,12 @@ export const BackupPartition = () => {
           </button>
         </div>
       </div>
+
+      {selectedText && (
+        <div className="mt-5">
+          Please check that the file {selectedText} exists under /tftpboot
+        </div>
+      )}
       <ToastContainer
         position="top-center"
         hideProgressBar={true}

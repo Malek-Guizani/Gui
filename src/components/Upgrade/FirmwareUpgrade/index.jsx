@@ -13,7 +13,7 @@ export const FirmwareUpgrade = () => {
   console.log("Selected file:", selectedFile?.name);
   const SfwUpRequest = () => {
     const request = new proto.grpc.SfwUpRequest();
-    request.setSfwupsectionkind("system1");
+    request.setSfwupsectionkind(selectedOption);
     //
     request.setPayload(selectedFile?.name);
     request.setSection(1);
@@ -43,6 +43,16 @@ export const FirmwareUpgrade = () => {
     setStatus("Null");
   }, [Status]);
 
+  const [selectedOption, setSelectedOption] = useState("");
+  const Optionchange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+  const options = [
+    { value: "", label: "Sélectionnez une option" },
+    { value: "Operational", label: " Operational" },
+    { value: "Rescue", label: "Rescue" },
+  ];
+
   return (
     <React.Fragment>
       {isLoaderActive && (
@@ -52,10 +62,24 @@ export const FirmwareUpgrade = () => {
       )}
       <div
         className={
-          isLoaderActive ? "opacity-70 backdrop-blur-sm flex flex-col gap-6" : "opacity-100 flex flex-col gap-6" 
+          isLoaderActive
+            ? "opacity-70 backdrop-blur-sm flex flex-col gap-6"
+            : "opacity-100 flex flex-col gap-6"
         }
         style={isLoaderActive ? { filter: "blur(4px)" } : {}}
       >
+        <select
+          id="param-select"
+          className="p-2 border border-gray-300 rounded-md"
+          onChange={Optionchange}
+          value={selectedOption}
+        >
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
         <div className="">
           <label
             for="device"
@@ -68,6 +92,7 @@ export const FirmwareUpgrade = () => {
             id="device"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
+            onChange={handleFileChange}
           />
         </div>
         <div>
