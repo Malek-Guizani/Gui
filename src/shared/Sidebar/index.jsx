@@ -9,10 +9,10 @@ export const Sidebar = (props) => {
   const [toggle, setToggle] = useState(false);
   const service = props.message;
   return (
-    <div className={`${toggle ? "w-[5.8rem]" : ""} sidebar-container`}>
-      {service === "service1" && (
-        <SidebarData service={service} />
-      )}
+    <div
+      className={`bg-zinc-300  h-[65%] w-[15rem] rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass md:absolute md:top-[9rem] sm:top-0 left-[17rem] transform-none`}
+    >
+      {service === "service1" && <SidebarData service={service} />}
       {service === "service2" && (
         <SidebarS2 toggle={toggle} service={service} />
       )}
