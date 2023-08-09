@@ -66,7 +66,7 @@ export const SoftwareUpgrade = () => {
     <React.Fragment>
       {isLoaderActive && (
         <div>
-          <Loader />
+          <Loader message="loading..." />
         </div>
       )}
       <div

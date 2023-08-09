@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const SidebarPartition = ({ toggle, service }) => {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("backup");
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
   };

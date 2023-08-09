@@ -1,6 +1,7 @@
 import React from "react";
 
-export const Loader = () => {
+export const Loader = (props) => {
+  const text = props.message;
   return (
     <div className="w-full h-full top-0 left-0 fixed block  opacity-100 z-50">
       <span
@@ -11,6 +12,7 @@ export const Loader = () => {
         }}
       >
         <i className="fas fa-circle-notch fa-spin fa-5x  text-sky-500"></i>
+        <p className="mt-2 ml-1">{text}</p>
       </span>
     </div>
   );

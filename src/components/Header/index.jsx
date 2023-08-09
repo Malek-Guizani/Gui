@@ -13,6 +13,10 @@ const Header = () => {
     "text-white bg-blue-700 md:text-blue-700 md:bg-transparent md:dark:text-blue-500";
   const pendingClasses =
     "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
+  const [activeButton, setActiveButton] = useState("ppGet");
+  const handleClick = (buttonName) => {
+    setActiveButton(buttonName);
+  };
   return (
     <header>
       <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6">
@@ -61,11 +65,13 @@ const Header = () => {
               <li>
                 <NavLink
                   to="service1/ppGet"
-                  className={({ isActive }) =>
-                    isActive ? activeClasses : pendingClasses
-                  }
+                  className={`${
+                    (pendingClasses,
+                    activeButton === "ppGet" ? " md:text-blue-700" : "")
+                  }`}
                   onClick={() => {
                     toggleMenu();
+                    handleClick("ppGet");
                   }}
                   aria-current="page"
                 >
@@ -75,11 +81,13 @@ const Header = () => {
               <li>
                 <NavLink
                   to="service2/cmd"
-                  className={({ isActive }) =>
-                    isActive ? activeClasses : pendingClasses
-                  }
+                  className={`${
+                    (pendingClasses,
+                    activeButton === "cmd" ? " md:text-blue-700" : "")
+                  }`}
                   onClick={() => {
                     toggleMenu();
+                    handleClick("cmd");
                   }}
                 >
                   CMD
@@ -88,11 +96,13 @@ const Header = () => {
               <li>
                 <NavLink
                   to="Upgrade/SoftwareUpgrade"
-                  className={({ isActive }) =>
-                    isActive ? activeClasses : pendingClasses
-                  }
+                  className={`${
+                    (pendingClasses,
+                    activeButton === "Upgrade" ? " md:text-blue-700" : "")
+                  }`}
                   onClick={() => {
                     toggleMenu();
+                    handleClick("Upgrade");
                   }}
                 >
                   Upgrade
@@ -101,11 +111,13 @@ const Header = () => {
               <li>
                 <NavLink
                   to="Partition/backupPartition"
-                  className={({ isActive }) =>
-                    isActive ? activeClasses : pendingClasses
-                  }
+                  className={`${
+                    (pendingClasses,
+                    activeButton === "Partition" ? " md:text-blue-700" : "")
+                  }`}
                   onClick={() => {
                     toggleMenu();
+                    handleClick("Partition");
                   }}
                 >
                   Partitions
