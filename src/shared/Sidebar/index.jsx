@@ -10,7 +10,7 @@ export const Sidebar = (props) => {
   const service = props.message;
   return (
     <div
-      className={`bg-zinc-300  h-[65%] w-[15rem] rounded-3xl ml-6 p-4 border transition-all duration-500 border-solid border-glass md:absolute md:top-[9rem] sm:top-0 md:left-[17rem]  sm:left-[13rem] left-[10rem] transform-none`}
+      className={`2xl:absolute 2xl:top-[9rem]  2xl:left-[17rem]    md:absolute  md:top-[9rem]  md:left-[0]                         sm:top-0 sm:left-[13rem] left-[10rem] h-[65%] md:w-[15rem] ml-6 p-4  flex md:flex-col flex-row  bg-zinc-300 w-full  rounded-3xl border  border-solid border-glass  transform-none`}
     >
       {service === "service1" && <SidebarData service={service} />}
       {service === "service2" && (
