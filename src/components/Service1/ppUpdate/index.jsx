@@ -11,22 +11,20 @@ export const PpUpdate = () => {
     setSelectedFile(event.target.files[0]);
   };
   console.log("Selected file:", selectedFile?.name);
-  const SfwUpRequest = () => {
-    const request = new proto.grpc.SfwUpRequest();
-    request.setSfwupsectionkind("system1");
-    //
-    request.setPayload(selectedFile?.name);
-    request.setSection(1);
+  const PpUpdateRequest = () => {
+    const request = new proto.grpc.PpUpdateRequest();
+    request.setFile(selectedFile?.name);
+    
 
     setLoaderActive(true);
-    client.sfwUp(request, {}, (err, response) => {
+    client.ppUpdate(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         return;
       }
       console.log(request);
 
-      console.log("Software Upgraded");
+      console.log("Permanent Parameter Updated");
       setStatus(response.getStatus());
     });
   };
@@ -34,12 +32,12 @@ export const PpUpdate = () => {
   useEffect(() => {
     // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (Status == "Success") {
-      console.log("before software upgrade");
+      console.log("before ppUpdate");
       setLoaderActive(false);
-      toast.success("Software upgraded !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Permanent Parameter Updated !!!"); // Afficher la toast après l'expiration du délai
     }
-    console.log("after software upgrade");
-    console.log("ppstatus: ", Status);
+    console.log("after ppUpdate");
+    console.log("status: ", Status);
     setStatus("Null");
   }, [Status]);
 
@@ -68,17 +66,18 @@ export const PpUpdate = () => {
             id="device"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
+            onChange={handleFileChange}
           />
         </div>
         <div>
           <button
             type="button"
             onClick={() => {
-              SfwUpRequest();
+              PpUpdateRequest();
             }}
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            SoftwareUpgrade
+            Update Permanent Parameter
           </button>
         </div>
       </div>

@@ -19,7 +19,7 @@ export const BackupPartition = () => {
     request.setPartition(selectedText);
     setLoaderActive(true);
     client.backupPart(request, {}, (err, response) => {
-      console.log(request);
+      console.log("mm",request);
       if (err) {
         console.error(err);
         return;

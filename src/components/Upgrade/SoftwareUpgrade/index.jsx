@@ -36,7 +36,7 @@ export const SoftwareUpgrade = () => {
     if (Status == "Success") {
       console.log("before software upgrade");
       setLoaderActive(false);
-      toast.success("Software upgraded !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Software Upgraded !!!"); // Afficher la toast après l'expiration du délai
     }
     console.log("after software upgrade");
     console.log("ppstatus: ", Status);
@@ -66,7 +66,7 @@ export const SoftwareUpgrade = () => {
     <React.Fragment>
       {isLoaderActive && (
         <div>
-          <Loader message="loading..." />
+          <Loader message="Upgrading..." />
         </div>
       )}
       <div
