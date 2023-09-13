@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import Equal from "../../../Assets/svg/equal-svgrepo-com.svg";
 import NotEqual from "../../../Assets/svg/not-equal-svgrepo-com.svg";
 import Fleche from "../../../Assets/icons8-flèche-100.png";
@@ -34,6 +35,14 @@ export const PpIf = () => {
       console.log(ppStatus);
     });
   };
+
+  useEffect(() => {
+    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
+    if (ppStatus == "Success") {
+      toast.success("done !!! "); // Afficher la toast après l'expiration du délai
+    }
+    SetppStatus("Null");
+  }, [ppStatus]);
 
   return (
     <>
@@ -123,6 +132,11 @@ export const PpIf = () => {
           </button>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        autoClose={2000}
+      />
     </>
   );
 };

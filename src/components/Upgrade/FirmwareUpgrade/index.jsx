@@ -70,7 +70,7 @@ export const FirmwareUpgrade = () => {
       >
         <select
           id="param-select"
-          className="p-2 border border-gray-300 rounded-md"
+          className="p-2 border border-gray-300 rounded-md w-1/2"
           onChange={Optionchange}
           value={selectedOption}
         >

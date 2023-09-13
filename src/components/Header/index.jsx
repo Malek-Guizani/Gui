@@ -80,7 +80,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="service2/cmd"
+                  to="other/cmd"
                   className={`${
                     (pendingClasses,
                     activeButton === "cmd" ? " md:text-blue-700" : "")
@@ -90,7 +90,7 @@ const Header = () => {
                     handleClick("cmd");
                   }}
                 >
-                  CMD
+                  Other
                 </NavLink>
               </li>
               <li>

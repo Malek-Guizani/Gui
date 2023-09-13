@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "App.css";
 import Home from "components/Home";
 import Not_found from "components/Not_found";
-import { Service1 } from "components/Service1";
-import { Cmd } from "components/Service2/Cmd";
-import { Ppget } from "components/Service1/Ppget";
-import { Ppset } from "components/Service1/Ppset";
-import { Service2 } from "components/Service2";
+import { Service1 } from "components/PermanentParameters";
+import { Cmd } from "components/Others/Cmd";
+import { Ppget } from "components/PermanentParameters/Ppget";
+import { Ppset } from "components/PermanentParameters/Ppset";
+import { Other } from "components/Others";
 import { BackupPartition } from "components/Partition/BackupPartition";
 import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
@@ -16,13 +16,14 @@ import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
 import { StartPage } from "components/StartPage";
 import { Loader } from "shared/Loader";
 import { Partition } from "components/Partition";
-import { PpUpdate } from "components/Service1/ppUpdate";
+import { PpUpdate } from "components/PermanentParameters/ppUpdate";
 import { MakePartition } from "components/Partition/MakePartition";
 import { UpdatePartition } from "components/Partition/UpdatePartition";
 import "react-toastify/dist/ReactToastify.min.css";
 import { MSuccess } from "shared/MSuccess";
 import { DeletePartition } from "components/Partition/DeletePartition";
-import { PpIf } from "components/Service1/PpIf";
+import { PpIf } from "components/PermanentParameters/PpIf";
+import { NVRAM } from "components/Others/NVRAM";
 
 function App() {
   return (
@@ -36,8 +37,9 @@ function App() {
               <Route path="ppUpdate" element={<PpUpdate />} />
               <Route path="ppIf" element={<PpIf />} />
             </Route>
-            <Route path="service2" element={<Service2 />}>
+            <Route path="other" element={<Other />}>
               <Route path="cmd" element={<Cmd />} />
+              <Route path="NVRAM" element={<NVRAM />} />
             </Route>
             <Route path="Upgrade" element={<Upgrade />}>
               <Route path="softwareUpgrade" element={<SoftwareUpgrade />} />

@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { BiChevronLeft } from "react-icons/bi";
-import SidebarData from "components/Service1/SideBarData";
-import SidebarS2 from "components/Service2/SideBarS2";
+import SidebarData from "components/PermanentParameters/SideBarData";
+import SidebarS2 from "components/Others/SideBarS2";
 import SideBarUp from "components/Upgrade/SideBarUp";
 import SidebarPartition from "components/Partition/SideBarPartition";
 export const Sidebar = (props) => {
@@ -13,9 +13,7 @@ export const Sidebar = (props) => {
       className={`2xl:absolute 2xl:top-[9rem]  2xl:left-[17rem]    md:absolute  md:top-[9rem]  md:left-[0]                         sm:top-0 sm:left-[13rem] left-[10rem] h-[65%] md:w-[15rem] ml-6 p-4  flex md:flex-col flex-row  bg-zinc-300 w-full  rounded-3xl border  border-solid border-glass  transform-none`}
     >
       {service === "service1" && <SidebarData service={service} />}
-      {service === "service2" && (
-        <SidebarS2 toggle={toggle} service={service} />
-      )}
+      {service === "other" && <SidebarS2 toggle={toggle} service={service} />}
       {service === "Upgrade" && <SideBarUp toggle={toggle} service={service} />}
       {service === "Partition" && (
         <SidebarPartition toggle={toggle} service={service} />

@@ -1,29 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MSuccess } from "shared/MSuccess";
 import { Loader } from "shared/Loader";
-
-
+import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const MakePartition = () => {
-  let [isOpenD, setIsOpenD] = useState(false);
   const [selectedPartition, setSelectedPartition] = useState("");
   const [selectedDevice, setSelectedDevice] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [status, setStatus] = useState(null);
   const [isLoaderActive, setLoaderActive] = useState(false);
 
-
-
   const MakePartRequest = () => {
     const request = new proto.grpc.MakePartRequest();
     request.setPartition(selectedPartition);
     request.setDevice(selectedDevice);
     request.setSize(selectedSize);
-    
+
     setLoaderActive(true);
     client.makePart(request, {}, (err, response) => {
-      console.log("mmmmmmmmmm",request);
+      console.log("mmmmmmmmmm", request);
       if (err) {
         console.error(err);
         return;
@@ -34,7 +30,17 @@ export const MakePartition = () => {
       setStatus(response.getStatus());
     });
   };
-
+  useEffect(() => {
+    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
+    if (status == "Success") {
+      console.log("before software upgrade");
+      setLoaderActive(false);
+      toast.success("Maked !!!"); // Afficher la toast après l'expiration du délai
+    }
+    console.log("after software upgrade");
+    console.log("ppstatus: ", status);
+    setStatus("Null");
+  }, [status]);
   return (
     <div className=" flex items-center flex-col justify-center">
       <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
@@ -50,7 +56,6 @@ export const MakePartition = () => {
             id="partition"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter partition"
-            
           />
         </div>
         <div className="">
@@ -82,19 +87,17 @@ export const MakePartition = () => {
       <button
         onClick={() => {
           MakePartRequest();
+          //toast.success("Maked !!!");
         }}
         type="button"
-        class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
-        onClick={() => {
-          setIsOpenD(true);
-        }}
+        className="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
       >
         Make
       </button>
-      <MSuccess
-        message="Make done !!!"
-        isOpenM={isOpenD}
-        closeModal={() => setIsOpenD(false)}
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        autoClose={2000}
       />
     </div>
   );

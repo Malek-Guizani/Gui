@@ -79,7 +79,7 @@ export const SoftwareUpgrade = () => {
       >
         <select
           id="param-select"
-          className="p-2 border border-gray-300 rounded-md w-1/2 m-auto"
+          className="p-2 border border-gray-300 rounded-md md:w-[20rem]  "
           onChange={Optionchange}
           value={selectedOption}
         >
@@ -100,7 +100,7 @@ export const SoftwareUpgrade = () => {
             type="file"
             id="device"
             onChange={handleFileChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            className="w-full md:max-w-max px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
           />
         </div>
@@ -116,6 +116,12 @@ export const SoftwareUpgrade = () => {
           </button>
         </div>
       </div>
+      {selectedFile && selectedFile.name && (
+        <div className="mt-5">
+          Please check that the new imag " {selectedFile?.name} "is under
+          /tftpboot
+        </div>
+      )}
       <ToastContainer
         position="top-center"
         hideProgressBar={true}
