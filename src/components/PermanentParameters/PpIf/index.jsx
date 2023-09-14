@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Equal from "../../../Assets/svg/equal-svgrepo-com.svg";
 import NotEqual from "../../../Assets/svg/not-equal-svgrepo-com.svg";
 import Fleche from "../../../Assets/icons8-flèche-100.png";
-import { options, options2 } from "../../../DB/data";
+import { options, options2 } from "../../../DB/dataPP";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const PpIf = () => {

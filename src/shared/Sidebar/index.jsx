@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { BiChevronLeft } from "react-icons/bi";
-import SidebarData from "components/PermanentParameters/SideBarData";
-import SidebarS2 from "components/Others/SideBarS2";
-import SideBarUp from "components/Upgrade/SideBarUp";
+import SidebarData from "components/PermanentParameters/SideBarPP";
+import SidebarS2 from "components/Others/SideBarOther";
+import SideBarUp from "components/Upgrade/SideBarFU";
 import SidebarPartition from "components/Partition/SideBarPartition";
 export const Sidebar = (props) => {
   const [toggle, setToggle] = useState(false);

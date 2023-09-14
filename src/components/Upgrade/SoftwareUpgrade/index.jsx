@@ -117,9 +117,10 @@ export const SoftwareUpgrade = () => {
         </div>
       </div>
       {selectedFile && selectedFile.name && (
-        <div className="mt-5">
-          Please check that the new imag " {selectedFile?.name} "is under
-          /tftpboot
+        <div className="mt-5  ">
+          Please check that the new imag :<br />"{" "}
+          <span className="text-rose-800"> {selectedFile?.name}</span> " is
+          under /tftpboot !!!!
         </div>
       )}
       <ToastContainer
