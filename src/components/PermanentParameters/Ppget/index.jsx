@@ -34,7 +34,7 @@ export const Ppget = () => {
     });
   };
   const options = [
-    { value: "", label: "Sélectionnez une option" },
+    { value: "", label: "Select an Option" },
     { value: "SERIAL_NUMBER", label: "Serial Number" },
     { value: "MANUFACTURER", label: "Manufacturer" },
     { value: "S_PRODUCT_ID", label: "S_PRODUCT_ID" },
@@ -78,7 +78,7 @@ export const Ppget = () => {
               type="button"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
             >
-              get paramètre
+              Get Parameter
             </button>
           </div>
 

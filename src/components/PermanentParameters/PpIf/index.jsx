@@ -46,7 +46,7 @@ export const PpIf = () => {
 
   return (
     <>
-      <div>condition : </div>
+      <div>Condition : </div>
       <div>
         <div className="flex flex-row mt-6 mb-5 items-center">
           <p className="md:m-5 text-center"> If </p>
@@ -89,7 +89,7 @@ export const PpIf = () => {
           <input
             type="text"
             className="p-2 border border-gray-300 rounded-md max-w-[10rem]"
-            placeholder="Valeur 1"
+            placeholder="Value 1"
             onChange={(e) => setSelectedValue1(e.target.value)}
             value={selectedValue1}
           />
@@ -113,7 +113,7 @@ export const PpIf = () => {
             <input
               type="text"
               className="p-2 border border-gray-300 rounded-md max-w-[14rem]"
-              placeholder="Valeur 2"
+              placeholder="Value 2"
               onChange={(e) => setSelectedValue2(e.target.value)}
               value={selectedValue2}
             />

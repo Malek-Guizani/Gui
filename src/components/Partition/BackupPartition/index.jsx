@@ -71,7 +71,7 @@ export const BackupPartition = () => {
 
       {selectedText && (
         <div className="mt-5">
-          Please check that the file {selectedText} exists under /tftpboot
+          Please Verify that the file "backup-SerialNUmber-{selectedText}.bin" exists under /tftpboot  😊
         </div>
       )}
       <ToastContainer

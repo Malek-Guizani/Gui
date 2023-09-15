@@ -51,7 +51,7 @@ export const Ppset = () => {
             onChange={handleChange1}
             value={selectedParam}
           >
-            <option value="">Sélectionnez une option</option>
+            <option value="">Select an Option</option>
             <option value="SERIAL_NUMBER">Serial Number</option>
             <option value="MANUFACTURER">Manufacturer</option>
             <option value="S_PRODUCT_ID">S_PRODUCT_ID</option>
@@ -66,7 +66,7 @@ export const Ppset = () => {
           <input
             type="text"
             className="p-2 border border-gray-300 rounded-md"
-            placeholder="Nouvelle Valeur"
+            placeholder="New Value"
             onChange={handleChange2}
             value={selectedValue}
           />

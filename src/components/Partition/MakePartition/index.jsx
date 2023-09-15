@@ -5,12 +5,21 @@ import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const MakePartition = () => {
-  const [selectedPartition, setSelectedPartition] = useState("");
+  const [selectedPartition, setSelectedPartition] = useState(null);
   const [selectedDevice, setSelectedDevice] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [status, setStatus] = useState(null);
   const [isLoaderActive, setLoaderActive] = useState(false);
 
+  const handleChange1 = (e) => {
+    setSelectedPartition(e.target.value);
+  };
+  const handleChange2 = (e) => {
+    setSelectedDevice(e.target.value);
+  };
+  const handleChange3 = (e) => {
+    setSelectedSize(e.target.value);
+  };
   const MakePartRequest = () => {
     const request = new proto.grpc.MakePartRequest();
     request.setPartition(selectedPartition);
@@ -41,6 +50,12 @@ export const MakePartition = () => {
     console.log("ppstatus: ", status);
     setStatus("Null");
   }, [status]);
+
+  const [selectedOption, setSelectedOption] = useState("");
+  const options = [
+    { value: "MB", label: "MB" },
+    { value: "KB", label: "KB" },
+  ];
   return (
     <div className=" flex items-center flex-col justify-center">
       <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
@@ -56,6 +71,7 @@ export const MakePartition = () => {
             id="partition"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter partition"
+            onChange={handleChange1}
           />
         </div>
         <div className="">
@@ -70,6 +86,7 @@ export const MakePartition = () => {
             id="device"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
+            onChange={handleChange2}
           />
         </div>
         <div className="">
@@ -81,7 +98,26 @@ export const MakePartition = () => {
             id="size"
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter size"
+            onChange={handleChange3}
           />
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label>unity</label>
+          <select
+            id="param-select"
+            className="p-2  border border-gray-300 rounded-md  max-w-min"
+            value={selectedOption}
+            onChange={(e) => {
+              setSelectedOption(e.target.value);
+            }}
+          >
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
       <button
@@ -92,7 +128,7 @@ export const MakePartition = () => {
         type="button"
         className="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
       >
-        Make
+        Making partition completed
       </button>
       <ToastContainer
         position="top-center"

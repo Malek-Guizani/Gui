@@ -48,7 +48,7 @@ export const SoftwareUpgrade = () => {
     setSelectedOption(e.target.value);
   };
   const options = [
-    { value: "", label: "Sélectionnez une option" },
+    { value: "", label: "Select an Option" },
     { value: "pkgtb", label: " pkgtb" },
     { value: "gsdf", label: "gsdf" },
     { value: "brcm", label: "brcm" },
@@ -115,14 +115,15 @@ export const SoftwareUpgrade = () => {
             SoftwareUpgrade
           </button>
         </div>
+
+        {selectedFile && selectedFile.name && (
+          <div className="mt-5  ">
+            Please check that the new image :<br />"
+            <span className="text-rose-800"> {selectedFile?.name}</span> " is
+            under /tftpboot !!!!
+          </div>
+        )}
       </div>
-      {selectedFile && selectedFile.name && (
-        <div className="mt-5  ">
-          Please check that the new imag :<br />"{" "}
-          <span className="text-rose-800"> {selectedFile?.name}</span> " is
-          under /tftpboot !!!!
-        </div>
-      )}
       <ToastContainer
         position="top-center"
         hideProgressBar={true}

@@ -1,5 +1,5 @@
 export const options = [
-  { value: "", label: "Sélectionnez une option" },
+  { value: "", label: "Select an Option" },
   { value: "SERIAL_NUMBER", label: "Serial Number" },
   { value: "MANUFACTURER", label: "Manufacturer" },
   { value: "S_PRODUCT_ID", label: "S_PRODUCT_ID" },
@@ -19,7 +19,7 @@ export const options = [
 ];
 
 export const options2 = [
-  { value: "", label: "Sélectionnez une option" },
+  { value: "", label: "Select an Option" },
   { value: "SERIAL_NUMBER", label: "Serial Number" },
   { value: "MANUFACTURER", label: "Manufacturer" },
   { value: "S_PRODUCT_ID", label: "S_PRODUCT_ID" },

@@ -1,46 +1,43 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const SideBarUp = ({ toggle, service }) => {
   const [activeButton, setActiveButton] = useState("SoftwareUpgrade");
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
   };
+
+  const activeClasses =
+    "last:w-[17rem] sidebar last:absolute left-4 bottom-4 bg-cyan-500";
+  const pendingClasses = "last:w-[17rem] sidebar last:absolute left-4 bottom-4";
   return (
     <React.Fragment>
-      <Link
+      <NavLink
         to={`/home/${service}/SoftwareUpgrade`}
-        className={`last:w-[17rem] sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "SoftwareUpgrade" ? "bg-cyan-500" : ""
-        }`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
         onClick={() => {
           handleClick("SoftwareUpgrade");
         }}
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className="text-[1rem] text-brown whitespace-pre">
           SoftwareUpgrade
         </div>
-      </Link>
-      <Link
+      </NavLink>
+
+      <NavLink
         to={`/home/${service}/firmwareUpgrade`}
-        className={`${"last:w-[17rem]"} sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "firmwareUpgrade" ? "bg-cyan-500" : ""
-        }`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
         onClick={() => {
-          handleClick("firmwareUpgrade");
+          handleClick("SoftwareUpgrade");
         }}
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className="text-[1rem] text-brown whitespace-pre">
           firmwareUpgrade
         </div>
-      </Link>
+      </NavLink>
     </React.Fragment>
   );
 };

@@ -46,7 +46,7 @@ export const Cmd = () => {
     // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (Status == "Success") {
       setLoaderActive(false);
-      toast.success("cmd applique !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Command applied !!!"); // Afficher la toast après l'expiration du délai
     }
     setStatus("Null");
   }, [Status]);
@@ -70,7 +70,7 @@ export const Cmd = () => {
           <input
             type="text"
             className="p-2 border border-gray-300 rounded-md"
-            placeholder="Nouvelle Valeur"
+            placeholder="New Value"
             onChange={handleChange}
           />
 
@@ -81,7 +81,7 @@ export const Cmd = () => {
             }}
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
           >
-            Executer La Commande
+            Execute the command
           </button>
         </div>
         <div className="bg-white ">

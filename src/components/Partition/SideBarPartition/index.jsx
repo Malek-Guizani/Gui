@@ -1,90 +1,64 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const SidebarPartition = ({ toggle, service }) => {
   const [activeButton, setActiveButton] = useState("backup");
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
   };
+
+  const activeClasses =
+    "last:w-[17rem] sidebar last:absolute left-4 bottom-4 bg-cyan-500";
+  const pendingClasses = "last:w-[17rem] sidebar last:absolute left-4 bottom-4";
   return (
     <React.Fragment>
-      <Link
+      <NavLink
         to={`/home/${service}/backupPartition`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "backup" ? "bg-cyan-500" : ""
-        }`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
         onClick={() => {
           handleClick("backup");
         }}
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className="text-[1rem] text-brown whitespace-pre">
           backup partition
         </div>
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to={`/home/${service}/MakePartition`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "Make" ? "bg-cyan-500" : ""
-        }`}
-        onClick={() => {
-          handleClick("Make");
-        }}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className={`text-[1rem] text-brown whitespace-pre`}>
           MakePartition
         </div>
-      </Link>
+      </NavLink>
 
-      <Link
+      <NavLink
         to={`/home/${service}/UpdatePartition`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "UpdateP" ? "bg-cyan-500" : ""
-        }`}
-        onClick={() => {
-          handleClick("UpdateP");
-        }}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className={`text-[1rem] text-brown whitespace-pre`}>
           UpdatePartition
         </div>
-      </Link>
-      <Link
+      </NavLink>
+      <NavLink
         to={`/home/${service}/DeletePartition`}
-        className={`${
-          toggle ? "last:w-[3.6rem]" : "last:w-[17rem]"
-        } sidebar last:absolute left-4 bottom-4 ${
-          activeButton === "DeleteP" ? "bg-cyan-500" : ""
-        }`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
         onClick={() => {
           handleClick("DeleteP");
         }}
       >
-        <div
-          className={`${
-            toggle ? "opacity-0 delay-200" : ""
-          } text-[1rem] text-brown whitespace-pre`}
-        >
+        <div className={`text-[1rem] text-brown whitespace-pre`}>
           DeletePartition
         </div>
-      </Link>
+      </NavLink>
     </React.Fragment>
   );
 };

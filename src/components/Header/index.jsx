@@ -1,22 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import LogoSagemcom from "../../Assets/Logo/logo-sagemcom-new-charte-header.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [activeButton, setActiveButton] = useState("ppGet");
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const commonClasses = "block py-2 pl-3 pr-4 rounded md:p-0";
-  const activeClasses =
-    "text-white bg-blue-700 md:text-blue-700 md:bg-transparent md:dark:text-blue-500";
   const pendingClasses =
     "text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
-  const [activeButton, setActiveButton] = useState("ppGet");
+
   const handleClick = (buttonName) => {
     setActiveButton(buttonName);
+    localStorage.setItem("activeButton", buttonName);
   };
+
+  // Effect to retrieve the activeButton from local storage on component mount
+  useEffect(() => {
+    const storedActiveButton = localStorage.getItem("activeButton");
+    if (storedActiveButton) {
+      setActiveButton(storedActiveButton);
+    }
+  }, []);
   return (
     <header>
       <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6">
@@ -78,21 +84,7 @@ const Header = () => {
                   Permanent Params
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="other/cmd"
-                  className={`${
-                    (pendingClasses,
-                    activeButton === "cmd" ? " md:text-blue-700" : "")
-                  }`}
-                  onClick={() => {
-                    toggleMenu();
-                    handleClick("cmd");
-                  }}
-                >
-                  Other
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink
                   to="Upgrade/SoftwareUpgrade"
@@ -121,6 +113,21 @@ const Header = () => {
                   }}
                 >
                   Partitions
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="other/cmd"
+                  className={`${
+                    (pendingClasses,
+                    activeButton === "cmd" ? " md:text-blue-700" : "")
+                  }`}
+                  onClick={() => {
+                    toggleMenu();
+                    handleClick("cmd");
+                  }}
+                >
+                  Other
                 </NavLink>
               </li>
             </ul>

@@ -48,7 +48,7 @@ export const FirmwareUpgrade = () => {
     setSelectedOption(e.target.value);
   };
   const options = [
-    { value: "", label: "Sélectionnez une option" },
+    { value: "", label: "Select an Option" },
     { value: "Operational", label: " Operational" },
     { value: "Rescue", label: "Rescue" },
   ];

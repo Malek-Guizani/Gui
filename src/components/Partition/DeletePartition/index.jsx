@@ -15,9 +15,9 @@ export const DeletePartition = () => {
     setSelectedOption(e.target.value);
   };
   const options = [
-    { value: "", label: "Sélectionnez une option" },
-    { value: "1", label: " 1" },
-    { value: "2", label: "2" },
+    { value: "", label: "Select an Option" },
+    { value: "1", label: "ubi" },
+    { value: "2", label: "mmcblk0" },
   ];
 
   useEffect(() => {
