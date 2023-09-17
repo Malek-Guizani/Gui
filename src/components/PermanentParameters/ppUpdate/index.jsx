@@ -12,14 +12,20 @@ export const PpUpdate = () => {
   };
   console.log("Selected file:", selectedFile?.name);
   const PpUpdateRequest = () => {
+    if (!selectedFile?.name) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.PpUpdateRequest();
     request.setFile(selectedFile?.name);
-    
 
     setLoaderActive(true);
     client.ppUpdate(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
       console.log(request);
@@ -50,7 +56,9 @@ export const PpUpdate = () => {
       )}
       <div
         className={
-          isLoaderActive ? "opacity-70 backdrop-blur-sm flex flex-col gap-6" : "opacity-100 flex flex-col gap-6"
+          isLoaderActive
+            ? "opacity-70 backdrop-blur-sm flex flex-col gap-6"
+            : "opacity-100 flex flex-col gap-6"
         }
         style={isLoaderActive ? { filter: "blur(4px)" } : {}}
       >

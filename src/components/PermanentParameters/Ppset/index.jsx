@@ -18,6 +18,11 @@ export const Ppset = () => {
   };
 
   const PpSetRequest = () => {
+    if (!selectedParam || !selectedValue) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.PpSetRequest();
     request.setParam(selectedParam);
     request.setValue(selectedValue);
@@ -25,6 +30,8 @@ export const Ppset = () => {
     client.ppSet(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        //setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
       console.log(request);

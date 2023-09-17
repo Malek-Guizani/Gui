@@ -15,13 +15,20 @@ export const BackupPartition = () => {
   };
 
   const BackupPartRequest = () => {
+    if (!selectedText) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.BackupPartRequest();
     request.setPartition(selectedText);
     setLoaderActive(true);
     client.backupPart(request, {}, (err, response) => {
-      console.log("mm",request);
+      console.log("mm", request);
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
 
@@ -71,7 +78,8 @@ export const BackupPartition = () => {
 
       {selectedText && (
         <div className="mt-5">
-          Please Verify that the file "backup-SerialNUmber-{selectedText}.bin" exists under /tftpboot  😊
+          Please Verify that the file "backup-SerialNUmber-{selectedText}.bin"
+          exists under /tftpboot 😊
         </div>
       )}
       <ToastContainer

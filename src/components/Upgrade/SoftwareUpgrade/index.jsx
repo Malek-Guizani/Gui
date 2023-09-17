@@ -12,6 +12,11 @@ export const SoftwareUpgrade = () => {
   };
   console.log("Selected file:", selectedFile?.name);
   const SfwUpRequest = () => {
+    if (!selectedFile?.name || !selectedOption) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.SfwUpRequest();
     request.setSfwupsectionkind(selectedOption);
     //
@@ -24,6 +29,8 @@ export const SoftwareUpgrade = () => {
     client.sfwUp(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
       console.log("Software Upgraded");

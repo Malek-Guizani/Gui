@@ -9,7 +9,7 @@ export const Other = () => {
         <Sidebar message="other" />
       </div>
 
-      <div className="md:min-w-450 ">
+      <div className="w-2/3">
         <Outlet />
       </div>
     </main>

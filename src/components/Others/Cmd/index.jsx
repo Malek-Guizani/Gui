@@ -25,6 +25,12 @@ export const Cmd = () => {
   };
 
   const CmdRequest = () => {
+    if (!selectedText) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
+
     const request = new proto.grpc.CmdRequest();
     request.setCmd(selectedText);
     setLoaderActive(true);
@@ -32,6 +38,8 @@ export const Cmd = () => {
       console.log(request);
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
 
@@ -86,8 +94,8 @@ export const Cmd = () => {
         </div>
         <div className="bg-white ">
           <h1 className="text-xl mb-2">Result :</h1>
-          <div className="flex flex-row   gap-1">
-            <div className="bg-gray-200 w-[10rem] md:w-[22rem] rounded-md p-4 overflow-auto">
+          <div className="flex flex-row   gap-1 mb-36 ">
+            <div className="max-w-max md:max-w-xl min-w-[35rem]  bg-gray-200  rounded-md p-4 overflow-auto">
               {ppMessage}
             </div>
             <button
@@ -97,7 +105,7 @@ export const Cmd = () => {
                 navigator.clipboard.writeText(ppMessage);
               }}
             >
-              <FaCopy className="mr-2" />
+              <FaCopy className="" />
               <span className="tooltip bg-gray-800 text-white text-xs px-2 py-1 rounded absolute bottom-full left-1/2 -translate-x-1/2 opacity-0 pointer-events-none transition-opacity duration-300">
                 Copier
               </span>

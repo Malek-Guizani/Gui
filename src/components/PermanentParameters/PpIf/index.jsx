@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Equal from "../../../Assets/svg/equal-svgrepo-com.svg";
 import NotEqual from "../../../Assets/svg/not-equal-svgrepo-com.svg";
 import Fleche from "../../../Assets/icons8-flèche-100.png";
-import { options, options2 } from "../../../DB/dataPP";
+import { options, options2 } from "../../../DB/PP_data";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const PpIf = () => {
@@ -15,6 +15,16 @@ export const PpIf = () => {
   const [selectedCondition, setSelectedCondition] = useState("==");
   console.log(selectedCondition);
   const PpIfRequest = () => {
+    if (
+      !selectedValue1 ||
+      !selectedValue2 ||
+      !selectedParam1 ||
+      !selectedParam2
+    ) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.PpIfRequest();
     request.setParam1(selectedParam1);
     request.setCondition(selectedCondition);
@@ -27,6 +37,8 @@ export const PpIf = () => {
     client.ppIf(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        //setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
       console.log(request);

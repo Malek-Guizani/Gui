@@ -19,6 +19,11 @@ export const UpdatePartition = () => {
   };
 
   const UpdatePartRequest = () => {
+    if (!selectedText || !selectedFile?.nam) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.UpdatePartRequest();
     request.setPartition(selectedText);
     request.setFile(selectedFile?.name);
@@ -27,6 +32,8 @@ export const UpdatePartition = () => {
     client.updatePart(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
 

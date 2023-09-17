@@ -21,6 +21,11 @@ export const MakePartition = () => {
     setSelectedSize(e.target.value);
   };
   const MakePartRequest = () => {
+    if (!selectedPartition || !selectedDevice || !selectedSize) {
+      // Show a message to choose a value
+      toast.warning(" input is empty");
+      return;
+    }
     const request = new proto.grpc.MakePartRequest();
     request.setPartition(selectedPartition);
     request.setDevice(selectedDevice);
@@ -31,6 +36,8 @@ export const MakePartition = () => {
       console.log("mmmmmmmmmm", request);
       if (err) {
         console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
 

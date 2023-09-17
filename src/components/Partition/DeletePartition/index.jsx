@@ -20,6 +20,11 @@ export const DeletePartition = () => {
     { value: "2", label: "mmcblk0" },
   ];
 
+  /*  if (!selectedText || !selectedFile?.nam) {
+    // Show a message to choose a value
+    toast.warning(" input is empty");
+    return;
+  } */
   useEffect(() => {
     // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (status == "Success") {

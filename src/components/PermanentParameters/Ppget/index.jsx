@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
-
-import "react-toastify/dist/ReactToastify.css";
-
+import { toast, ToastContainer } from "react-toastify";
+import { options } from "../../../DB/PP_data";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const Ppget = () => {
@@ -16,6 +15,12 @@ export const Ppget = () => {
   console.log(selectedParam);
 
   const PpGetRequest = () => {
+    if (!selectedParam) {
+      // Show a message to choose a value
+      toast.warning("Please choose a value before clicking 'Get Parameter'");
+      return;
+    }
+
     console.log(selectedParam);
     const request = new proto.grpc.PpGetRequest();
     request.setParam(selectedParam);
@@ -23,6 +28,8 @@ export const Ppget = () => {
     client.ppGet(request, {}, (err, response) => {
       if (err) {
         console.error(err);
+        /* setLoaderActive(false); */
+        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
 
@@ -33,26 +40,7 @@ export const Ppget = () => {
       setppStatus(response.getStatus());
     });
   };
-  const options = [
-    { value: "", label: "Select an Option" },
-    { value: "SERIAL_NUMBER", label: "Serial Number" },
-    { value: "MANUFACTURER", label: "Manufacturer" },
-    { value: "S_PRODUCT_ID", label: "S_PRODUCT_ID" },
-    { value: "RAM_SIZE", label: "RAM SIZE" },
-    { value: "WIFI_MAC1", label: "WiFi MAC 1" },
-    { value: "WIFI_MAC2", label: "Wifi MAC 2" },
-    { value: "COUNTRY_CODE", label: "COUNTRY CODE" },
-    { value: "CLIENT_CERTIFICATE", label: "CLIENT CERTIFICATE" },
-    { value: "S_HARDWARE_VERSION", label: "S_HARDWARE_VERSION" },
-    { value: "C_HARDWARE_REVISION", label: "C_HARDWARE_REVISION" },
-    { value: "PRIVATE_KEY", label: "PRIVATE_KEY" },
-    { value: "CERTIFICATE", label: "CERTIFICATE" },
-    { value: "DSA", label: "DSA" },
-    { value: "VENDOR_INFO1", label: "VENDOR_INFO1" },
-    { value: "VENDOR_INFO2", label: "VENDOR_INFO2" },
-    { value: "VENDOR_INFO3", label: "VENDOR_INFO3" },
 
-  ];
   return (
     <React.Fragment>
       <main>
@@ -73,7 +61,6 @@ export const Ppget = () => {
             <button
               onClick={() => {
                 PpGetRequest();
-                //test();
               }}
               type="button"
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
@@ -104,6 +91,11 @@ export const Ppget = () => {
           </div>
         </div>
       </main>
+      <ToastContainer
+        position="top-center"
+        hideProgressBar={true}
+        autoClose={3000}
+      />
     </React.Fragment>
   );
 };
