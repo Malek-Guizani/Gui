@@ -18,7 +18,7 @@ export const SoftwareUpgrade = () => {
     }
     const request = new proto.grpc.SfwUpRequest();
     request.setSfwupsectionkind(selectedOption);
-    
+
     request.setPayload(selectedFile?.name);
     request.setSection(1);
 
@@ -93,7 +93,7 @@ export const SoftwareUpgrade = () => {
         </select>
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             Device:

@@ -67,7 +67,7 @@ export const DeletePartition = () => {
         <div className="  rounded-lg  p-6 w-full flex  md:flex-row  flex-col items-start justify-start gap-5">
           <div className="w-1/2 mx-auto	">
             <label
-              for="partition"
+              htmlFor="partition"
               className="block text-gray-700 font-semibold mb-2"
             >
               Partition:
@@ -107,7 +107,7 @@ export const DeletePartition = () => {
           onClick={() => {
             DeletePartRequest();
           }}
-          class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
+          className="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
         >
           Delete
         </button>

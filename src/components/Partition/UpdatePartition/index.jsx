@@ -63,7 +63,7 @@ export const UpdatePartition = () => {
         <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
           <div className="min-w-min	">
             <label
-              for="partition"
+              htmlFor="partition"
               className="block text-gray-700 font-semibold mb-2"
             >
               Partition:
@@ -78,7 +78,7 @@ export const UpdatePartition = () => {
           </div>
           <div className="">
             <label
-              for="device"
+              htmlFor="device"
               className="block text-gray-700 font-semibold mb-2"
             >
               Img:
@@ -97,7 +97,7 @@ export const UpdatePartition = () => {
           onClick={() => {
             UpdatePartRequest();
           }}
-          class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
+          className="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
         >
           Update
         </button>

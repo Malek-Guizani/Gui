@@ -23,7 +23,7 @@ export const PpUpdate = () => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); 
+        toast.error("Error !!!");
         return;
       }
 
@@ -34,7 +34,7 @@ export const PpUpdate = () => {
   useEffect(() => {
     if (Status == "Success") {
       setLoaderActive(false);
-      toast.success("Permanent Parameter Updated !!!"); 
+      toast.success("Permanent Parameter Updated !!!");
     }
     setStatus("Null");
   }, [Status]);
@@ -56,7 +56,7 @@ export const PpUpdate = () => {
       >
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             Device:

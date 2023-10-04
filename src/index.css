@@ -30,4 +30,4 @@ code {
   .sidebar {
     @apply flex items-center mt-2 p-4 rounded-lg cursor-pointer hover:bg-cyan-500 transition-all duration-300
   }
-} 
+}

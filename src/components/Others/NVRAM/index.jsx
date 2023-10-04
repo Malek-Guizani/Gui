@@ -41,7 +41,7 @@ export const NVRAM = () => {
       <article className="flex flex-col gap-5">
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             file Source:
@@ -56,7 +56,7 @@ export const NVRAM = () => {
         </div>
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             file destination:

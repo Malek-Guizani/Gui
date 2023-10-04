@@ -80,7 +80,7 @@ export const FirmwareUpgrade = () => {
         </select>
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             Device:

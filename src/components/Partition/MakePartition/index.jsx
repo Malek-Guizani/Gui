@@ -45,7 +45,7 @@ export const MakePartition = () => {
   useEffect(() => {
     if (status == "Success") {
       setLoaderActive(false);
-      toast.success("Maked !!!"); 
+      toast.success("Maked !!!");
     }
     setStatus("Null");
   }, [status]);
@@ -60,7 +60,7 @@ export const MakePartition = () => {
       <div className=" rounded-lg  p-6 w-[35rem] flex flex-row gap-5">
         <div className="min-w-min	">
           <label
-            for="partition"
+            htmlFor="partition"
             className="block text-gray-700 font-semibold mb-2"
           >
             Partition:
@@ -75,7 +75,7 @@ export const MakePartition = () => {
         </div>
         <div className="">
           <label
-            for="device"
+            htmlFor="device"
             className="block text-gray-700 font-semibold mb-2"
           >
             Device:
@@ -89,7 +89,10 @@ export const MakePartition = () => {
           />
         </div>
         <div className="">
-          <label for="size" className="block text-gray-700 font-semibold mb-2">
+          <label
+            htmlFor="size"
+            className="block text-gray-700 font-semibold mb-2"
+          >
             Size:
           </label>
           <input

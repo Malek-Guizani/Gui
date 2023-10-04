@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const SidebarData = ({ toggle, service }) => {
   const isActiveLink = useIsActiveLink(service);
   const activeClasses =
-    "last:w-[17rem] sidebar last:absolute left-4 bottom-4 bg-cyan-500";
+    "md:w-full sidebar last:absolute left-4 bottom-4 bg-cyan-500";
   const pendingClasses = "last:w-[17rem] sidebar last:absolute left-4 bottom-4";
   return (
     <React.Fragment>
