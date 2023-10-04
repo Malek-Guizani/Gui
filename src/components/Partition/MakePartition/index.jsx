@@ -22,46 +22,38 @@ export const MakePartition = () => {
   };
   const MakePartRequest = () => {
     if (!selectedPartition || !selectedDevice || !selectedSize) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
     const request = new proto.grpc.MakePartRequest();
     request.setPartition(selectedPartition);
     request.setDevice(selectedDevice);
-    request.setSize(selectedSize);
+    request.setSize(selectedSize + selectedOption);
 
     setLoaderActive(true);
     client.makePart(request, {}, (err, response) => {
-      console.log("mmmmmmmmmm", request);
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-
-      console.log(response.getStatus());
 
       setStatus(response.getStatus());
     });
   };
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (status == "Success") {
-      console.log("before software upgrade");
       setLoaderActive(false);
-      toast.success("Maked !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Maked !!!"); 
     }
-    console.log("after software upgrade");
-    console.log("ppstatus: ", status);
     setStatus("Null");
   }, [status]);
 
   const [selectedOption, setSelectedOption] = useState("");
   const options = [
-    { value: "MB", label: "MB" },
-    { value: "KB", label: "KB" },
+    { value: "MiB", label: "MB" },
+    { value: "KiB", label: "KB" },
   ];
   return (
     <div className=" flex items-center flex-col justify-center">

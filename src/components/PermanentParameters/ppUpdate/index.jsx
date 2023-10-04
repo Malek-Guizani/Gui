@@ -10,10 +10,8 @@ export const PpUpdate = () => {
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
-  console.log("Selected file:", selectedFile?.name);
   const PpUpdateRequest = () => {
     if (!selectedFile?.name) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
@@ -25,25 +23,19 @@ export const PpUpdate = () => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!"); 
         return;
       }
-      console.log(request);
 
-      console.log("Permanent Parameter Updated");
       setStatus(response.getStatus());
     });
   };
 
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (Status == "Success") {
-      console.log("before ppUpdate");
       setLoaderActive(false);
-      toast.success("Permanent Parameter Updated !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Permanent Parameter Updated !!!"); 
     }
-    console.log("after ppUpdate");
-    console.log("status: ", Status);
     setStatus("Null");
   }, [Status]);
 

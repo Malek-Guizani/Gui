@@ -10,43 +10,38 @@ export const SoftwareUpgrade = () => {
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
-  console.log("Selected file:", selectedFile?.name);
+
   const SfwUpRequest = () => {
     if (!selectedFile?.name || !selectedOption) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
     const request = new proto.grpc.SfwUpRequest();
     request.setSfwupsectionkind(selectedOption);
-    //
+    
     request.setPayload(selectedFile?.name);
     request.setSection(1);
 
     setLoaderActive(true);
-    console.log("name of selected file :", selectedFile?.name);
-    console.log(request);
+
     client.sfwUp(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-      console.log("Software Upgraded");
+
       setStatus(response.getStatus());
     });
   };
 
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (Status == "Success") {
-      console.log("before software upgrade");
       setLoaderActive(false);
-      toast.success("Software Upgraded !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("Software Upgraded !!!");
     }
-    console.log("after software upgrade");
-    console.log("ppstatus: ", Status);
+
     setStatus("Null");
   }, [Status]);
 

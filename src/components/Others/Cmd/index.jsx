@@ -26,7 +26,6 @@ export const Cmd = () => {
 
   const CmdRequest = () => {
     if (!selectedText) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
@@ -35,15 +34,12 @@ export const Cmd = () => {
     request.setCmd(selectedText);
     setLoaderActive(true);
     client.cmd(request, {}, (err, response) => {
-      console.log(request);
       if (err) {
         console.error(err);
         setLoaderActive(false);
         toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
-
-      console.log(response.getMessage());
 
       SetppMessage(response.getMessage());
       setStatus(response.getStatus());
@@ -101,7 +97,7 @@ export const Cmd = () => {
             <button
               className="bg-transparent text-gray-600 hover:text-gray-800 focus:outline-none"
               onClick={() => {
-                // Logique pour copier le contenu de ppMessage
+                // pour copier le contenu de ppMessage
                 navigator.clipboard.writeText(ppMessage);
               }}
             >

@@ -19,35 +19,30 @@ export const UpdatePartition = () => {
   };
 
   const UpdatePartRequest = () => {
-    if (!selectedText || !selectedFile?.nam) {
-      // Show a message to choose a value
+    if (!selectedText || !selectedFile?.name) {
       toast.warning(" input is empty");
       return;
     }
     const request = new proto.grpc.UpdatePartRequest();
     request.setPartition(selectedText);
     request.setFile(selectedFile?.name);
-    console.log(request);
     setLoaderActive(true);
     client.updatePart(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-
-      console.log(response.getStatus());
 
       setStatus(response.getStatus());
     });
   };
 
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (status == "Success") {
       setLoaderActive(false);
-      toast.success("update completed !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("update completed !!!");
     }
     setStatus("Null");
   }, [status]);

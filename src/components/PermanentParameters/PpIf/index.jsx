@@ -8,12 +8,29 @@ const { client, proto } = require("../../../services/grpcClient");
 
 export const PpIf = () => {
   const [ppStatus, SetppStatus] = useState(null);
+  const [ppMessage, SetppMessage] = useState(null);
   const [selectedValue1, setSelectedValue1] = useState("");
   const [selectedValue2, setSelectedValue2] = useState("");
   const [selectedParam1, setSelectedParam1] = useState("");
   const [selectedParam2, setSelectedParam2] = useState("");
   const [selectedCondition, setSelectedCondition] = useState("==");
-  console.log(selectedCondition);
+
+  const PpGetRequest = (callback) => {
+    const request = new proto.grpc.PpGetRequest();
+    request.setParam(selectedParam1);
+
+    client.ppGet(request, {}, (err, response) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      SetppMessage(response.getMessage());
+      console.log("oy ppMessage= ", response.getMessage());
+      callback();
+    });
+  };
+
   const PpIfRequest = () => {
     if (
       !selectedValue1 ||
@@ -21,10 +38,12 @@ export const PpIf = () => {
       !selectedParam1 ||
       !selectedParam2
     ) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
+
+    console.log("IF ", ppMessage, " ", selectedCondition, " ", selectedValue1);
+
     const request = new proto.grpc.PpIfRequest();
     request.setParam1(selectedParam1);
     request.setCondition(selectedCondition);
@@ -38,20 +57,16 @@ export const PpIf = () => {
       if (err) {
         console.error(err);
         //setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-      console.log(request);
-      //Pour recuperer la valeur de status , status doit être "Success"
       SetppStatus(response.getStatus());
-      console.log(ppStatus);
     });
   };
 
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (ppStatus == "Success") {
-      toast.success("done !!! "); // Afficher la toast après l'expiration du délai
+      toast.success("done !!! ");
     }
     SetppStatus("Null");
   }, [ppStatus]);
@@ -65,7 +80,9 @@ export const PpIf = () => {
           <select
             id="param-select"
             className="p-2 border border-gray-300 rounded-md  md:h-10 md:w-60"
-            onChange={(e) => setSelectedParam1(e.target.value)}
+            onChange={(e) => {
+              setSelectedParam1(e.target.value);
+            }}
             value={selectedParam1}
           >
             {options.map((option) => (
@@ -89,10 +106,10 @@ export const PpIf = () => {
             <label className="flex md:gap-3">
               <input
                 type="radio"
-                value="<>"
+                value="!="
                 name="Condition"
-                checked={selectedCondition === "<>"}
-                onChange={() => setSelectedCondition("<>")}
+                checked={selectedCondition === "!="}
+                onChange={() => setSelectedCondition("!=")}
               />
               <img className="max-w-[1.25rem]" src={NotEqual} alt="NotEqual" />
             </label>
@@ -102,7 +119,10 @@ export const PpIf = () => {
             type="text"
             className="p-2 border border-gray-300 rounded-md max-w-[10rem]"
             placeholder="Value 1"
-            onChange={(e) => setSelectedValue1(e.target.value)}
+            onChange={(e) => {
+              setSelectedValue1(e.target.value);
+              
+            }}
             value={selectedValue1}
           />
         </div>
@@ -135,12 +155,15 @@ export const PpIf = () => {
         <div className="flex justify-center mt-5">
           <button
             onClick={() => {
-              PpIfRequest();
+              PpGetRequest(() => {
+                // Après que PpGetRequest ait terminé, appelez PpIfRequest
+                PpIfRequest();
+              });
             }}
             type="button"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded min-w-max"
           >
-            Ok
+            Execute
           </button>
         </div>
       </div>

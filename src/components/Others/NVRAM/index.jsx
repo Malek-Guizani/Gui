@@ -16,8 +16,7 @@ export const NVRAM = () => {
   };
 
   const WifiNvramUpdateRequest = () => {
-    if (!selectedFileSrc?.name || !selectedFileDest?.name) {
-      // Show a message to choose a value
+    if (!selectedFileSrc?.name) {
       toast.warning(" input is empty");
       return;
     }
@@ -27,7 +26,6 @@ export const NVRAM = () => {
     request.setFiledst();
 
     setLoaderActive(true);
-    console.log(request);
     client.wifiNvramUpdate(request, {}, (err, response) => {
       if (err) {
         console.error(err);
@@ -35,7 +33,6 @@ export const NVRAM = () => {
         toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
-      console.log("NVRAM Updated");
       setStatus(response.getStatus());
     });
   };

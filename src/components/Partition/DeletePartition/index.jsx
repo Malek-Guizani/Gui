@@ -5,12 +5,14 @@ import { Loader } from "shared/Loader";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const DeletePartition = () => {
-  const [selectedText, setSelectedText] = useState("");
+  const [selectedPartition, setSelectedPartition] = useState(null);
   const [status, setStatus] = useState(null);
   const [selectedFile, setSelectedFile] = useState([]);
   const [isLoaderActive, setLoaderActive] = useState(false);
-
   const [selectedOption, setSelectedOption] = useState("");
+  const handleChange1 = (e) => {
+    setSelectedPartition(e.target.value);
+  };
   const Optionchange = (e) => {
     setSelectedOption(e.target.value);
   };
@@ -19,17 +21,32 @@ export const DeletePartition = () => {
     { value: "1", label: "ubi" },
     { value: "2", label: "mmcblk0" },
   ];
+  const DeletePartRequest = () => {
+    const request = new proto.grpc.DeletePartRequest();
+    request.setPartition(selectedPartition);
+    request.setRequired(true);
+    request.setUbipart();
 
-  /*  if (!selectedText || !selectedFile?.nam) {
+    setLoaderActive(true);
+    client.deletePart(request, {}, (err, response) => {
+      if (err) {
+        console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!");
+        return;
+      }
+      setStatus(response.getStatus());
+    });
+  };
+  /*  if (!selectedText || !selectedFile?.name) {
     // Show a message to choose a value
     toast.warning(" input is empty");
     return;
   } */
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (status == "Success") {
       setLoaderActive(false);
-      toast.success("deleted completed !!!"); // Afficher la toast après l'expiration du délai
+      toast.success("deleted completed !!!");
     }
     setStatus("Null");
   }, [status]);
@@ -58,7 +75,7 @@ export const DeletePartition = () => {
             <input
               type="text"
               id="partition"
-              //onChange={handleChange}
+              onChange={handleChange1}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               placeholder="Enter partition"
             />
@@ -88,7 +105,7 @@ export const DeletePartition = () => {
         <button
           type="button"
           onClick={() => {
-            //UpdatePartRequest();
+            DeletePartRequest();
           }}
           class="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
         >

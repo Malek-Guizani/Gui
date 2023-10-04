@@ -19,7 +19,6 @@ export const Ppset = () => {
 
   const PpSetRequest = () => {
     if (!selectedParam || !selectedValue) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
@@ -31,20 +30,16 @@ export const Ppset = () => {
       if (err) {
         console.error(err);
         //setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-      console.log(request);
-      //Pour recuperer la valeur de status , status doit être "Success"
       SetppStatus(response.getStatus());
-      console.log(ppStatus);
     });
   };
 
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (ppStatus == "Success") {
-      toast.success("New Value !!! "); // Afficher la toast après l'expiration du délai
+      toast.success("New Value !!! ");
     }
     SetppStatus("Null");
   }, [ppStatus]);

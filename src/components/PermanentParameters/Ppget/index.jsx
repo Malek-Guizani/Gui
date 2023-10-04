@@ -12,16 +12,13 @@ export const Ppget = () => {
   const handleChange = (e) => {
     setSelectedParam(e.target.value);
   };
-  console.log(selectedParam);
 
   const PpGetRequest = () => {
     if (!selectedParam) {
-      // Show a message to choose a value
       toast.warning("Please choose a value before clicking 'Get Parameter'");
       return;
     }
 
-    console.log(selectedParam);
     const request = new proto.grpc.PpGetRequest();
     request.setParam(selectedParam);
 
@@ -29,13 +26,10 @@ export const Ppget = () => {
       if (err) {
         console.error(err);
         /* setLoaderActive(false); */
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
 
-      console.log(response.getMessage());
-      console.log(selectedParam);
-      console.log(request);
       SetppMessage(response.getMessage());
       setppStatus(response.getStatus());
     });
@@ -78,7 +72,6 @@ export const Ppget = () => {
               <button
                 className="bg-transparent text-gray-600 hover:text-gray-800 focus:outline-none"
                 onClick={() => {
-                  // Logique pour copier le contenu de ppMessage
                   navigator.clipboard.writeText(ppMessage);
                 }}
               >

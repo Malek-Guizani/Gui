@@ -5,9 +5,9 @@ import { Loader } from "shared/Loader";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const BackupPartition = () => {
-  const [ppMessage, SetppMessage] = useState(null);
   const [selectedText, setSelectedText] = useState("");
   const [status, setStatus] = useState(null);
+  const [ppMessage, SetppMessage] = useState(null);
   const [isLoaderActive, setLoaderActive] = useState(false);
 
   const handleChange = (e) => {
@@ -16,7 +16,6 @@ export const BackupPartition = () => {
 
   const BackupPartRequest = () => {
     if (!selectedText) {
-      // Show a message to choose a value
       toast.warning(" input is empty");
       return;
     }
@@ -24,22 +23,33 @@ export const BackupPartition = () => {
     request.setPartition(selectedText);
     setLoaderActive(true);
     client.backupPart(request, {}, (err, response) => {
-      console.log("mm", request);
       if (err) {
         console.error(err);
         setLoaderActive(false);
-        toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
+        toast.error("Error !!!");
         return;
       }
-
-      console.log(response.getStatus());
 
       setStatus(response.getStatus());
     });
   };
 
+  //Pour récupérer la valeur de serial number
+  const PpGetRequest = () => {  
+    const request = new proto.grpc.PpGetRequest();
+    request.setParam("SERIAL_NUMBER");
+
+    client.ppGet(request, {}, (err, response) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+      SetppMessage(response.getMessage());
+    });
+  };
+
   useEffect(() => {
-    // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
     if (status == "Success") {
       setLoaderActive(false);
       toast.success("Backup completed !!! ");
@@ -61,7 +71,11 @@ export const BackupPartition = () => {
             type="text"
             className="p-2 border border-gray-300 rounded-md"
             placeholder="Name of partition"
-            onChange={handleChange}
+            onChange={(e) => {
+              handleChange(e);
+              PpGetRequest(e);
+            }}
+            
           />
 
           <button
@@ -78,8 +92,8 @@ export const BackupPartition = () => {
 
       {selectedText && (
         <div className="mt-5">
-          Please Verify that the file "backup-SerialNUmber-{selectedText}.bin"
-          exists under /tftpboot 😊
+          Please Verify that the  file "backup-{ppMessage}-{selectedText}.bin"
+          exists under /tftpboot before backing up the partition 😊
         </div>
       )}
       <ToastContainer

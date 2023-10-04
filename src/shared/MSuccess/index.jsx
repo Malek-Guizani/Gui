@@ -7,11 +7,10 @@ export const MSuccess = ({ message, isOpenM, closeModal }) => {
   useEffect(() => {
     setIsOpen(isOpenM);
     if (isOpenM) {
-      // If the dialog is open, set a timer to close it after 1 second
       const timer = setTimeout(() => {
-        closeModal(); // Call the closeModal function after 1 second
+        closeModal(); 
       }, 1500);
-      return () => clearTimeout(timer); // Clear the timer if the component unmounts or isOpenM changes
+      return () => clearTimeout(timer); 
     }
   }, [isOpenM, closeModal]);
 
@@ -32,7 +31,7 @@ export const MSuccess = ({ message, isOpenM, closeModal }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          {/* you can add this to make the backgroud dark "bg-black bg-opacity-25"*/}
+          {}
           <div className="fixed inset-0 " />
         </Transition.Child>
 

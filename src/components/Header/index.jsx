@@ -16,7 +16,6 @@ const Header = () => {
     localStorage.setItem("activeButton", buttonName);
   };
 
-  // Effect to retrieve the activeButton from local storage on component mount
   useEffect(() => {
     const storedActiveButton = localStorage.getItem("activeButton");
     if (storedActiveButton) {
@@ -26,8 +25,7 @@ const Header = () => {
   return (
     <header>
       <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6">
-        {/* <p>Refurbishing</p>
-        <p>CPE</p> */}
+        {}
       </div>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -127,7 +125,7 @@ const Header = () => {
                     handleClick("cmd");
                   }}
                 >
-                  Other
+                  Others
                 </NavLink>
               </li>
             </ul>
