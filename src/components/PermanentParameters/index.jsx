@@ -10,7 +10,7 @@ export const Service1 = () => {
         <Sidebar message="service1" />
       </div>
 
-      <div className="md:min-w-450">
+      <div className=" mx-10 md:mx-auto w-full  md:w-2/3">
         <Outlet />
       </div>
     </main>

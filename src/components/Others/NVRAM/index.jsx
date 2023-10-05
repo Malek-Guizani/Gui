@@ -38,7 +38,7 @@ export const NVRAM = () => {
   };
   return (
     <React.Fragment>
-      <article className="flex flex-col gap-5">
+      <article className="flex flex-col   mx-24 md:mx-auto w-full gap-5">
         <div className="">
           <label
             htmlFor="device"
@@ -49,7 +49,7 @@ export const NVRAM = () => {
           <input
             type="file"
             id="device"
-            className="w-2/5 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            className="  sm:w-[50%]  px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
             onChange={handleFileChange1}
           />
@@ -64,7 +64,7 @@ export const NVRAM = () => {
           <input
             type="file"
             id="device"
-            className="w-2/5 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            className=" sm:w-[50%]  px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
             onChange={handleFileChange2}
           />

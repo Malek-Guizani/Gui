@@ -55,7 +55,7 @@ export const Cmd = () => {
     setStatus("Null");
   }, [Status]);
   return (
-    <div>
+    <div className="mx-10 md:mx-auto w-full">
       {isLoaderActive && (
         <div>
           <Loader />

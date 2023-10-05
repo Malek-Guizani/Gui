@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
+import { options } from "../../../DB/PP_data";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const Ppset = () => {
@@ -53,15 +54,11 @@ export const Ppset = () => {
             onChange={handleChange1}
             value={selectedParam}
           >
-            <option value="">Select an Option</option>
-            <option value="SERIAL_NUMBER">Serial Number</option>
-            <option value="MANUFACTURER">Manufacturer</option>
-            <option value="S_PRODUCT_ID">S_PRODUCT_ID</option>
-            <option value="RAM_SIZE">RAM SIZE</option>
-            <option value="WIFI_MAC1">WiFi MAC 1</option>
-            <option value="WIFI_MAC2">Wifi MAC 2</option>
-            <option value="COUNTRY_CODE">COUNTRY CODE</option>
-            <option value="CLIENT_CERTIFICATE">CLIENT CERTIFICATE</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
         <div className="">
@@ -78,7 +75,7 @@ export const Ppset = () => {
             PpSetRequest();
           }}
           type="button"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4  w-52 md:w-96 rounded "
         >
           Set New Value
         </button>

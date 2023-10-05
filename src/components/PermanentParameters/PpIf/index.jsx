@@ -8,14 +8,19 @@ const { client, proto } = require("../../../services/grpcClient");
 
 export const PpIf = () => {
   const [ppStatus, SetppStatus] = useState(null);
-  const [ppMessage, SetppMessage] = useState(null);
+  const [newMessage, SetppMessage] = useState(null);
   const [selectedValue1, setSelectedValue1] = useState("");
   const [selectedValue2, setSelectedValue2] = useState("");
   const [selectedParam1, setSelectedParam1] = useState("");
   const [selectedParam2, setSelectedParam2] = useState("");
   const [selectedCondition, setSelectedCondition] = useState("==");
 
+  //Cette fonction est pour récupérer le valeur de selectedParam1
   const PpGetRequest = (callback) => {
+    if (!selectedParam1) {
+      toast.warning("Select an option");
+      return;
+    }
     const request = new proto.grpc.PpGetRequest();
     request.setParam(selectedParam1);
 
@@ -25,43 +30,47 @@ export const PpIf = () => {
         return;
       }
 
-      SetppMessage(response.getMessage());
-      console.log("oy ppMessage= ", response.getMessage());
-      callback();
+      const newMessage = response.getMessage();
+
+      SetppMessage(newMessage);
+      callback(newMessage);
     });
   };
 
-  const PpIfRequest = () => {
+  const PpIfRequest = (newMessage) => {
     if (
       !selectedValue1 ||
       !selectedValue2 ||
       !selectedParam1 ||
       !selectedParam2
     ) {
-      toast.warning(" input is empty");
+      toast.warning("Select an Option");
       return;
     }
+    //l'equivalent de (if newMessage == selectedValue1) ou (if newMessage != selectedValue1) 
+    if (eval(`newMessage ${selectedCondition} selectedValue1`)) {
 
-    console.log("IF ", ppMessage, " ", selectedCondition, " ", selectedValue1);
-
-    const request = new proto.grpc.PpIfRequest();
-    request.setParam1(selectedParam1);
-    request.setCondition(selectedCondition);
-    request.setValue1(selectedValue1);
-    request.setParam2(selectedParam2);
-    request.setValue2(selectedValue2);
-    request.setParam3();
-    request.setValue3();
-
-    client.ppIf(request, {}, (err, response) => {
-      if (err) {
-        console.error(err);
-        //setLoaderActive(false);
-        toast.error("Error !!!");
-        return;
-      }
-      SetppStatus(response.getStatus());
-    });
+      const request = new proto.grpc.PpIfRequest();
+      request.setParam1(selectedParam1);
+      request.setCondition(selectedCondition);
+      request.setValue1(selectedValue1);
+      request.setParam2(selectedParam2);
+      request.setValue2(selectedValue2);
+      request.setParam3();
+      request.setValue3();
+      client.ppIf(request, {}, (err, response) => {
+        if (err) {
+          console.error(err);
+          //setLoaderActive(false);
+          toast.error("Error !!!");
+          return;
+        }
+        SetppStatus(response.getStatus());
+      });
+    } else {
+      toast.warning("Wrong Condition");
+      return;
+    }
   };
 
   useEffect(() => {
@@ -76,7 +85,7 @@ export const PpIf = () => {
       <div>Condition : </div>
       <div>
         <div className="flex flex-row mt-6 mb-5 items-center">
-          <p className="md:m-5 text-center"> If </p>
+          <p className="md:m-5 text-center"> IF </p>
           <select
             id="param-select"
             className="p-2 border border-gray-300 rounded-md  md:h-10 md:w-60"
@@ -121,7 +130,6 @@ export const PpIf = () => {
             placeholder="Value 1"
             onChange={(e) => {
               setSelectedValue1(e.target.value);
-              
             }}
             value={selectedValue1}
           />
@@ -155,9 +163,9 @@ export const PpIf = () => {
         <div className="flex justify-center mt-5">
           <button
             onClick={() => {
-              PpGetRequest(() => {
-                // Après que PpGetRequest ait terminé, appelez PpIfRequest
-                PpIfRequest();
+              PpGetRequest((newMessage) => {
+                // Après que PpGetRequest est terminé, appelez PpIfRequest
+                PpIfRequest(newMessage);
               });
             }}
             type="button"

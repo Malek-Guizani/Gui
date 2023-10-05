@@ -66,7 +66,7 @@ export const Ppget = () => {
           <div className="bg-white ">
             <h1 className="text-xl mb-2">Result :</h1>
             <div className="flex flex-row   gap-1">
-              <div className="bg-gray-200 w-[10rem] md:w-[22rem] rounded-md p-4 overflow-auto">
+              <div className="bg-gray-200 w-[90%] md:max-w-max rounded-md p-4 overflow-auto">
                 {ppMessage}
               </div>
               <button
