@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 const SidebarPartition = ({ toggle, service }) => {
-  const [activeButton, setActiveButton] = useState("backup");
-  const handleClick = (buttonName) => {
-    setActiveButton(buttonName);
-  };
-
   const activeClasses =
     "md:w-full sidebar last:absolute left-4 bottom-4 bg-cyan-500";
   const pendingClasses = "md:w-full sidebar last:absolute left-4 bottom-4";
@@ -16,9 +11,6 @@ const SidebarPartition = ({ toggle, service }) => {
         className={({ isActive }) =>
           isActive ? activeClasses : pendingClasses
         }
-        onClick={() => {
-          handleClick("backup");
-        }}
       >
         <div className="text-[1rem] text-brown whitespace-pre">
           backup partition
@@ -51,9 +43,6 @@ const SidebarPartition = ({ toggle, service }) => {
         className={({ isActive }) =>
           isActive ? activeClasses : pendingClasses
         }
-        onClick={() => {
-          handleClick("DeleteP");
-        }}
       >
         <div className={`text-[1rem] text-brown whitespace-pre`}>
           DeletePartition

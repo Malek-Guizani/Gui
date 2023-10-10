@@ -8,7 +8,6 @@ const { client, proto } = require("../../../services/grpcClient");
 
 export const PpIf = () => {
   const [ppStatus, SetppStatus] = useState(null);
-  const [newMessage, SetppMessage] = useState(null);
   const [selectedValue1, setSelectedValue1] = useState("");
   const [selectedValue2, setSelectedValue2] = useState("");
   const [selectedParam1, setSelectedParam1] = useState("");
@@ -30,14 +29,13 @@ export const PpIf = () => {
         return;
       }
 
-      const newMessage = response.getMessage();
-
-      SetppMessage(newMessage);
-      callback(newMessage);
+      const Message = response.getMessage();
+      callback(Message);
     });
   };
 
-  const PpIfRequest = (newMessage) => {
+  const PpIfRequest = (Message) => {
+    console.log("message : ", Message);
     if (
       !selectedValue1 ||
       !selectedValue2 ||
@@ -47,9 +45,21 @@ export const PpIf = () => {
       toast.warning("Select an Option");
       return;
     }
-    //l'equivalent de (if newMessage == selectedValue1) ou (if newMessage != selectedValue1) 
-    if (eval(`newMessage ${selectedCondition} selectedValue1`)) {
+    
+    let condition;
+    switch (selectedCondition) {
+      case "==":
+        condition = Message === selectedValue1;
+        break;
+      case "!=":
+        condition = Message !== selectedValue1;
+        break;
+      default:
+        toast.warning("Wrong Condition");
+        return;
+    }
 
+    if (condition) {
       const request = new proto.grpc.PpIfRequest();
       request.setParam1(selectedParam1);
       request.setCondition(selectedCondition);
@@ -63,9 +73,9 @@ export const PpIf = () => {
           console.error(err);
           //setLoaderActive(false);
           toast.error("Error !!!");
-          return;
+        } else {
+          SetppStatus(response.getStatus());
         }
-        SetppStatus(response.getStatus());
       });
     } else {
       toast.warning("Wrong Condition");
@@ -74,7 +84,7 @@ export const PpIf = () => {
   };
 
   useEffect(() => {
-    if (ppStatus == "Success") {
+    if (ppStatus === "Success") {
       toast.success("done !!! ");
     }
     SetppStatus("Null");
@@ -163,9 +173,9 @@ export const PpIf = () => {
         <div className="flex justify-center mt-5">
           <button
             onClick={() => {
-              PpGetRequest((newMessage) => {
+              PpGetRequest((Message) => {
                 // Après que PpGetRequest est terminé, appelez PpIfRequest
-                PpIfRequest(newMessage);
+                PpIfRequest(Message);
               });
             }}
             type="button"

@@ -4,7 +4,6 @@ import { options } from "../../../DB/PP_data";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const Ppset = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const [ppStatus, SetppStatus] = useState(null);
   const [selectedParam, setSelectedParam] = useState("");
@@ -39,7 +38,7 @@ export const Ppset = () => {
   };
 
   useEffect(() => {
-    if (ppStatus == "Success") {
+    if (ppStatus === "Success") {
       toast.success("New Value !!! ");
     }
     SetppStatus("Null");

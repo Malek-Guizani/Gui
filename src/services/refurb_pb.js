@@ -9,7 +9,7 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this; })();
 
 const proto = {};
 proto.grpc = require('./refurb_pb.js');
@@ -86,7 +86,7 @@ proto.grpc.MakePartRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.MakePartRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
     device: jspb.Message.getFieldWithDefault(msg, 2, ""),
     size: jspb.Message.getFieldWithDefault(msg, 3, "")
@@ -107,7 +107,7 @@ proto.grpc.MakePartRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.MakePartRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.MakePartRequest;
+  var msg = new proto.grpc.MakePartRequest();
   return proto.grpc.MakePartRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -124,18 +124,19 @@ proto.grpc.MakePartRequest.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setDevice(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setSize(value);
       break;
     default:
@@ -282,7 +283,7 @@ proto.grpc.MakePartResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.MakePartResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -301,7 +302,7 @@ proto.grpc.MakePartResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.MakePartResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.MakePartResponse;
+  var msg = new proto.grpc.MakePartResponse();
   return proto.grpc.MakePartResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -444,7 +445,7 @@ proto.grpc.WifiNvramUpdateRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.WifiNvramUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.WifiNvramUpdateRequest;
+  var msg = new proto.grpc.WifiNvramUpdateRequest();
   return proto.grpc.WifiNvramUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -461,14 +462,15 @@ proto.grpc.WifiNvramUpdateRequest.deserializeBinaryFromReader = function(msg, re
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setFilesrc(value);
       break;
     case 2:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setFiledst(value);
       break;
@@ -610,7 +612,7 @@ proto.grpc.WifiNvramUpdateResponse.prototype.toObject = function(opt_includeInst
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -629,7 +631,7 @@ proto.grpc.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.WifiNvramUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.WifiNvramUpdateResponse;
+  var msg = new proto.grpc.WifiNvramUpdateResponse();
   return proto.grpc.WifiNvramUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -752,7 +754,7 @@ proto.grpc.SfwUpRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.SfwUpRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     sfwupsectionkind: jspb.Message.getFieldWithDefault(msg, 1, ""),
     payload: jspb.Message.getFieldWithDefault(msg, 2, ""),
     section: jspb.Message.getFieldWithDefault(msg, 3, 0)
@@ -773,7 +775,7 @@ proto.grpc.SfwUpRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.SfwUpRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.SfwUpRequest;
+  var msg = new proto.grpc.SfwUpRequest();
   return proto.grpc.SfwUpRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -790,18 +792,19 @@ proto.grpc.SfwUpRequest.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setSfwupsectionkind(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPayload(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint32());
+      value = /** @type {number} */ (reader.readUint32());
       msg.setSection(value);
       break;
     default:
@@ -948,7 +951,7 @@ proto.grpc.SfwUpResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.SfwUpResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -967,7 +970,7 @@ proto.grpc.SfwUpResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.SfwUpResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.SfwUpResponse;
+  var msg = new proto.grpc.SfwUpResponse();
   return proto.grpc.SfwUpResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1090,7 +1093,7 @@ proto.grpc.FwUpRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.FwUpRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     fwupsection: jspb.Message.getFieldWithDefault(msg, 1, ""),
     payload: jspb.Message.getFieldWithDefault(msg, 2, ""),
     kindEgsdf: jspb.Message.getFieldWithDefault(msg, 3, false)
@@ -1111,7 +1114,7 @@ proto.grpc.FwUpRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.FwUpRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.FwUpRequest;
+  var msg = new proto.grpc.FwUpRequest();
   return proto.grpc.FwUpRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1128,18 +1131,19 @@ proto.grpc.FwUpRequest.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setFwupsection(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPayload(value);
       break;
     case 3:
-      var value = /** @type {boolean} */ (reader.readBool());
+      value = /** @type {boolean} */ (reader.readBool());
       msg.setKindEgsdf(value);
       break;
     default:
@@ -1288,7 +1292,7 @@ proto.grpc.FwUpResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.FwUpResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -1307,7 +1311,7 @@ proto.grpc.FwUpResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.FwUpResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.FwUpResponse;
+  var msg = new proto.grpc.FwUpResponse();
   return proto.grpc.FwUpResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1430,7 +1434,7 @@ proto.grpc.PpSetRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpSetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     param: jspb.Message.getFieldWithDefault(msg, 1, ""),
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -1450,7 +1454,7 @@ proto.grpc.PpSetRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpSetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpSetRequest;
+  var msg = new proto.grpc.PpSetRequest();
   return proto.grpc.PpSetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1467,14 +1471,15 @@ proto.grpc.PpSetRequest.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setParam(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setValue(value);
       break;
     default:
@@ -1599,7 +1604,7 @@ proto.grpc.PpSetResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpSetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -1618,7 +1623,7 @@ proto.grpc.PpSetResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpSetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpSetResponse;
+  var msg = new proto.grpc.PpSetResponse();
   return proto.grpc.PpSetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1741,7 +1746,7 @@ proto.grpc.CmdRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.CmdRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     cmd: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -1760,7 +1765,7 @@ proto.grpc.CmdRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.CmdRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.CmdRequest;
+  var msg = new proto.grpc.CmdRequest();
   return proto.grpc.CmdRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1883,7 +1888,7 @@ proto.grpc.CmdResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.CmdResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, ""),
     message: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -1903,7 +1908,7 @@ proto.grpc.CmdResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.CmdResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.CmdResponse;
+  var msg = new proto.grpc.CmdResponse();
   return proto.grpc.CmdResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1920,14 +1925,15 @@ proto.grpc.CmdResponse.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setStatus(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setMessage(value);
       break;
     default:
@@ -2052,7 +2058,7 @@ proto.grpc.PpGetRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpGetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     param: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -2071,7 +2077,7 @@ proto.grpc.PpGetRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpGetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpGetRequest;
+  var msg = new proto.grpc.PpGetRequest();
   return proto.grpc.PpGetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2194,7 +2200,7 @@ proto.grpc.PpGetResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpGetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, ""),
     message: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -2214,7 +2220,7 @@ proto.grpc.PpGetResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpGetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpGetResponse;
+  var msg = new proto.grpc.PpGetResponse();
   return proto.grpc.PpGetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2231,14 +2237,15 @@ proto.grpc.PpGetResponse.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setStatus(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setMessage(value);
       break;
     default:
@@ -2388,7 +2395,7 @@ proto.grpc.PpIfRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpIfRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpIfRequest;
+  var msg = new proto.grpc.PpIfRequest();
   return proto.grpc.PpIfRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2405,35 +2412,36 @@ proto.grpc.PpIfRequest.deserializeBinaryFromReader = function(msg, reader) {
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setParam1(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setCondition(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setValue1(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setParam2(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setValue2(value);
       break;
     case 6:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setParam3(value);
       break;
     case 7:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setValue3(value);
       break;
@@ -2701,7 +2709,7 @@ proto.grpc.PpIfResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpIfResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -2720,7 +2728,7 @@ proto.grpc.PpIfResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpIfResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpIfResponse;
+  var msg = new proto.grpc.PpIfResponse();
   return proto.grpc.PpIfResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2864,7 +2872,7 @@ proto.grpc.DeletePartRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.DeletePartRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.DeletePartRequest;
+  var msg = new proto.grpc.DeletePartRequest();
   return proto.grpc.DeletePartRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2881,18 +2889,19 @@ proto.grpc.DeletePartRequest.deserializeBinaryFromReader = function(msg, reader)
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
+      value = /** @type {boolean} */ (reader.readBool());
       msg.setRequired(value);
       break;
     case 3:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setUbipart(value);
       break;
@@ -3058,7 +3067,7 @@ proto.grpc.DeletePartResponse.prototype.toObject = function(opt_includeInstance)
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.DeletePartResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3077,7 +3086,7 @@ proto.grpc.DeletePartResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.DeletePartResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.DeletePartResponse;
+  var msg = new proto.grpc.DeletePartResponse();
   return proto.grpc.DeletePartResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3200,7 +3209,7 @@ proto.grpc.UpdatePartRequest.prototype.toObject = function(opt_includeInstance) 
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.UpdatePartRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
     file: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -3220,7 +3229,7 @@ proto.grpc.UpdatePartRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.UpdatePartRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.UpdatePartRequest;
+  var msg = new proto.grpc.UpdatePartRequest();
   return proto.grpc.UpdatePartRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3237,14 +3246,15 @@ proto.grpc.UpdatePartRequest.deserializeBinaryFromReader = function(msg, reader)
     if (reader.isEndGroup()) {
       break;
     }
+    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setFile(value);
       break;
     default:
@@ -3369,7 +3379,7 @@ proto.grpc.UpdatePartResponse.prototype.toObject = function(opt_includeInstance)
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.UpdatePartResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3388,7 +3398,7 @@ proto.grpc.UpdatePartResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.UpdatePartResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.UpdatePartResponse;
+  var msg = new proto.grpc.UpdatePartResponse();
   return proto.grpc.UpdatePartResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3511,7 +3521,7 @@ proto.grpc.BackupPartRequest.prototype.toObject = function(opt_includeInstance) 
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.BackupPartRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3530,7 +3540,7 @@ proto.grpc.BackupPartRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.BackupPartRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.BackupPartRequest;
+  var msg = new proto.grpc.BackupPartRequest();
   return proto.grpc.BackupPartRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3653,7 +3663,7 @@ proto.grpc.BackupPartResponse.prototype.toObject = function(opt_includeInstance)
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.BackupPartResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3672,7 +3682,7 @@ proto.grpc.BackupPartResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.BackupPartResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.BackupPartResponse;
+  var msg = new proto.grpc.BackupPartResponse();
   return proto.grpc.BackupPartResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3795,7 +3805,7 @@ proto.grpc.PpUpdateRequest.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpUpdateRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     file: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3814,7 +3824,7 @@ proto.grpc.PpUpdateRequest.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpUpdateRequest;
+  var msg = new proto.grpc.PpUpdateRequest();
   return proto.grpc.PpUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3937,7 +3947,7 @@ proto.grpc.PpUpdateResponse.prototype.toObject = function(opt_includeInstance) {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.grpc.PpUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     status: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3956,7 +3966,7 @@ proto.grpc.PpUpdateResponse.toObject = function(includeInstance, msg) {
  */
 proto.grpc.PpUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpUpdateResponse;
+  var msg = new proto.grpc.PpUpdateResponse();
   return proto.grpc.PpUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 

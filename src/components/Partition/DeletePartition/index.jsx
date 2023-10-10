@@ -7,7 +7,6 @@ const { client, proto } = require("../../../services/grpcClient");
 export const DeletePartition = () => {
   const [selectedPartition, setSelectedPartition] = useState(null);
   const [status, setStatus] = useState(null);
-  const [selectedFile, setSelectedFile] = useState([]);
   const [isLoaderActive, setLoaderActive] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const handleChange1 = (e) => {
@@ -44,7 +43,7 @@ export const DeletePartition = () => {
     return;
   } */
   useEffect(() => {
-    if (status == "Success") {
+    if (status === "Success") {
       setLoaderActive(false);
       toast.success("deleted completed !!!");
     }

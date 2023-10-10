@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaCopy } from "react-icons/fa";
-
-import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/ReactToastify.min.css";
 
@@ -48,7 +46,7 @@ export const Cmd = () => {
 
   useEffect(() => {
     // Comparer la valeur actuelle de ppStatus avec l'ancienne valeur
-    if (Status == "Success") {
+    if (Status === "Success") {
       setLoaderActive(false);
       toast.success("Command applied !!!"); // Afficher la toast après l'expiration du délai
     }

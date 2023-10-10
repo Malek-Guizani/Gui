@@ -32,7 +32,7 @@ export const PpUpdate = () => {
   };
 
   useEffect(() => {
-    if (Status == "Success") {
+    if (Status === "Success") {
       setLoaderActive(false);
       toast.success("Permanent Parameter Updated !!!");
     }

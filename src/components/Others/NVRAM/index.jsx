@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 const { client, proto } = require("../../../services/grpcClient");
 
 export const NVRAM = () => {
   const [selectedFileSrc, setSelectedFileSrc] = useState([]);
-  const [selectedFileDest, setSelectedFileDst] = useState([]);
-  const [Status, setStatus] = useState(null);
-  const [isLoaderActive, setLoaderActive] = useState(false);
 
   const handleFileChange1 = (event) => {
     setSelectedFileSrc(event.target.files[0]);
   };
-  const handleFileChange2 = (event) => {
-    setSelectedFileDst(event.target.files[0]);
-  };
-
+  
   const WifiNvramUpdateRequest = () => {
     if (!selectedFileSrc?.name) {
       toast.warning(" input is empty");
@@ -25,15 +19,12 @@ export const NVRAM = () => {
     request.setFilesrc(selectedFileSrc?.name);
     request.setFiledst();
 
-    setLoaderActive(true);
     client.wifiNvramUpdate(request, {}, (err, response) => {
       if (err) {
         console.error(err);
-        setLoaderActive(false);
         toast.error("Error !!!"); // Afficher la toast après l'expiration du délai
         return;
       }
-      setStatus(response.getStatus());
     });
   };
   return (
@@ -66,7 +57,6 @@ export const NVRAM = () => {
             id="device"
             className=" sm:w-[50%]  px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
             placeholder="Enter device"
-            onChange={handleFileChange2}
           />
         </div>
         <button

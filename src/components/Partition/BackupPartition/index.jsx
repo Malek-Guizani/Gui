@@ -50,7 +50,7 @@ export const BackupPartition = () => {
   };
 
   useEffect(() => {
-    if (status == "Success") {
+    if (status === "Success") {
       setLoaderActive(false);
       toast.success("Backup completed !!! ");
     }

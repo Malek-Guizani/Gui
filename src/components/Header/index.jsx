@@ -24,12 +24,15 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6">
+      <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6 z-50">
         {}
       </div>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link to="/home/service1/ppGet" className="flex items-center">
+          <Link
+            to="/home/PermanentParameters/ppGet"
+            className="flex items-center"
+          >
             <img src={LogoSagemcom} className="h-8 mr-2" alt="sagem Logo" />
           </Link>
           <div className="flex md:order-2">
@@ -68,7 +71,7 @@ const Header = () => {
             <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <NavLink
-                  to="service1/ppGet"
+                  to="PermanentParameters/ppGet"
                   className={`${
                     (pendingClasses,
                     activeButton === "ppGet" ? " md:text-blue-700" : "")

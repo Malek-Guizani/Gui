@@ -37,7 +37,7 @@ export const SoftwareUpgrade = () => {
   };
 
   useEffect(() => {
-    if (Status == "Success") {
+    if (Status === "Success") {
       setLoaderActive(false);
       toast.success("Software Upgraded !!!");
     }

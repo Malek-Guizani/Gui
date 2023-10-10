@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FaCopy } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import { options } from "../../../DB/PP_data";
@@ -6,7 +6,6 @@ const { client, proto } = require("../../../services/grpcClient");
 
 export const Ppget = () => {
   const [ppMessage, SetppMessage] = useState(null);
-  const [ppStatus, setppStatus] = useState(null);
   const [selectedParam, setSelectedParam] = useState("");
 
   const handleChange = (e) => {
@@ -31,7 +30,6 @@ export const Ppget = () => {
       }
 
       SetppMessage(response.getMessage());
-      setppStatus(response.getStatus());
     });
   };
 
@@ -66,7 +64,7 @@ export const Ppget = () => {
           <div className="bg-white ">
             <h1 className="text-xl mb-2">Result :</h1>
             <div className="flex flex-row   gap-1">
-              <div className="bg-gray-200 w-[90%] md:max-w-max rounded-md p-4 overflow-auto">
+              <div className="bg-gray-200 w-[90%] md:max-w-md rounded-md p-4 overflow-auto">
                 {ppMessage}
               </div>
               <button

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { MSuccess } from "shared/MSuccess";
-import { Loader } from "shared/Loader";
 import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../services/grpcClient");
 
@@ -9,7 +7,6 @@ export const MakePartition = () => {
   const [selectedDevice, setSelectedDevice] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
   const [status, setStatus] = useState(null);
-  const [isLoaderActive, setLoaderActive] = useState(false);
 
   const handleChange1 = (e) => {
     setSelectedPartition(e.target.value);
@@ -30,11 +27,9 @@ export const MakePartition = () => {
     request.setDevice(selectedDevice);
     request.setSize(selectedSize + selectedOption);
 
-    setLoaderActive(true);
     client.makePart(request, {}, (err, response) => {
       if (err) {
         console.error(err);
-        setLoaderActive(false);
         toast.error("Error !!!");
         return;
       }
@@ -43,8 +38,7 @@ export const MakePartition = () => {
     });
   };
   useEffect(() => {
-    if (status == "Success") {
-      setLoaderActive(false);
+    if (status === "Success") {
       toast.success("Maked !!!");
     }
     setStatus("Null");

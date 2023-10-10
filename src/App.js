@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "App.css";
 import Home from "components/Home";
-import Not_found from "components/Not_found";
-import { Service1 } from "components/PermanentParameters";
+import NotFound from "components/NotFound";
+import { PermanentParameters } from "components/PermanentParameters";
 import { Cmd } from "components/Others/Cmd";
 import { Ppget } from "components/PermanentParameters/Ppget";
 import { Ppset } from "components/PermanentParameters/Ppset";
@@ -14,13 +13,11 @@ import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
 import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
 import { StartPage } from "components/StartPage";
-import { Loader } from "shared/Loader";
 import { Partition } from "components/Partition";
 import { PpUpdate } from "components/PermanentParameters/ppUpdate";
 import { MakePartition } from "components/Partition/MakePartition";
 import { UpdatePartition } from "components/Partition/UpdatePartition";
 import "react-toastify/dist/ReactToastify.min.css";
-import { MSuccess } from "shared/MSuccess";
 import { DeletePartition } from "components/Partition/DeletePartition";
 import { PpIf } from "components/PermanentParameters/PpIf";
 import { NVRAM } from "components/Others/NVRAM";
@@ -31,7 +28,7 @@ function App() {
       <div className="w-full font-PtSans flex items-start justify-center h-screen">
         <Routes>
           <Route path="/home" element={<Home />}>
-            <Route path="service1" element={<Service1 />}>
+            <Route path="PermanentParameters" element={<PermanentParameters />}>
               <Route path="ppGet" element={<Ppget />} />
               <Route path="ppSet" element={<Ppset />} />
               <Route path="ppUpdate" element={<PpUpdate />} />
@@ -52,9 +49,8 @@ function App() {
               <Route path="DeletePartition" element={<DeletePartition />} />
             </Route>
           </Route>
-          <Route path="*" element={<Not_found />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<StartPage />} />
-          <Route path="/model" element={<MSuccess />} />
         </Routes>
       </div>
     </BrowserRouter>

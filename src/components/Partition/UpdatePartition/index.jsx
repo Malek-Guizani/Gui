@@ -40,7 +40,7 @@ export const UpdatePartition = () => {
   };
 
   useEffect(() => {
-    if (status == "Success") {
+    if (status === "Success") {
       setLoaderActive(false);
       toast.success("update completed !!!");
     }

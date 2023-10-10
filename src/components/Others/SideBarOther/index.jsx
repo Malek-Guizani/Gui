@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const SidebarData = ({ toggle, service }) => {
   //const [activeButton, setActiveButton] = useState("cmd");
