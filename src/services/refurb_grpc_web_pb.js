@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for grpc
+ * @fileoverview gRPC-Web generated client stub for scos_refurb.v1
  * @enhanceable
  * @public
  */
@@ -10,15 +10,20 @@
 // 	protoc              v3.6.1
 // source: refurb.proto
 
+
 /* eslint-disable */
 // @ts-nocheck
 
+
+
 const grpc = {};
-grpc.web = require("grpc-web");
+grpc.web = require('grpc-web');
 
-var google_protobuf_wrappers_pb = require("google-protobuf/google/protobuf/wrappers_pb.js");
+
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 const proto = {};
-proto.grpc = require("./refurb_pb.js");
+proto.scos_refurb = {};
+proto.scos_refurb.v1 = require('./refurb_pb.js');
 
 /**
  * @param {string} hostname
@@ -28,9 +33,10 @@ proto.grpc = require("./refurb_pb.js");
  * @struct
  * @final
  */
-proto.grpc.refurbClient = function (hostname, credentials, options) {
+proto.scos_refurb.v1.RefurbishingClient =
+    function(hostname, credentials, options) {
   if (!options) options = {};
-  options.format = "binary";
+  options.format = 'binary';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -40,8 +46,10 @@ proto.grpc.refurbClient = function (hostname, credentials, options) {
   /**
    * @private @const {string} The hostname
    */
-  this.hostname_ = hostname.replace(/\/+$/, "");
+  this.hostname_ = hostname.replace(/\/+$/, '');
+
 };
+
 
 /**
  * @param {string} hostname
@@ -51,9 +59,10 @@ proto.grpc.refurbClient = function (hostname, credentials, options) {
  * @struct
  * @final
  */
-proto.grpc.refurbPromiseClient = function (hostname, credentials, options) {
+proto.scos_refurb.v1.RefurbishingPromiseClient =
+    function(hostname, credentials, options) {
   if (!options) options = {};
-  options.format = "binary";
+  options.format = 'binary';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -63,765 +72,1169 @@ proto.grpc.refurbPromiseClient = function (hostname, credentials, options) {
   /**
    * @private @const {string} The hostname
    */
-  this.hostname_ = hostname.replace(/\/+$/, "");
+  this.hostname_ = hostname.replace(/\/+$/, '');
+
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.SfwUpRequest,
- *   !proto.grpc.SfwUpResponse>}
+ *   !proto.scos_refurb.v1.BoardInspectRequest,
+ *   !proto.scos_refurb.v1.BoardInspectResponse>}
  */
-const methodDescriptor_refurb_SfwUp = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/SfwUp",
+const methodDescriptor_Refurbishing_BoardInspect = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/BoardInspect',
   grpc.web.MethodType.UNARY,
-  proto.grpc.SfwUpRequest,
-  proto.grpc.SfwUpResponse,
+  proto.scos_refurb.v1.BoardInspectRequest,
+  proto.scos_refurb.v1.BoardInspectResponse,
   /**
-   * @param {!proto.grpc.SfwUpRequest} request
+   * @param {!proto.scos_refurb.v1.BoardInspectRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.SfwUpResponse.deserializeBinary
+  proto.scos_refurb.v1.BoardInspectResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.SfwUpRequest} request The
+ * @param {!proto.scos_refurb.v1.BoardInspectRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.SfwUpResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.BoardInspectResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.SfwUpResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.BoardInspectResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.sfwUp = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/SfwUp",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_SfwUp,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.boardInspect =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/BoardInspect',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_BoardInspect,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.SfwUpRequest} request The
+ * @param {!proto.scos_refurb.v1.BoardInspectRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.SfwUpResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.BoardInspectResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.sfwUp = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/SfwUp",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_SfwUp
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.boardInspect =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/BoardInspect',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_BoardInspect);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.FwUpRequest,
- *   !proto.grpc.FwUpResponse>}
+ *   !proto.scos_refurb.v1.BoardVersionsRequest,
+ *   !proto.scos_refurb.v1.BoardVersionsResponse>}
  */
-const methodDescriptor_refurb_FwUp = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/FwUp",
+const methodDescriptor_Refurbishing_BoardVersions = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/BoardVersions',
   grpc.web.MethodType.UNARY,
-  proto.grpc.FwUpRequest,
-  proto.grpc.FwUpResponse,
+  proto.scos_refurb.v1.BoardVersionsRequest,
+  proto.scos_refurb.v1.BoardVersionsResponse,
   /**
-   * @param {!proto.grpc.FwUpRequest} request
+   * @param {!proto.scos_refurb.v1.BoardVersionsRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.FwUpResponse.deserializeBinary
+  proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.FwUpRequest} request The
+ * @param {!proto.scos_refurb.v1.BoardVersionsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.FwUpResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.BoardVersionsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.FwUpResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.BoardVersionsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.fwUp = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/FwUp",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_FwUp,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.boardVersions =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/BoardVersions',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_BoardVersions,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.FwUpRequest} request The
+ * @param {!proto.scos_refurb.v1.BoardVersionsRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.FwUpResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.BoardVersionsResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.fwUp = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/FwUp",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_FwUp
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.boardVersions =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/BoardVersions',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_BoardVersions);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.CmdRequest,
- *   !proto.grpc.CmdResponse>}
+ *   !proto.scos_refurb.v1.DepotGetRequest,
+ *   !proto.scos_refurb.v1.DepotGetResponse>}
  */
-const methodDescriptor_refurb_Cmd = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/Cmd",
+const methodDescriptor_Refurbishing_DepotGet = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/DepotGet',
   grpc.web.MethodType.UNARY,
-  proto.grpc.CmdRequest,
-  proto.grpc.CmdResponse,
+  proto.scos_refurb.v1.DepotGetRequest,
+  proto.scos_refurb.v1.DepotGetResponse,
   /**
-   * @param {!proto.grpc.CmdRequest} request
+   * @param {!proto.scos_refurb.v1.DepotGetRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.CmdResponse.deserializeBinary
+  proto.scos_refurb.v1.DepotGetResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.CmdRequest} request The
+ * @param {!proto.scos_refurb.v1.DepotGetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.CmdResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.DepotGetResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.CmdResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.DepotGetResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.cmd = function (request, metadata, callback) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/Cmd",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_Cmd,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.depotGet =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/DepotGet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_DepotGet,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.CmdRequest} request The
+ * @param {!proto.scos_refurb.v1.DepotGetRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.CmdResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.DepotGetResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.cmd = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/Cmd",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_Cmd
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.depotGet =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/DepotGet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_DepotGet);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.PpGetRequest,
- *   !proto.grpc.PpGetResponse>}
+ *   !proto.scos_refurb.v1.DryRunEnableRequest,
+ *   !proto.scos_refurb.v1.DryRunEnableResponse>}
  */
-const methodDescriptor_refurb_PpGet = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/PpGet",
+const methodDescriptor_Refurbishing_DryRunEnable = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/DryRunEnable',
   grpc.web.MethodType.UNARY,
-  proto.grpc.PpGetRequest,
-  proto.grpc.PpGetResponse,
+  proto.scos_refurb.v1.DryRunEnableRequest,
+  proto.scos_refurb.v1.DryRunEnableResponse,
   /**
-   * @param {!proto.grpc.PpGetRequest} request
+   * @param {!proto.scos_refurb.v1.DryRunEnableRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.PpGetResponse.deserializeBinary
+  proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.PpGetRequest} request The
+ * @param {!proto.scos_refurb.v1.DryRunEnableRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.PpGetResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.DryRunEnableResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.PpGetResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.DryRunEnableResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.ppGet = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/PpGet",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpGet,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.dryRunEnable =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/DryRunEnable',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_DryRunEnable,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.PpGetRequest} request The
+ * @param {!proto.scos_refurb.v1.DryRunEnableRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.PpGetResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.DryRunEnableResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.ppGet = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/PpGet",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpGet
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.dryRunEnable =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/DryRunEnable',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_DryRunEnable);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.PpSetRequest,
- *   !proto.grpc.PpSetResponse>}
+ *   !proto.scos_refurb.v1.FwUpdateRequest,
+ *   !proto.scos_refurb.v1.FwUpdateResponse>}
  */
-const methodDescriptor_refurb_PpSet = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/PpSet",
+const methodDescriptor_Refurbishing_FwUpdate = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/FwUpdate',
   grpc.web.MethodType.UNARY,
-  proto.grpc.PpSetRequest,
-  proto.grpc.PpSetResponse,
+  proto.scos_refurb.v1.FwUpdateRequest,
+  proto.scos_refurb.v1.FwUpdateResponse,
   /**
-   * @param {!proto.grpc.PpSetRequest} request
+   * @param {!proto.scos_refurb.v1.FwUpdateRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.PpSetResponse.deserializeBinary
+  proto.scos_refurb.v1.FwUpdateResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.PpSetRequest} request The
+ * @param {!proto.scos_refurb.v1.FwUpdateRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.PpSetResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.FwUpdateResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.PpSetResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.FwUpdateResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.ppSet = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/PpSet",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpSet,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.fwUpdate =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/FwUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_FwUpdate,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.PpSetRequest} request The
+ * @param {!proto.scos_refurb.v1.FwUpdateRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.PpSetResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.FwUpdateResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.ppSet = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/PpSet",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpSet
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.fwUpdate =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/FwUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_FwUpdate);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.PpIfRequest,
- *   !proto.grpc.PpIfResponse>}
+ *   !proto.scos_refurb.v1.PartBackupRequest,
+ *   !proto.scos_refurb.v1.PartBackupResponse>}
  */
-const methodDescriptor_refurb_PpIf = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/PpIf",
+const methodDescriptor_Refurbishing_PartBackup = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PartBackup',
   grpc.web.MethodType.UNARY,
-  proto.grpc.PpIfRequest,
-  proto.grpc.PpIfResponse,
+  proto.scos_refurb.v1.PartBackupRequest,
+  proto.scos_refurb.v1.PartBackupResponse,
   /**
-   * @param {!proto.grpc.PpIfRequest} request
+   * @param {!proto.scos_refurb.v1.PartBackupRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.PpIfResponse.deserializeBinary
+  proto.scos_refurb.v1.PartBackupResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.PpIfRequest} request The
+ * @param {!proto.scos_refurb.v1.PartBackupRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.PpIfResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PartBackupResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.PpIfResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PartBackupResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.ppIf = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/PpIf",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpIf,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.partBackup =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartBackup',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartBackup,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.PpIfRequest} request The
+ * @param {!proto.scos_refurb.v1.PartBackupRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.PpIfResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PartBackupResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.ppIf = function (request, metadata) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/PpIf",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpIf
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.partBackup =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartBackup',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartBackup);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.PpUpdateRequest,
- *   !proto.grpc.PpUpdateResponse>}
+ *   !proto.scos_refurb.v1.PartDeleteRequest,
+ *   !proto.scos_refurb.v1.PartDeleteResponse>}
  */
-const methodDescriptor_refurb_PpUpdate = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/PpUpdate",
+const methodDescriptor_Refurbishing_PartDelete = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PartDelete',
   grpc.web.MethodType.UNARY,
-  proto.grpc.PpUpdateRequest,
-  proto.grpc.PpUpdateResponse,
+  proto.scos_refurb.v1.PartDeleteRequest,
+  proto.scos_refurb.v1.PartDeleteResponse,
   /**
-   * @param {!proto.grpc.PpUpdateRequest} request
+   * @param {!proto.scos_refurb.v1.PartDeleteRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.PpUpdateResponse.deserializeBinary
+  proto.scos_refurb.v1.PartDeleteResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.PpUpdateRequest} request The
+ * @param {!proto.scos_refurb.v1.PartDeleteRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.PpUpdateResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PartDeleteResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.PpUpdateResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PartDeleteResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.ppUpdate = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/PpUpdate",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpUpdate,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.partDelete =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartDelete',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartDelete,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.PpUpdateRequest} request The
+ * @param {!proto.scos_refurb.v1.PartDeleteRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.PpUpdateResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PartDeleteResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.ppUpdate = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/PpUpdate",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_PpUpdate
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.partDelete =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartDelete',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartDelete);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.BackupPartRequest,
- *   !proto.grpc.BackupPartResponse>}
+ *   !proto.scos_refurb.v1.PartMakeRequest,
+ *   !proto.scos_refurb.v1.PartMakeResponse>}
  */
-const methodDescriptor_refurb_BackupPart = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/BackupPart",
+const methodDescriptor_Refurbishing_PartMake = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PartMake',
   grpc.web.MethodType.UNARY,
-  proto.grpc.BackupPartRequest,
-  proto.grpc.BackupPartResponse,
+  proto.scos_refurb.v1.PartMakeRequest,
+  proto.scos_refurb.v1.PartMakeResponse,
   /**
-   * @param {!proto.grpc.BackupPartRequest} request
+   * @param {!proto.scos_refurb.v1.PartMakeRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.BackupPartResponse.deserializeBinary
+  proto.scos_refurb.v1.PartMakeResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.BackupPartRequest} request The
+ * @param {!proto.scos_refurb.v1.PartMakeRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.BackupPartResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PartMakeResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.BackupPartResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PartMakeResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.backupPart = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/BackupPart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_BackupPart,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.partMake =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartMake',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartMake,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.BackupPartRequest} request The
+ * @param {!proto.scos_refurb.v1.PartMakeRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.BackupPartResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PartMakeResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.backupPart = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/BackupPart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_BackupPart
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.partMake =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartMake',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartMake);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.UpdatePartRequest,
- *   !proto.grpc.UpdatePartResponse>}
+ *   !proto.scos_refurb.v1.PartUpdateRequest,
+ *   !proto.scos_refurb.v1.PartUpdateResponse>}
  */
-const methodDescriptor_refurb_UpdatePart = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/UpdatePart",
+const methodDescriptor_Refurbishing_PartUpdate = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PartUpdate',
   grpc.web.MethodType.UNARY,
-  proto.grpc.UpdatePartRequest,
-  proto.grpc.UpdatePartResponse,
+  proto.scos_refurb.v1.PartUpdateRequest,
+  proto.scos_refurb.v1.PartUpdateResponse,
   /**
-   * @param {!proto.grpc.UpdatePartRequest} request
+   * @param {!proto.scos_refurb.v1.PartUpdateRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.UpdatePartResponse.deserializeBinary
+  proto.scos_refurb.v1.PartUpdateResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.UpdatePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PartUpdateRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.UpdatePartResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PartUpdateResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.UpdatePartResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PartUpdateResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.updatePart = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/UpdatePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_UpdatePart,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.partUpdate =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartUpdate,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.UpdatePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PartUpdateRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.UpdatePartResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PartUpdateResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.updatePart = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/UpdatePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_UpdatePart
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.partUpdate =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PartUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PartUpdate);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.DeletePartRequest,
- *   !proto.grpc.DeletePartResponse>}
+ *   !proto.scos_refurb.v1.PpGetRequest,
+ *   !proto.scos_refurb.v1.PpGetResponse>}
  */
-const methodDescriptor_refurb_DeletePart = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/DeletePart",
+const methodDescriptor_Refurbishing_PpGet = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpGet',
   grpc.web.MethodType.UNARY,
-  proto.grpc.DeletePartRequest,
-  proto.grpc.DeletePartResponse,
+  proto.scos_refurb.v1.PpGetRequest,
+  proto.scos_refurb.v1.PpGetResponse,
   /**
-   * @param {!proto.grpc.DeletePartRequest} request
+   * @param {!proto.scos_refurb.v1.PpGetRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.DeletePartResponse.deserializeBinary
+  proto.scos_refurb.v1.PpGetResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.DeletePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PpGetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.DeletePartResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpGetResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.DeletePartResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpGetResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.deletePart = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/DeletePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_DeletePart,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppGet =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpGet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpGet,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.DeletePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PpGetRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.DeletePartResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PpGetResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.deletePart = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/DeletePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_DeletePart
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppGet =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpGet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpGet);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.MakePartRequest,
- *   !proto.grpc.MakePartResponse>}
+ *   !proto.scos_refurb.v1.PpIfRequest,
+ *   !proto.scos_refurb.v1.PpIfResponse>}
  */
-const methodDescriptor_refurb_MakePart = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/MakePart",
+const methodDescriptor_Refurbishing_PpIf = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpIf',
   grpc.web.MethodType.UNARY,
-  proto.grpc.MakePartRequest,
-  proto.grpc.MakePartResponse,
+  proto.scos_refurb.v1.PpIfRequest,
+  proto.scos_refurb.v1.PpIfResponse,
   /**
-   * @param {!proto.grpc.MakePartRequest} request
+   * @param {!proto.scos_refurb.v1.PpIfRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.MakePartResponse.deserializeBinary
+  proto.scos_refurb.v1.PpIfResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.MakePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PpIfRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.MakePartResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpIfResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.MakePartResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpIfResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.makePart = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/MakePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_MakePart,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppIf =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpIf',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpIf,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.MakePartRequest} request The
+ * @param {!proto.scos_refurb.v1.PpIfRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.MakePartResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PpIfResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.makePart = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/MakePart",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_MakePart
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppIf =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpIf',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpIf);
 };
+
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.grpc.WifiNvramUpdateRequest,
- *   !proto.grpc.WifiNvramUpdateResponse>}
+ *   !proto.scos_refurb.v1.PpListRequest,
+ *   !proto.scos_refurb.v1.PpListResponse>}
  */
-const methodDescriptor_refurb_WifiNvramUpdate = new grpc.web.MethodDescriptor(
-  "/grpc.refurb/WifiNvramUpdate",
+const methodDescriptor_Refurbishing_PpList = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpList',
   grpc.web.MethodType.UNARY,
-  proto.grpc.WifiNvramUpdateRequest,
-  proto.grpc.WifiNvramUpdateResponse,
+  proto.scos_refurb.v1.PpListRequest,
+  proto.scos_refurb.v1.PpListResponse,
   /**
-   * @param {!proto.grpc.WifiNvramUpdateRequest} request
+   * @param {!proto.scos_refurb.v1.PpListRequest} request
    * @return {!Uint8Array}
    */
-  function (request) {
+  function(request) {
     return request.serializeBinary();
   },
-  proto.grpc.WifiNvramUpdateResponse.deserializeBinary
+  proto.scos_refurb.v1.PpListResponse.deserializeBinary
 );
 
+
 /**
- * @param {!proto.grpc.WifiNvramUpdateRequest} request The
+ * @param {!proto.scos_refurb.v1.PpListRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.RpcError, ?proto.grpc.WifiNvramUpdateResponse)}
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpListResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.grpc.WifiNvramUpdateResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpListResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.grpc.refurbClient.prototype.wifiNvramUpdate = function (
-  request,
-  metadata,
-  callback
-) {
-  return this.client_.rpcCall(
-    this.hostname_ + "/grpc.refurb/WifiNvramUpdate",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_WifiNvramUpdate,
-    callback
-  );
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppList =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpList',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpList,
+      callback);
 };
 
+
 /**
- * @param {!proto.grpc.WifiNvramUpdateRequest} request The
+ * @param {!proto.scos_refurb.v1.PpListRequest} request The
  *     request proto
  * @param {?Object<string, string>=} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.grpc.WifiNvramUpdateResponse>}
+ * @return {!Promise<!proto.scos_refurb.v1.PpListResponse>}
  *     Promise that resolves to the response
  */
-proto.grpc.refurbPromiseClient.prototype.wifiNvramUpdate = function (
-  request,
-  metadata
-) {
-  return this.client_.unaryCall(
-    this.hostname_ + "/grpc.refurb/WifiNvramUpdate",
-    request,
-    metadata || {},
-    methodDescriptor_refurb_WifiNvramUpdate
-  );
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppList =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpList',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpList);
 };
 
-module.exports = proto.grpc;
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.PpSetRequest,
+ *   !proto.scos_refurb.v1.PpSetResponse>}
+ */
+const methodDescriptor_Refurbishing_PpSet = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpSet',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.PpSetRequest,
+  proto.scos_refurb.v1.PpSetResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.PpSetRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.PpSetResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpSetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpSetResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpSetResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppSet =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpSet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpSet,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpSetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.PpSetResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppSet =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpSet',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpSet);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.PpSwapRequest,
+ *   !proto.scos_refurb.v1.PpSwapResponse>}
+ */
+const methodDescriptor_Refurbishing_PpSwap = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpSwap',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.PpSwapRequest,
+  proto.scos_refurb.v1.PpSwapResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.PpSwapRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.PpSwapResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpSwapRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpSwapResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpSwapResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppSwap =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpSwap',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpSwap,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpSwapRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.PpSwapResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppSwap =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpSwap',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpSwap);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.PpUpdateRequest,
+ *   !proto.scos_refurb.v1.PpUpdateResponse>}
+ */
+const methodDescriptor_Refurbishing_PpUpdate = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/PpUpdate',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.PpUpdateRequest,
+  proto.scos_refurb.v1.PpUpdateResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.PpUpdateRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.PpUpdateResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpUpdateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.PpUpdateResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.PpUpdateResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.ppUpdate =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpUpdate,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.PpUpdateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.PpUpdateResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.ppUpdate =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/PpUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_PpUpdate);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.SboxApplyRequest,
+ *   !proto.scos_refurb.v1.SboxApplyResponse>}
+ */
+const methodDescriptor_Refurbishing_SboxApply = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/SboxApply',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.SboxApplyRequest,
+  proto.scos_refurb.v1.SboxApplyResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.SboxApplyRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.SboxApplyResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SboxApplyRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.SboxApplyResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.SboxApplyResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.sboxApply =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SboxApply',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SboxApply,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SboxApplyRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.SboxApplyResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.sboxApply =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SboxApply',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SboxApply);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.SysExecRequest,
+ *   !proto.scos_refurb.v1.SysExecResponse>}
+ */
+const methodDescriptor_Refurbishing_SysExec = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/SysExec',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.SysExecRequest,
+  proto.scos_refurb.v1.SysExecResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.SysExecRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.SysExecResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SysExecRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.SysExecResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.SysExecResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.sysExec =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SysExec',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SysExec,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SysExecRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.SysExecResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.sysExec =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SysExec',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SysExec);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.SysRebootRequest,
+ *   !proto.scos_refurb.v1.SysRebootResponse>}
+ */
+const methodDescriptor_Refurbishing_SysReboot = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/SysReboot',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.SysRebootRequest,
+  proto.scos_refurb.v1.SysRebootResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.SysRebootRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.SysRebootResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SysRebootRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.SysRebootResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.SysRebootResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.sysReboot =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SysReboot',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SysReboot,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.SysRebootRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.SysRebootResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.sysReboot =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/SysReboot',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_SysReboot);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.scos_refurb.v1.WifiNvramUpdateRequest,
+ *   !proto.scos_refurb.v1.WifiNvramUpdateResponse>}
+ */
+const methodDescriptor_Refurbishing_WifiNvramUpdate = new grpc.web.MethodDescriptor(
+  '/scos_refurb.v1.Refurbishing/WifiNvramUpdate',
+  grpc.web.MethodType.UNARY,
+  proto.scos_refurb.v1.WifiNvramUpdateRequest,
+  proto.scos_refurb.v1.WifiNvramUpdateResponse,
+  /**
+   * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.scos_refurb.v1.WifiNvramUpdateResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.scos_refurb.v1.WifiNvramUpdateResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.scos_refurb.v1.RefurbishingClient.prototype.wifiNvramUpdate =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/WifiNvramUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_WifiNvramUpdate,
+      callback);
+};
+
+
+/**
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.scos_refurb.v1.WifiNvramUpdateResponse>}
+ *     Promise that resolves to the response
+ */
+proto.scos_refurb.v1.RefurbishingPromiseClient.prototype.wifiNvramUpdate =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/scos_refurb.v1.Refurbishing/WifiNvramUpdate',
+      request,
+      metadata || {},
+      methodDescriptor_Refurbishing_WifiNvramUpdate);
+};
+
+
+module.exports = proto.scos_refurb.v1;
+

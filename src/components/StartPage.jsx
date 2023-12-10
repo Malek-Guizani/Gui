@@ -4,14 +4,14 @@ import { Button } from "@material-tailwind/react";
 import LogoSagemcom from "../Assets/Logo/logo-sagemcom-new-charte-header.png";
 
 export const StartPage = () => {
-//ToDo  
+//ToDo
 /*   const [isLinkActive, setIsLinkActive] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLinkActive(true);
     }, 2000);
- 
+
     return () => clearTimeout(timeout);
   }, []);
 */

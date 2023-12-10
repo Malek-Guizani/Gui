@@ -13,6 +13,7 @@ import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
 import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
 import { StartPage } from "components/StartPage";
+//import { Loader } from "shared/Loader";
 import { Partition } from "components/Partition";
 import { PpUpdate } from "components/PermanentParameters/ppUpdate";
 import { MakePartition } from "components/Partition/MakePartition";

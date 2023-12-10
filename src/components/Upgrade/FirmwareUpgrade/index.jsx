@@ -10,18 +10,19 @@ export const FirmwareUpgrade = () => {
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
-  const SfwUpRequest = () => {
+  const FwUpdateRequest = () => {
     if (!selectedFile?.name || !selectedOption) {
       toast.warning(" input is empty");
       return;
     }
-    const request = new proto.grpc.SfwUpRequest();
-    request.setSfwupsectionkind(selectedOption);
-    request.setPayload(selectedFile?.name);
-    request.setSection(1);
-
+    const request = new proto.grpc.FwUpdateRequest();
+    request.setComponent(selectedOption+"@1");
+    request.setUrl("depot:"+selectedFile?.name);
+    //request.setSection(1);
+    console.log(request);
     setLoaderActive(true);
-    client.sfwUp(request, {}, (err, response) => {
+    client.fwUpdate(request, {}, (err, response) => {
+      console.log(request);
       if (err) {
         console.error(err);
         setLoaderActive(false);
@@ -29,7 +30,7 @@ export const FirmwareUpgrade = () => {
         return;
       }
 
-      setStatus(response.getStatus());
+      //setStatus(response.getStatus());
     });
   };
 
@@ -47,10 +48,18 @@ export const FirmwareUpgrade = () => {
   };
   const options = [
     { value: "", label: "Select an Option" },
-    { value: "Operational", label: " Operational" },
-    { value: "Rescue", label: "Rescue" },
+    { value: "pkgtb", label: " pkgtb" },
+    { value: "gsdf", label: "gsdf" },
+    { value: "brcm", label: "brcm" },
+    { value: "ipl", label: "ipl" },
+    { value: "modulexfw", label: "modulexfw" },
+    { value: "nvram", label: "nvram" },
+    { value: "pp", label: "pp" },
+    { value: "spl", label: "spl" },
+    { value: "system", label: "system" },
+    { value: "tee", label: "tee" },
+    { value: "tpl", label: "tpl" },
   ];
-
   return (
     <React.Fragment>
       {isLoaderActive && (
@@ -97,7 +106,7 @@ export const FirmwareUpgrade = () => {
           <button
             type="button"
             onClick={() => {
-              SfwUpRequest();
+              FwUpdateRequest();
             }}
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >

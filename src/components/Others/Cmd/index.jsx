@@ -6,7 +6,7 @@ import "react-toastify/ReactToastify.min.css";
 import { Loader } from "shared/Loader";
 const proto = {};
 proto.grpc = require("../../../services/refurb_grpc_web_pb");
-const client = new proto.grpc.refurbClient(
+const client = new proto.grpc.RefurbishingClient(
   "http://192.168.1.5:8000",
   null,
   null
@@ -28,10 +28,10 @@ export const Cmd = () => {
       return;
     }
 
-    const request = new proto.grpc.CmdRequest();
-    request.setCmd(selectedText);
+    const request = new proto.grpc.SysExecRequest();
+    request.setCommand(selectedText);
     setLoaderActive(true);
-    client.cmd(request, {}, (err, response) => {
+    client.sysExec(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
@@ -39,8 +39,8 @@ export const Cmd = () => {
         return;
       }
 
-      SetppMessage(response.getMessage());
-      setStatus(response.getStatus());
+      SetppMessage(response.getOutput());
+      setStatus("Success");
     });
   };
 

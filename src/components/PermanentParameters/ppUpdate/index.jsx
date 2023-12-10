@@ -27,17 +27,18 @@ export const PpUpdate = () => {
         return;
       }
 
-      setStatus(response.getStatus());
+      toast.success("Permanent Parameter Updated !!!");
+      setLoaderActive(false);
     });
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (Status === "Success") {
       setLoaderActive(false);
       toast.success("Permanent Parameter Updated !!!");
     }
     setStatus("Null");
-  }, [Status]);
+  }, [Status]); */
 
   return (
     <React.Fragment>

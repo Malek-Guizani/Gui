@@ -16,7 +16,7 @@ const NotFound = () => {
 
           <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
             <Link
-              to="/home/PermanentParameters/ppGet"
+              to="/home/PermanentParameters"
               className="bg-info  mb-2 flex mx-auto	hover:bg-Primary text-white font-bold py-3 px-10 rounded-md text-xs max-w-max"
             >
               Go Home

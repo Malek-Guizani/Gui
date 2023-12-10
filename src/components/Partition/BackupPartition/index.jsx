@@ -19,25 +19,25 @@ export const BackupPartition = () => {
       toast.warning(" input is empty");
       return;
     }
-    const request = new proto.grpc.BackupPartRequest();
+    const request = new proto.grpc.PartBackupRequest();
     request.setPartition(selectedText);
     setLoaderActive(true);
-    client.backupPart(request, {}, (err, response) => {
+    client.partBackup(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
         toast.error("Error !!!");
         return;
       }
-
-      setStatus(response.getStatus());
+      toast.success("Backup completed !!! ");
+      setLoaderActive(false);
     });
   };
 
   //Pour récupérer la valeur de serial number
   const PpGetRequest = () => {  
     const request = new proto.grpc.PpGetRequest();
-    request.setParam("SERIAL_NUMBER");
+    request.setName("SERIAL_NUMBER");
 
     client.ppGet(request, {}, (err, response) => {
       if (err) {
@@ -45,17 +45,18 @@ export const BackupPartition = () => {
         return;
       }
 
-      SetppMessage(response.getMessage());
+      SetppMessage(response.getValue());
+
     });
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (status === "Success") {
       setLoaderActive(false);
       toast.success("Backup completed !!! ");
     }
     setStatus("Null");
-  }, [status]);
+  }, [status]); */
 
   return (
     <div>

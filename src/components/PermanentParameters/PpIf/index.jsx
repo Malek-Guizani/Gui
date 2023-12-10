@@ -21,7 +21,7 @@ export const PpIf = () => {
       return;
     }
     const request = new proto.grpc.PpGetRequest();
-    request.setParam(selectedParam1);
+    request.setName(selectedParam1);
 
     client.ppGet(request, {}, (err, response) => {
       if (err) {
@@ -29,7 +29,7 @@ export const PpIf = () => {
         return;
       }
 
-      const Message = response.getMessage();
+      const Message = response.getValue();
       callback(Message);
     });
   };
@@ -45,7 +45,7 @@ export const PpIf = () => {
       toast.warning("Select an Option");
       return;
     }
-    
+
     let condition;
     switch (selectedCondition) {
       case "==":
@@ -61,21 +61,21 @@ export const PpIf = () => {
 
     if (condition) {
       const request = new proto.grpc.PpIfRequest();
-      request.setParam1(selectedParam1);
-      request.setCondition(selectedCondition);
-      request.setValue1(selectedValue1);
-      request.setParam2(selectedParam2);
-      request.setValue2(selectedValue2);
-      request.setParam3();
-      request.setValue3();
+      request.setTestName(selectedParam1);
+      request.setTestOp(selectedCondition);
+      request.setTestValue(selectedValue1);
+      request.setBodyName(selectedParam2);
+      request.setBodyValue(selectedValue2);
+      request.setAltName();
+      request.setAltValue();
       client.ppIf(request, {}, (err, response) => {
         if (err) {
           console.error(err);
           //setLoaderActive(false);
           toast.error("Error !!!");
-        } else {
-          SetppStatus(response.getStatus());
+          return;
         }
+        toast.success("done !!! ");
       });
     } else {
       toast.warning("Wrong Condition");

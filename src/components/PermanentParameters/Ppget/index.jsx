@@ -19,7 +19,7 @@ export const Ppget = () => {
     }
 
     const request = new proto.grpc.PpGetRequest();
-    request.setParam(selectedParam);
+    request.setName(selectedParam);
 
     client.ppGet(request, {}, (err, response) => {
       if (err) {
@@ -29,7 +29,7 @@ export const Ppget = () => {
         return;
       }
 
-      SetppMessage(response.getMessage());
+      SetppMessage(response.getValue());
     });
   };
 

@@ -23,7 +23,7 @@ export const Ppset = () => {
       return;
     }
     const request = new proto.grpc.PpSetRequest();
-    request.setParam(selectedParam);
+    request.setName(selectedParam);
     request.setValue(selectedValue);
 
     client.ppSet(request, {}, (err, response) => {
@@ -33,17 +33,18 @@ export const Ppset = () => {
         toast.error("Error !!!");
         return;
       }
-      SetppStatus(response.getStatus());
+      toast.success("New Value !!! ");
+
     });
   };
-
+  /*
   useEffect(() => {
     if (ppStatus === "Success") {
       toast.success("New Value !!! ");
     }
     SetppStatus("Null");
   }, [ppStatus]);
-
+  */
   return (
     <main>
       <div className="flex flex-col gap-6">

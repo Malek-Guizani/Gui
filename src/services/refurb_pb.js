@@ -7,39 +7,56 @@
  */
 // GENERATED CODE -- DO NOT EDIT!
 
+const proto = {};
+const COMPILED= true;
+proto.scos_refurb = {};
+proto.scos_refurb.v1 = {};
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() { return this; })();
-
-const proto = {};
-proto.grpc = require('./refurb_pb.js');
-const COMPILED = true;
+var global = Function('return this')();
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
-goog.exportSymbol('proto.grpc.BackupPartRequest', null, global);
-goog.exportSymbol('proto.grpc.BackupPartResponse', null, global);
-goog.exportSymbol('proto.grpc.CmdRequest', null, global);
-goog.exportSymbol('proto.grpc.CmdResponse', null, global);
-goog.exportSymbol('proto.grpc.DeletePartRequest', null, global);
-goog.exportSymbol('proto.grpc.DeletePartResponse', null, global);
-goog.exportSymbol('proto.grpc.FwUpRequest', null, global);
-goog.exportSymbol('proto.grpc.FwUpResponse', null, global);
-goog.exportSymbol('proto.grpc.MakePartRequest', null, global);
-goog.exportSymbol('proto.grpc.MakePartResponse', null, global);
-goog.exportSymbol('proto.grpc.PpGetRequest', null, global);
-goog.exportSymbol('proto.grpc.PpGetResponse', null, global);
-goog.exportSymbol('proto.grpc.PpIfRequest', null, global);
-goog.exportSymbol('proto.grpc.PpIfResponse', null, global);
-goog.exportSymbol('proto.grpc.PpSetRequest', null, global);
-goog.exportSymbol('proto.grpc.PpSetResponse', null, global);
-goog.exportSymbol('proto.grpc.PpUpdateRequest', null, global);
-goog.exportSymbol('proto.grpc.PpUpdateResponse', null, global);
-goog.exportSymbol('proto.grpc.SfwUpRequest', null, global);
-goog.exportSymbol('proto.grpc.SfwUpResponse', null, global);
-goog.exportSymbol('proto.grpc.UpdatePartRequest', null, global);
-goog.exportSymbol('proto.grpc.UpdatePartResponse', null, global);
-goog.exportSymbol('proto.grpc.WifiNvramUpdateRequest', null, global);
-goog.exportSymbol('proto.grpc.WifiNvramUpdateResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.BoardInspectRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.BoardInspectResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.BoardInspectResponse.BoardInfo', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.BoardVersionsRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.BoardVersionsResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.DepotGetRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.DepotGetResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.DryRunEnableRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.DryRunEnableResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.FwUpdateRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.FwUpdateResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartBackupRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartBackupResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartDeleteRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartDeleteResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartMakeRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartMakeResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartUpdateRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PartUpdateResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PermanentParam', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpGetRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpGetResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpIfRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpIfResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpListRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpListResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpSetRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpSetResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpSwapRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpSwapResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpUpdateRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.PpUpdateResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SboxApplyRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SboxApplyResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SysExecRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SysExecResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SysRebootRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.SysRebootResponse', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.WifiNvramUpdateRequest', null, global);
+goog.exportSymbol('proto.scos_refurb.v1.WifiNvramUpdateResponse', null, global);
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -51,12 +68,12 @@ goog.exportSymbol('proto.grpc.WifiNvramUpdateResponse', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.MakePartRequest = function(opt_data) {
+proto.scos_refurb.v1.BoardInspectRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.MakePartRequest, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.BoardInspectRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.MakePartRequest.displayName = 'proto.grpc.MakePartRequest';
+  proto.scos_refurb.v1.BoardInspectRequest.displayName = 'proto.scos_refurb.v1.BoardInspectRequest';
 }
 
 
@@ -71,8 +88,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.MakePartRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.MakePartRequest.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.BoardInspectRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.BoardInspectRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -81,12 +98,1968 @@ proto.grpc.MakePartRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.MakePartRequest} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.BoardInspectRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.MakePartRequest.toObject = function(includeInstance, msg) {
-  var obj = {
+proto.scos_refurb.v1.BoardInspectRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.BoardInspectRequest}
+ */
+proto.scos_refurb.v1.BoardInspectRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.BoardInspectRequest;
+  return proto.scos_refurb.v1.BoardInspectRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.BoardInspectRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.BoardInspectRequest}
+ */
+proto.scos_refurb.v1.BoardInspectRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.BoardInspectRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.BoardInspectRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.BoardInspectRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardInspectRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.BoardInspectResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.BoardInspectResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.BoardInspectResponse.displayName = 'proto.scos_refurb.v1.BoardInspectResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.BoardInspectResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardInspectResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    info: (f = msg.getInfo()) && proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.BoardInspectResponse}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.BoardInspectResponse;
+  return proto.scos_refurb.v1.BoardInspectResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.BoardInspectResponse}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo;
+      reader.readMessage(value,proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader);
+      msg.setInfo(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.BoardInspectResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardInspectResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getInfo();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.BoardInspectResponse.BoardInfo, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.displayName = 'proto.scos_refurb.v1.BoardInspectResponse.BoardInfo';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse.BoardInfo} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    versionsMap: (f = msg.getVersionsMap()) ? f.toObject(includeInstance, undefined) : [],
+    parametersMap: (f = msg.getParametersMap()) ? f.toObject(includeInstance, undefined) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.BoardInspectResponse.BoardInfo}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo;
+  return proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse.BoardInfo} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.BoardInspectResponse.BoardInfo}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getVersionsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
+    case 2:
+      var value = msg.getParametersMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.BoardInspectResponse.BoardInfo} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getVersionsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
+  f = message.getParametersMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
+};
+
+
+/**
+ * map<string, string> versions = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.getVersionsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      null));
+};
+
+
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.clearVersionsMap = function() {
+  this.getVersionsMap().clear();
+};
+
+
+/**
+ * map<string, string> parameters = 2;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.getParametersMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 2, opt_noLazyCreate,
+      null));
+};
+
+
+proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.clearParametersMap = function() {
+  this.getParametersMap().clear();
+};
+
+
+/**
+ * optional BoardInfo info = 1;
+ * @return {?proto.scos_refurb.v1.BoardInspectResponse.BoardInfo}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.prototype.getInfo = function() {
+  return /** @type{?proto.scos_refurb.v1.BoardInspectResponse.BoardInfo} */ (
+    jspb.Message.getWrapperField(this, proto.scos_refurb.v1.BoardInspectResponse.BoardInfo, 1));
+};
+
+
+/** @param {?proto.scos_refurb.v1.BoardInspectResponse.BoardInfo|undefined} value */
+proto.scos_refurb.v1.BoardInspectResponse.prototype.setInfo = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.scos_refurb.v1.BoardInspectResponse.prototype.clearInfo = function() {
+  this.setInfo(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.BoardInspectResponse.prototype.hasInfo = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.BoardVersionsRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.BoardVersionsRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.BoardVersionsRequest.displayName = 'proto.scos_refurb.v1.BoardVersionsRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.BoardVersionsRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.BoardVersionsRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.BoardVersionsRequest}
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.BoardVersionsRequest;
+  return proto.scos_refurb.v1.BoardVersionsRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.BoardVersionsRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.BoardVersionsRequest}
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.BoardVersionsRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.BoardVersionsRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardVersionsRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.BoardVersionsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.BoardVersionsResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.BoardVersionsResponse.displayName = 'proto.scos_refurb.v1.BoardVersionsResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.BoardVersionsResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.BoardVersionsResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    versionsMap: (f = msg.getVersionsMap()) ? f.toObject(includeInstance, undefined) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.BoardVersionsResponse}
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.BoardVersionsResponse;
+  return proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.BoardVersionsResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.BoardVersionsResponse}
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getVersionsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.BoardVersionsResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.BoardVersionsResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getVersionsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
+};
+
+
+/**
+ * map<string, string> versions = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.scos_refurb.v1.BoardVersionsResponse.prototype.getVersionsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      null));
+};
+
+
+proto.scos_refurb.v1.BoardVersionsResponse.prototype.clearVersionsMap = function() {
+  this.getVersionsMap().clear();
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.DepotGetRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.DepotGetRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.DepotGetRequest.displayName = 'proto.scos_refurb.v1.DepotGetRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.DepotGetRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.DepotGetRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.DepotGetRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DepotGetRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.DepotGetRequest}
+ */
+proto.scos_refurb.v1.DepotGetRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.DepotGetRequest;
+  return proto.scos_refurb.v1.DepotGetRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.DepotGetRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.DepotGetRequest}
+ */
+proto.scos_refurb.v1.DepotGetRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.DepotGetRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.DepotGetRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.DepotGetRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DepotGetRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.DepotGetResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.DepotGetResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.DepotGetResponse.displayName = 'proto.scos_refurb.v1.DepotGetResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.DepotGetResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.DepotGetResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.DepotGetResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DepotGetResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    address: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.DepotGetResponse}
+ */
+proto.scos_refurb.v1.DepotGetResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.DepotGetResponse;
+  return proto.scos_refurb.v1.DepotGetResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.DepotGetResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.DepotGetResponse}
+ */
+proto.scos_refurb.v1.DepotGetResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setAddress(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.DepotGetResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.DepotGetResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.DepotGetResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DepotGetResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getAddress();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string address = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.DepotGetResponse.prototype.getAddress = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.DepotGetResponse.prototype.setAddress = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.DryRunEnableResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.DryRunEnableResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.DryRunEnableResponse.displayName = 'proto.scos_refurb.v1.DryRunEnableResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.DryRunEnableResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.DryRunEnableResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.DryRunEnableResponse}
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.DryRunEnableResponse;
+  return proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.DryRunEnableResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.DryRunEnableResponse}
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.DryRunEnableResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.DryRunEnableResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DryRunEnableResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.FwUpdateRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.FwUpdateRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.FwUpdateRequest.displayName = 'proto.scos_refurb.v1.FwUpdateRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.FwUpdateRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.FwUpdateRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.FwUpdateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    component: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    url: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.FwUpdateRequest}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.FwUpdateRequest;
+  return proto.scos_refurb.v1.FwUpdateRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.FwUpdateRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.FwUpdateRequest}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setComponent(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setUrl(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.FwUpdateRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.FwUpdateRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.FwUpdateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getComponent();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getUrl();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string component = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.getComponent = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.setComponent = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string url = 2;
+ * @return {string}
+ */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.getUrl = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.FwUpdateRequest.prototype.setUrl = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.FwUpdateResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.FwUpdateResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.FwUpdateResponse.displayName = 'proto.scos_refurb.v1.FwUpdateResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.FwUpdateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.FwUpdateResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.FwUpdateResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.FwUpdateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.FwUpdateResponse}
+ */
+proto.scos_refurb.v1.FwUpdateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.FwUpdateResponse;
+  return proto.scos_refurb.v1.FwUpdateResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.FwUpdateResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.FwUpdateResponse}
+ */
+proto.scos_refurb.v1.FwUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.FwUpdateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.FwUpdateResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.FwUpdateResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.FwUpdateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PartBackupRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PartBackupRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PartBackupRequest.displayName = 'proto.scos_refurb.v1.PartBackupRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PartBackupRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartBackupRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PartBackupRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartBackupRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    partition: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PartBackupRequest}
+ */
+proto.scos_refurb.v1.PartBackupRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PartBackupRequest;
+  return proto.scos_refurb.v1.PartBackupRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PartBackupRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PartBackupRequest}
+ */
+proto.scos_refurb.v1.PartBackupRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPartition(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PartBackupRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PartBackupRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PartBackupRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartBackupRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPartition();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string partition = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.PartBackupRequest.prototype.getPartition = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.PartBackupRequest.prototype.setPartition = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PartBackupResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PartBackupResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PartBackupResponse.displayName = 'proto.scos_refurb.v1.PartBackupResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PartBackupResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartBackupResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PartBackupResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartBackupResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PartBackupResponse}
+ */
+proto.scos_refurb.v1.PartBackupResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PartBackupResponse;
+  return proto.scos_refurb.v1.PartBackupResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PartBackupResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PartBackupResponse}
+ */
+proto.scos_refurb.v1.PartBackupResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PartBackupResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PartBackupResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PartBackupResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartBackupResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PartDeleteRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PartDeleteRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PartDeleteRequest.displayName = 'proto.scos_refurb.v1.PartDeleteRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartDeleteRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PartDeleteRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartDeleteRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    required: jspb.Message.getFieldWithDefault(msg, 2, false),
+    device: (f = msg.getDevice()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PartDeleteRequest}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PartDeleteRequest;
+  return proto.scos_refurb.v1.PartDeleteRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PartDeleteRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PartDeleteRequest}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPartition(value);
+      break;
+    case 2:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setRequired(value);
+      break;
+    case 3:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setDevice(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PartDeleteRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PartDeleteRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartDeleteRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPartition();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getRequired();
+  if (f) {
+    writer.writeBool(
+      2,
+      f
+    );
+  }
+  f = message.getDevice();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string partition = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.getPartition = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.setPartition = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional bool required = 2;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.getRequired = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
+};
+
+
+/** @param {boolean} value */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.setRequired = function(value) {
+  jspb.Message.setProto3BooleanField(this, 2, value);
+};
+
+
+/**
+ * optional google.protobuf.StringValue device = 3;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.getDevice = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 3));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.setDevice = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.scos_refurb.v1.PartDeleteRequest.prototype.clearDevice = function() {
+  this.setDevice(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.PartDeleteRequest.prototype.hasDevice = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PartDeleteResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PartDeleteResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PartDeleteResponse.displayName = 'proto.scos_refurb.v1.PartDeleteResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PartDeleteResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartDeleteResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PartDeleteResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartDeleteResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PartDeleteResponse}
+ */
+proto.scos_refurb.v1.PartDeleteResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PartDeleteResponse;
+  return proto.scos_refurb.v1.PartDeleteResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PartDeleteResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PartDeleteResponse}
+ */
+proto.scos_refurb.v1.PartDeleteResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PartDeleteResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PartDeleteResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PartDeleteResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartDeleteResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PartMakeRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PartMakeRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PartMakeRequest.displayName = 'proto.scos_refurb.v1.PartMakeRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PartMakeRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartMakeRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PartMakeRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PartMakeRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
     device: jspb.Message.getFieldWithDefault(msg, 2, ""),
     size: jspb.Message.getFieldWithDefault(msg, 3, "")
@@ -103,40 +2076,39 @@ proto.grpc.MakePartRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.MakePartRequest}
+ * @return {!proto.scos_refurb.v1.PartMakeRequest}
  */
-proto.grpc.MakePartRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PartMakeRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.MakePartRequest();
-  return proto.grpc.MakePartRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PartMakeRequest;
+  return proto.scos_refurb.v1.PartMakeRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.MakePartRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PartMakeRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.MakePartRequest}
+ * @return {!proto.scos_refurb.v1.PartMakeRequest}
  */
-proto.grpc.MakePartRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PartMakeRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readString());
       msg.setDevice(value);
       break;
     case 3:
-      value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readString());
       msg.setSize(value);
       break;
     default:
@@ -152,9 +2124,9 @@ proto.grpc.MakePartRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.MakePartRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PartMakeRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.MakePartRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PartMakeRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -162,11 +2134,11 @@ proto.grpc.MakePartRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.MakePartRequest} message
+ * @param {!proto.scos_refurb.v1.PartMakeRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.MakePartRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PartMakeRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPartition();
   if (f.length > 0) {
@@ -196,13 +2168,13 @@ proto.grpc.MakePartRequest.serializeBinaryToWriter = function(message, writer) {
  * optional string partition = 1;
  * @return {string}
  */
-proto.grpc.MakePartRequest.prototype.getPartition = function() {
+proto.scos_refurb.v1.PartMakeRequest.prototype.getPartition = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.MakePartRequest.prototype.setPartition = function(value) {
+proto.scos_refurb.v1.PartMakeRequest.prototype.setPartition = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -211,13 +2183,13 @@ proto.grpc.MakePartRequest.prototype.setPartition = function(value) {
  * optional string device = 2;
  * @return {string}
  */
-proto.grpc.MakePartRequest.prototype.getDevice = function() {
+proto.scos_refurb.v1.PartMakeRequest.prototype.getDevice = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.MakePartRequest.prototype.setDevice = function(value) {
+proto.scos_refurb.v1.PartMakeRequest.prototype.setDevice = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -226,13 +2198,13 @@ proto.grpc.MakePartRequest.prototype.setDevice = function(value) {
  * optional string size = 3;
  * @return {string}
  */
-proto.grpc.MakePartRequest.prototype.getSize = function() {
+proto.scos_refurb.v1.PartMakeRequest.prototype.getSize = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.MakePartRequest.prototype.setSize = function(value) {
+proto.scos_refurb.v1.PartMakeRequest.prototype.setSize = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -248,12 +2220,12 @@ proto.grpc.MakePartRequest.prototype.setSize = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.MakePartResponse = function(opt_data) {
+proto.scos_refurb.v1.PartMakeResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.MakePartResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PartMakeResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.MakePartResponse.displayName = 'proto.grpc.MakePartResponse';
+  proto.scos_refurb.v1.PartMakeResponse.displayName = 'proto.scos_refurb.v1.PartMakeResponse';
 }
 
 
@@ -268,8 +2240,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.MakePartResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.MakePartResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PartMakeResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartMakeResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -278,156 +2250,13 @@ proto.grpc.MakePartResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.MakePartResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PartMakeResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.MakePartResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.MakePartResponse}
- */
-proto.grpc.MakePartResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.MakePartResponse();
-  return proto.grpc.MakePartResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.MakePartResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.MakePartResponse}
- */
-proto.grpc.MakePartResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.MakePartResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.MakePartResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.MakePartResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.MakePartResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.MakePartResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.MakePartResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.WifiNvramUpdateRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.WifiNvramUpdateRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.WifiNvramUpdateRequest.displayName = 'proto.grpc.WifiNvramUpdateRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.WifiNvramUpdateRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.WifiNvramUpdateRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.WifiNvramUpdateRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.WifiNvramUpdateRequest.toObject = function(includeInstance, msg) {
+proto.scos_refurb.v1.PartMakeResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    filesrc: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    filedst: (f = msg.getFiledst()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+
   };
 
   if (includeInstance) {
@@ -441,39 +2270,29 @@ proto.grpc.WifiNvramUpdateRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.WifiNvramUpdateRequest}
+ * @return {!proto.scos_refurb.v1.PartMakeResponse}
  */
-proto.grpc.WifiNvramUpdateRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PartMakeResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.WifiNvramUpdateRequest();
-  return proto.grpc.WifiNvramUpdateRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PartMakeResponse;
+  return proto.scos_refurb.v1.PartMakeResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.WifiNvramUpdateRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PartMakeResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.WifiNvramUpdateRequest}
+ * @return {!proto.scos_refurb.v1.PartMakeResponse}
  */
-proto.grpc.WifiNvramUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PartMakeResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var value;
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setFilesrc(value);
-      break;
-    case 2:
-      value = new google_protobuf_wrappers_pb.StringValue();
-      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setFiledst(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -487,9 +2306,9 @@ proto.grpc.WifiNvramUpdateRequest.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.WifiNvramUpdateRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PartMakeResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.WifiNvramUpdateRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PartMakeResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -497,72 +2316,12 @@ proto.grpc.WifiNvramUpdateRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.WifiNvramUpdateRequest} message
+ * @param {!proto.scos_refurb.v1.PartMakeResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.WifiNvramUpdateRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PartMakeResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getFilesrc();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getFiledst();
-  if (f != null) {
-    writer.writeMessage(
-      2,
-      f,
-      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional string filesrc = 1;
- * @return {string}
- */
-proto.grpc.WifiNvramUpdateRequest.prototype.getFilesrc = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.WifiNvramUpdateRequest.prototype.setFilesrc = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional google.protobuf.StringValue filedst = 2;
- * @return {?proto.google.protobuf.StringValue}
- */
-proto.grpc.WifiNvramUpdateRequest.prototype.getFiledst = function() {
-  return /** @type{?proto.google.protobuf.StringValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 2));
-};
-
-
-/** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.grpc.WifiNvramUpdateRequest.prototype.setFiledst = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-proto.grpc.WifiNvramUpdateRequest.prototype.clearFiledst = function() {
-  this.setFiledst(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.grpc.WifiNvramUpdateRequest.prototype.hasFiledst = function() {
-  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -577,12 +2336,12 @@ proto.grpc.WifiNvramUpdateRequest.prototype.hasFiledst = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.WifiNvramUpdateResponse = function(opt_data) {
+proto.scos_refurb.v1.PartUpdateRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.WifiNvramUpdateResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PartUpdateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.WifiNvramUpdateResponse.displayName = 'proto.grpc.WifiNvramUpdateResponse';
+  proto.scos_refurb.v1.PartUpdateRequest.displayName = 'proto.scos_refurb.v1.PartUpdateRequest';
 }
 
 
@@ -597,8 +2356,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.WifiNvramUpdateResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.WifiNvramUpdateResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PartUpdateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartUpdateRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -607,13 +2366,14 @@ proto.grpc.WifiNvramUpdateResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.WifiNvramUpdateResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PartUpdateRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PartUpdateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    file: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -627,23 +2387,23 @@ proto.grpc.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.WifiNvramUpdateResponse}
+ * @return {!proto.scos_refurb.v1.PartUpdateRequest}
  */
-proto.grpc.WifiNvramUpdateResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PartUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.WifiNvramUpdateResponse();
-  return proto.grpc.WifiNvramUpdateResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PartUpdateRequest;
+  return proto.scos_refurb.v1.PartUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.WifiNvramUpdateResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PartUpdateRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.WifiNvramUpdateResponse}
+ * @return {!proto.scos_refurb.v1.PartUpdateRequest}
  */
-proto.grpc.WifiNvramUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PartUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -652,160 +2412,11 @@ proto.grpc.WifiNvramUpdateResponse.deserializeBinaryFromReader = function(msg, r
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.WifiNvramUpdateResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.WifiNvramUpdateResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.WifiNvramUpdateResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.WifiNvramUpdateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.WifiNvramUpdateResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.WifiNvramUpdateResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.SfwUpRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.SfwUpRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.SfwUpRequest.displayName = 'proto.grpc.SfwUpRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.SfwUpRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.SfwUpRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.SfwUpRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.SfwUpRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    sfwupsectionkind: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    payload: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    section: jspb.Message.getFieldWithDefault(msg, 3, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.SfwUpRequest}
- */
-proto.grpc.SfwUpRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.SfwUpRequest();
-  return proto.grpc.SfwUpRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.SfwUpRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.SfwUpRequest}
- */
-proto.grpc.SfwUpRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var value;
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setSfwupsectionkind(value);
+      msg.setPartition(value);
       break;
     case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setPayload(value);
-      break;
-    case 3:
-      value = /** @type {number} */ (reader.readUint32());
-      msg.setSection(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFile(value);
       break;
     default:
       reader.skipField();
@@ -820,9 +2431,9 @@ proto.grpc.SfwUpRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.SfwUpRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PartUpdateRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.SfwUpRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PartUpdateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -830,81 +2441,59 @@ proto.grpc.SfwUpRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.SfwUpRequest} message
+ * @param {!proto.scos_refurb.v1.PartUpdateRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.SfwUpRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PartUpdateRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getSfwupsectionkind();
+  f = message.getPartition();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getPayload();
+  f = message.getFile();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getSection();
-  if (f !== 0) {
-    writer.writeUint32(
-      3,
-      f
-    );
-  }
 };
 
 
 /**
- * optional string SfwUpSectionKind = 1;
+ * optional string partition = 1;
  * @return {string}
  */
-proto.grpc.SfwUpRequest.prototype.getSfwupsectionkind = function() {
+proto.scos_refurb.v1.PartUpdateRequest.prototype.getPartition = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.SfwUpRequest.prototype.setSfwupsectionkind = function(value) {
+proto.scos_refurb.v1.PartUpdateRequest.prototype.setPartition = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string payload = 2;
+ * optional string file = 2;
  * @return {string}
  */
-proto.grpc.SfwUpRequest.prototype.getPayload = function() {
+proto.scos_refurb.v1.PartUpdateRequest.prototype.getFile = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.SfwUpRequest.prototype.setPayload = function(value) {
+proto.scos_refurb.v1.PartUpdateRequest.prototype.setFile = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
-/**
- * optional uint32 section = 3;
- * @return {number}
- */
-proto.grpc.SfwUpRequest.prototype.getSection = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/** @param {number} value */
-proto.grpc.SfwUpRequest.prototype.setSection = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -916,12 +2505,12 @@ proto.grpc.SfwUpRequest.prototype.setSection = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.SfwUpResponse = function(opt_data) {
+proto.scos_refurb.v1.PartUpdateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.SfwUpResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PartUpdateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.SfwUpResponse.displayName = 'proto.grpc.SfwUpResponse';
+  proto.scos_refurb.v1.PartUpdateResponse.displayName = 'proto.scos_refurb.v1.PartUpdateResponse';
 }
 
 
@@ -936,8 +2525,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.SfwUpResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.SfwUpResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PartUpdateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PartUpdateResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -946,13 +2535,13 @@ proto.grpc.SfwUpResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.SfwUpResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PartUpdateResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.SfwUpResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PartUpdateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
   };
 
   if (includeInstance) {
@@ -966,33 +2555,29 @@ proto.grpc.SfwUpResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.SfwUpResponse}
+ * @return {!proto.scos_refurb.v1.PartUpdateResponse}
  */
-proto.grpc.SfwUpResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PartUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.SfwUpResponse();
-  return proto.grpc.SfwUpResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PartUpdateResponse;
+  return proto.scos_refurb.v1.PartUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.SfwUpResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PartUpdateResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.SfwUpResponse}
+ * @return {!proto.scos_refurb.v1.PartUpdateResponse}
  */
-proto.grpc.SfwUpResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PartUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -1006,9 +2591,9 @@ proto.grpc.SfwUpResponse.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.SfwUpResponse.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PartUpdateResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.SfwUpResponse.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PartUpdateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1016,34 +2601,12 @@ proto.grpc.SfwUpResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.SfwUpResponse} message
+ * @param {!proto.scos_refurb.v1.PartUpdateResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.SfwUpResponse.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PartUpdateResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.SfwUpResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.SfwUpResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -1058,12 +2621,12 @@ proto.grpc.SfwUpResponse.prototype.setStatus = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.FwUpRequest = function(opt_data) {
+proto.scos_refurb.v1.PermanentParam = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.FwUpRequest, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PermanentParam, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.FwUpRequest.displayName = 'proto.grpc.FwUpRequest';
+  proto.scos_refurb.v1.PermanentParam.displayName = 'proto.scos_refurb.v1.PermanentParam';
 }
 
 
@@ -1078,8 +2641,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.FwUpRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.FwUpRequest.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PermanentParam.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PermanentParam.toObject(opt_includeInstance, this);
 };
 
 
@@ -1088,354 +2651,13 @@ proto.grpc.FwUpRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.FwUpRequest} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PermanentParam} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.FwUpRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    fwupsection: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    payload: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    kindEgsdf: jspb.Message.getFieldWithDefault(msg, 3, false)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.FwUpRequest}
- */
-proto.grpc.FwUpRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.FwUpRequest();
-  return proto.grpc.FwUpRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.FwUpRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.FwUpRequest}
- */
-proto.grpc.FwUpRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var value;
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setFwupsection(value);
-      break;
-    case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setPayload(value);
-      break;
-    case 3:
-      value = /** @type {boolean} */ (reader.readBool());
-      msg.setKindEgsdf(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.FwUpRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.FwUpRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.FwUpRequest} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.FwUpRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getFwupsection();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getPayload();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-  f = message.getKindEgsdf();
-  if (f) {
-    writer.writeBool(
-      3,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string FwUpSection = 1;
- * @return {string}
- */
-proto.grpc.FwUpRequest.prototype.getFwupsection = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.FwUpRequest.prototype.setFwupsection = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string payload = 2;
- * @return {string}
- */
-proto.grpc.FwUpRequest.prototype.getPayload = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.FwUpRequest.prototype.setPayload = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional bool kind_egsdf = 3;
- * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
- * You should avoid comparisons like {@code val === true/false} in those cases.
- * @return {boolean}
- */
-proto.grpc.FwUpRequest.prototype.getKindEgsdf = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
-};
-
-
-/** @param {boolean} value */
-proto.grpc.FwUpRequest.prototype.setKindEgsdf = function(value) {
-  jspb.Message.setProto3BooleanField(this, 3, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.FwUpResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.FwUpResponse, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.FwUpResponse.displayName = 'proto.grpc.FwUpResponse';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.FwUpResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.FwUpResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.FwUpResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.FwUpResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.FwUpResponse}
- */
-proto.grpc.FwUpResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.FwUpResponse();
-  return proto.grpc.FwUpResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.FwUpResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.FwUpResponse}
- */
-proto.grpc.FwUpResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.FwUpResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.FwUpResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.FwUpResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.FwUpResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.FwUpResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.FwUpResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.PpSetRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.PpSetRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpSetRequest.displayName = 'proto.grpc.PpSetRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.PpSetRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpSetRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpSetRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpSetRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    param: jspb.Message.getFieldWithDefault(msg, 1, ""),
+proto.scos_refurb.v1.PermanentParam.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -1450,36 +2672,35 @@ proto.grpc.PpSetRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpSetRequest}
+ * @return {!proto.scos_refurb.v1.PermanentParam}
  */
-proto.grpc.PpSetRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PermanentParam.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpSetRequest();
-  return proto.grpc.PpSetRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PermanentParam;
+  return proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.PpSetRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PermanentParam} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpSetRequest}
+ * @return {!proto.scos_refurb.v1.PermanentParam}
  */
-proto.grpc.PpSetRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setParam(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
       break;
     case 2:
-      value = /** @type {string} */ (reader.readString());
+      var value = /** @type {string} */ (reader.readString());
       msg.setValue(value);
       break;
     default:
@@ -1495,9 +2716,9 @@ proto.grpc.PpSetRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.PpSetRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PermanentParam.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.PpSetRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PermanentParam.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1505,13 +2726,13 @@ proto.grpc.PpSetRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpSetRequest} message
+ * @param {!proto.scos_refurb.v1.PermanentParam} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpSetRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PermanentParam.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getParam();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -1529,16 +2750,16 @@ proto.grpc.PpSetRequest.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string param = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.grpc.PpSetRequest.prototype.getParam = function() {
+proto.scos_refurb.v1.PermanentParam.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpSetRequest.prototype.setParam = function(value) {
+proto.scos_refurb.v1.PermanentParam.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1547,13 +2768,13 @@ proto.grpc.PpSetRequest.prototype.setParam = function(value) {
  * optional string value = 2;
  * @return {string}
  */
-proto.grpc.PpSetRequest.prototype.getValue = function() {
+proto.scos_refurb.v1.PermanentParam.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpSetRequest.prototype.setValue = function(value) {
+proto.scos_refurb.v1.PermanentParam.prototype.setValue = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1569,12 +2790,12 @@ proto.grpc.PpSetRequest.prototype.setValue = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.PpSetResponse = function(opt_data) {
+proto.scos_refurb.v1.PpGetRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.PpSetResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpGetRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpSetResponse.displayName = 'proto.grpc.PpSetResponse';
+  proto.scos_refurb.v1.PpGetRequest.displayName = 'proto.scos_refurb.v1.PpGetRequest';
 }
 
 
@@ -1589,8 +2810,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.PpSetResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpSetResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpGetRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpGetRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1599,785 +2820,13 @@ proto.grpc.PpSetResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpSetResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpGetRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpSetResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpSetResponse}
- */
-proto.grpc.PpSetResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpSetResponse();
-  return proto.grpc.PpSetResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.PpSetResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpSetResponse}
- */
-proto.grpc.PpSetResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.PpSetResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.PpSetResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpSetResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpSetResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.PpSetResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.PpSetResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.CmdRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.CmdRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.CmdRequest.displayName = 'proto.grpc.CmdRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.CmdRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.CmdRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.CmdRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.CmdRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    cmd: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.CmdRequest}
- */
-proto.grpc.CmdRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.CmdRequest();
-  return proto.grpc.CmdRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.CmdRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.CmdRequest}
- */
-proto.grpc.CmdRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCmd(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.CmdRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.CmdRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.CmdRequest} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.CmdRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getCmd();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string cmd = 1;
- * @return {string}
- */
-proto.grpc.CmdRequest.prototype.getCmd = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.CmdRequest.prototype.setCmd = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.CmdResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.CmdResponse, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.CmdResponse.displayName = 'proto.grpc.CmdResponse';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.CmdResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.CmdResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.CmdResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.CmdResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    message: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.CmdResponse}
- */
-proto.grpc.CmdResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.CmdResponse();
-  return proto.grpc.CmdResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.CmdResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.CmdResponse}
- */
-proto.grpc.CmdResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var value;
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.CmdResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.CmdResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.CmdResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.CmdResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getMessage();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.CmdResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.CmdResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string message = 2;
- * @return {string}
- */
-proto.grpc.CmdResponse.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.CmdResponse.prototype.setMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.PpGetRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.PpGetRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpGetRequest.displayName = 'proto.grpc.PpGetRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.PpGetRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpGetRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpGetRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpGetRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    param: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpGetRequest}
- */
-proto.grpc.PpGetRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpGetRequest();
-  return proto.grpc.PpGetRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.PpGetRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpGetRequest}
- */
-proto.grpc.PpGetRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setParam(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.PpGetRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.PpGetRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpGetRequest} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpGetRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getParam();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string param = 1;
- * @return {string}
- */
-proto.grpc.PpGetRequest.prototype.getParam = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.PpGetRequest.prototype.setParam = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.PpGetResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.PpGetResponse, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpGetResponse.displayName = 'proto.grpc.PpGetResponse';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.PpGetResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpGetResponse.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpGetResponse} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpGetResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    message: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpGetResponse}
- */
-proto.grpc.PpGetResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpGetResponse();
-  return proto.grpc.PpGetResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.PpGetResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpGetResponse}
- */
-proto.grpc.PpGetResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var value;
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setMessage(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.PpGetResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.PpGetResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpGetResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpGetResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getMessage();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.PpGetResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.PpGetResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional string message = 2;
- * @return {string}
- */
-proto.grpc.PpGetResponse.prototype.getMessage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.PpGetResponse.prototype.setMessage = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.PpIfRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.PpIfRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpIfRequest.displayName = 'proto.grpc.PpIfRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.PpIfRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpIfRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpIfRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpIfRequest.toObject = function(includeInstance, msg) {
+proto.scos_refurb.v1.PpGetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    param1: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    condition: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    value1: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    param2: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    value2: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    param3: (f = msg.getParam3()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    value3: (f = msg.getValue3()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -2391,59 +2840,348 @@ proto.grpc.PpIfRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpIfRequest}
+ * @return {!proto.scos_refurb.v1.PpGetRequest}
  */
-proto.grpc.PpIfRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpGetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpIfRequest();
-  return proto.grpc.PpIfRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpGetRequest;
+  return proto.scos_refurb.v1.PpGetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.PpIfRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpGetRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpIfRequest}
+ * @return {!proto.scos_refurb.v1.PpGetRequest}
  */
-proto.grpc.PpIfRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpGetRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var value;
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setParam1(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setName(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpGetRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpGetRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpGetRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpGetRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getName();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string name = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.PpGetRequest.prototype.getName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.PpGetRequest.prototype.setName = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PpGetResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PpGetResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PpGetResponse.displayName = 'proto.scos_refurb.v1.PpGetResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PpGetResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpGetResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PpGetResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpGetResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    value: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PpGetResponse}
+ */
+proto.scos_refurb.v1.PpGetResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PpGetResponse;
+  return proto.scos_refurb.v1.PpGetResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PpGetResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PpGetResponse}
+ */
+proto.scos_refurb.v1.PpGetResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValue(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpGetResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpGetResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpGetResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpGetResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValue();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string value = 2;
+ * @return {string}
+ */
+proto.scos_refurb.v1.PpGetResponse.prototype.getValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.PpGetResponse.prototype.setValue = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PpIfRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PpIfRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PpIfRequest.displayName = 'proto.scos_refurb.v1.PpIfRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PpIfRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpIfRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PpIfRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpIfRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    testName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    testOp: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    testValue: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    bodyName: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    bodyValue: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    altName: (f = msg.getAltName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    altValue: (f = msg.getAltValue()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PpIfRequest}
+ */
+proto.scos_refurb.v1.PpIfRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PpIfRequest;
+  return proto.scos_refurb.v1.PpIfRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PpIfRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PpIfRequest}
+ */
+proto.scos_refurb.v1.PpIfRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTestName(value);
       break;
     case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setCondition(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTestOp(value);
       break;
     case 3:
-      value = /** @type {string} */ (reader.readString());
-      msg.setValue1(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTestValue(value);
       break;
     case 4:
-      value = /** @type {string} */ (reader.readString());
-      msg.setParam2(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBodyName(value);
       break;
     case 5:
-      value = /** @type {string} */ (reader.readString());
-      msg.setValue2(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setBodyValue(value);
       break;
     case 6:
-      value = new google_protobuf_wrappers_pb.StringValue();
+      var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setParam3(value);
+      msg.setAltName(value);
       break;
     case 7:
-      value = new google_protobuf_wrappers_pb.StringValue();
+      var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setValue3(value);
+      msg.setAltValue(value);
       break;
     default:
       reader.skipField();
@@ -2458,9 +3196,9 @@ proto.grpc.PpIfRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.PpIfRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.PpIfRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpIfRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2468,48 +3206,48 @@ proto.grpc.PpIfRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpIfRequest} message
+ * @param {!proto.scos_refurb.v1.PpIfRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpIfRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpIfRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getParam1();
+  f = message.getTestName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getCondition();
+  f = message.getTestOp();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getValue1();
+  f = message.getTestValue();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-  f = message.getParam2();
+  f = message.getBodyName();
   if (f.length > 0) {
     writer.writeString(
       4,
       f
     );
   }
-  f = message.getValue2();
+  f = message.getBodyValue();
   if (f.length > 0) {
     writer.writeString(
       5,
       f
     );
   }
-  f = message.getParam3();
+  f = message.getAltName();
   if (f != null) {
     writer.writeMessage(
       6,
@@ -2517,7 +3255,7 @@ proto.grpc.PpIfRequest.serializeBinaryToWriter = function(message, writer) {
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
-  f = message.getValue3();
+  f = message.getAltValue();
   if (f != null) {
     writer.writeMessage(
       7,
@@ -2529,98 +3267,98 @@ proto.grpc.PpIfRequest.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string param1 = 1;
+ * optional string test_name = 1;
  * @return {string}
  */
-proto.grpc.PpIfRequest.prototype.getParam1 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getTestName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpIfRequest.prototype.setParam1 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setTestName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string condition = 2;
+ * optional string test_op = 2;
  * @return {string}
  */
-proto.grpc.PpIfRequest.prototype.getCondition = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getTestOp = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpIfRequest.prototype.setCondition = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setTestOp = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string value1 = 3;
+ * optional string test_value = 3;
  * @return {string}
  */
-proto.grpc.PpIfRequest.prototype.getValue1 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getTestValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpIfRequest.prototype.setValue1 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setTestValue = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional string param2 = 4;
+ * optional string body_name = 4;
  * @return {string}
  */
-proto.grpc.PpIfRequest.prototype.getParam2 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getBodyName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpIfRequest.prototype.setParam2 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setBodyName = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * optional string value2 = 5;
+ * optional string body_value = 5;
  * @return {string}
  */
-proto.grpc.PpIfRequest.prototype.getValue2 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getBodyValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpIfRequest.prototype.setValue2 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setBodyValue = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
 /**
- * optional google.protobuf.StringValue param3 = 6;
+ * optional google.protobuf.StringValue alt_name = 6;
  * @return {?proto.google.protobuf.StringValue}
  */
-proto.grpc.PpIfRequest.prototype.getParam3 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getAltName = function() {
   return /** @type{?proto.google.protobuf.StringValue} */ (
     jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 6));
 };
 
 
 /** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.grpc.PpIfRequest.prototype.setParam3 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setAltName = function(value) {
   jspb.Message.setWrapperField(this, 6, value);
 };
 
 
-proto.grpc.PpIfRequest.prototype.clearParam3 = function() {
-  this.setParam3(undefined);
+proto.scos_refurb.v1.PpIfRequest.prototype.clearAltName = function() {
+  this.setAltName(undefined);
 };
 
 
@@ -2628,29 +3366,29 @@ proto.grpc.PpIfRequest.prototype.clearParam3 = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.grpc.PpIfRequest.prototype.hasParam3 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.hasAltName = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
 
 /**
- * optional google.protobuf.StringValue value3 = 7;
+ * optional google.protobuf.StringValue alt_value = 7;
  * @return {?proto.google.protobuf.StringValue}
  */
-proto.grpc.PpIfRequest.prototype.getValue3 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.getAltValue = function() {
   return /** @type{?proto.google.protobuf.StringValue} */ (
     jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 7));
 };
 
 
 /** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.grpc.PpIfRequest.prototype.setValue3 = function(value) {
+proto.scos_refurb.v1.PpIfRequest.prototype.setAltValue = function(value) {
   jspb.Message.setWrapperField(this, 7, value);
 };
 
 
-proto.grpc.PpIfRequest.prototype.clearValue3 = function() {
-  this.setValue3(undefined);
+proto.scos_refurb.v1.PpIfRequest.prototype.clearAltValue = function() {
+  this.setAltValue(undefined);
 };
 
 
@@ -2658,7 +3396,7 @@ proto.grpc.PpIfRequest.prototype.clearValue3 = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.grpc.PpIfRequest.prototype.hasValue3 = function() {
+proto.scos_refurb.v1.PpIfRequest.prototype.hasAltValue = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 
@@ -2674,12 +3412,12 @@ proto.grpc.PpIfRequest.prototype.hasValue3 = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.PpIfResponse = function(opt_data) {
+proto.scos_refurb.v1.PpIfResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.PpIfResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpIfResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpIfResponse.displayName = 'proto.grpc.PpIfResponse';
+  proto.scos_refurb.v1.PpIfResponse.displayName = 'proto.scos_refurb.v1.PpIfResponse';
 }
 
 
@@ -2694,8 +3432,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.PpIfResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpIfResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpIfResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpIfResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2704,157 +3442,13 @@ proto.grpc.PpIfResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpIfResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpIfResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpIfResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpIfResponse}
- */
-proto.grpc.PpIfResponse.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpIfResponse();
-  return proto.grpc.PpIfResponse.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.PpIfResponse} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpIfResponse}
- */
-proto.grpc.PpIfResponse.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.PpIfResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.PpIfResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpIfResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.PpIfResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.PpIfResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.PpIfResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.DeletePartRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.DeletePartRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.DeletePartRequest.displayName = 'proto.grpc.DeletePartRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.DeletePartRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.DeletePartRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.DeletePartRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.DeletePartRequest.toObject = function(includeInstance, msg) {
+proto.scos_refurb.v1.PpIfResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    required: jspb.Message.getFieldWithDefault(msg, 2, false),
-    ubipart: (f = msg.getUbipart()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+
   };
 
   if (includeInstance) {
@@ -2868,43 +3462,29 @@ proto.grpc.DeletePartRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.DeletePartRequest}
+ * @return {!proto.scos_refurb.v1.PpIfResponse}
  */
-proto.grpc.DeletePartRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpIfResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.DeletePartRequest();
-  return proto.grpc.DeletePartRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpIfResponse;
+  return proto.scos_refurb.v1.PpIfResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.DeletePartRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpIfResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.DeletePartRequest}
+ * @return {!proto.scos_refurb.v1.PpIfResponse}
  */
-proto.grpc.DeletePartRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpIfResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
-    var value;
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setPartition(value);
-      break;
-    case 2:
-      value = /** @type {boolean} */ (reader.readBool());
-      msg.setRequired(value);
-      break;
-    case 3:
-      value = new google_protobuf_wrappers_pb.StringValue();
-      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setUbipart(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -2918,9 +3498,9 @@ proto.grpc.DeletePartRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.DeletePartRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpIfResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.DeletePartRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpIfResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2928,96 +3508,12 @@ proto.grpc.DeletePartRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.DeletePartRequest} message
+ * @param {!proto.scos_refurb.v1.PpIfResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.DeletePartRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpIfResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPartition();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getRequired();
-  if (f) {
-    writer.writeBool(
-      2,
-      f
-    );
-  }
-  f = message.getUbipart();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional string partition = 1;
- * @return {string}
- */
-proto.grpc.DeletePartRequest.prototype.getPartition = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.DeletePartRequest.prototype.setPartition = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional bool required = 2;
- * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
- * You should avoid comparisons like {@code val === true/false} in those cases.
- * @return {boolean}
- */
-proto.grpc.DeletePartRequest.prototype.getRequired = function() {
-  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 2, false));
-};
-
-
-/** @param {boolean} value */
-proto.grpc.DeletePartRequest.prototype.setRequired = function(value) {
-  jspb.Message.setProto3BooleanField(this, 2, value);
-};
-
-
-/**
- * optional google.protobuf.StringValue ubipart = 3;
- * @return {?proto.google.protobuf.StringValue}
- */
-proto.grpc.DeletePartRequest.prototype.getUbipart = function() {
-  return /** @type{?proto.google.protobuf.StringValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 3));
-};
-
-
-/** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.grpc.DeletePartRequest.prototype.setUbipart = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-proto.grpc.DeletePartRequest.prototype.clearUbipart = function() {
-  this.setUbipart(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.grpc.DeletePartRequest.prototype.hasUbipart = function() {
-  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -3032,12 +3528,12 @@ proto.grpc.DeletePartRequest.prototype.hasUbipart = function() {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.DeletePartResponse = function(opt_data) {
+proto.scos_refurb.v1.PpListRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.DeletePartResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpListRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.DeletePartResponse.displayName = 'proto.grpc.DeletePartResponse';
+  proto.scos_refurb.v1.PpListRequest.displayName = 'proto.scos_refurb.v1.PpListRequest';
 }
 
 
@@ -3052,8 +3548,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.DeletePartResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.DeletePartResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpListRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpListRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3062,13 +3558,13 @@ proto.grpc.DeletePartResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.DeletePartResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpListRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.DeletePartResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PpListRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
   };
 
   if (includeInstance) {
@@ -3082,23 +3578,284 @@ proto.grpc.DeletePartResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.DeletePartResponse}
+ * @return {!proto.scos_refurb.v1.PpListRequest}
  */
-proto.grpc.DeletePartResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpListRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.DeletePartResponse();
-  return proto.grpc.DeletePartResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpListRequest;
+  return proto.scos_refurb.v1.PpListRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.DeletePartResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpListRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.DeletePartResponse}
+ * @return {!proto.scos_refurb.v1.PpListRequest}
  */
-proto.grpc.DeletePartResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpListRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpListRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpListRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpListRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpListRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PpListResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PpListResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PpListResponse.displayName = 'proto.scos_refurb.v1.PpListResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PpListResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpListResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PpListResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpListResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    parametersMap: (f = msg.getParametersMap()) ? f.toObject(includeInstance, undefined) : []
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PpListResponse}
+ */
+proto.scos_refurb.v1.PpListResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PpListResponse;
+  return proto.scos_refurb.v1.PpListResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PpListResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PpListResponse}
+ */
+proto.scos_refurb.v1.PpListResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = msg.getParametersMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpListResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpListResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpListResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpListResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getParametersMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(1, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  }
+};
+
+
+/**
+ * map<string, string> parameters = 1;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
+ */
+proto.scos_refurb.v1.PpListResponse.prototype.getParametersMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 1, opt_noLazyCreate,
+      null));
+};
+
+
+proto.scos_refurb.v1.PpListResponse.prototype.clearParametersMap = function() {
+  this.getParametersMap().clear();
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PpSetRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PpSetRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PpSetRequest.displayName = 'proto.scos_refurb.v1.PpSetRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PpSetRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpSetRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PpSetRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpSetRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    value: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PpSetRequest}
+ */
+proto.scos_refurb.v1.PpSetRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PpSetRequest;
+  return proto.scos_refurb.v1.PpSetRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PpSetRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PpSetRequest}
+ */
+proto.scos_refurb.v1.PpSetRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3107,155 +3864,11 @@ proto.grpc.DeletePartResponse.deserializeBinaryFromReader = function(msg, reader
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.grpc.DeletePartResponse.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.grpc.DeletePartResponse.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.DeletePartResponse} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.DeletePartResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.DeletePartResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.DeletePartResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.grpc.UpdatePartRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.grpc.UpdatePartRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.grpc.UpdatePartRequest.displayName = 'proto.grpc.UpdatePartRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.grpc.UpdatePartRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.UpdatePartRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.grpc.UpdatePartRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.grpc.UpdatePartRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    file: jspb.Message.getFieldWithDefault(msg, 2, "")
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.UpdatePartRequest}
- */
-proto.grpc.UpdatePartRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.UpdatePartRequest();
-  return proto.grpc.UpdatePartRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.grpc.UpdatePartRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.UpdatePartRequest}
- */
-proto.grpc.UpdatePartRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var value;
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      value = /** @type {string} */ (reader.readString());
-      msg.setPartition(value);
+      msg.setName(value);
       break;
     case 2:
-      value = /** @type {string} */ (reader.readString());
-      msg.setFile(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -3270,9 +3883,9 @@ proto.grpc.UpdatePartRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.UpdatePartRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpSetRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.UpdatePartRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpSetRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3280,20 +3893,20 @@ proto.grpc.UpdatePartRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.UpdatePartRequest} message
+ * @param {!proto.scos_refurb.v1.PpSetRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.UpdatePartRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpSetRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPartition();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getFile();
+  f = message.getValue();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -3304,31 +3917,31 @@ proto.grpc.UpdatePartRequest.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional string partition = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.grpc.UpdatePartRequest.prototype.getPartition = function() {
+proto.scos_refurb.v1.PpSetRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.UpdatePartRequest.prototype.setPartition = function(value) {
+proto.scos_refurb.v1.PpSetRequest.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string file = 2;
+ * optional string value = 2;
  * @return {string}
  */
-proto.grpc.UpdatePartRequest.prototype.getFile = function() {
+proto.scos_refurb.v1.PpSetRequest.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.UpdatePartRequest.prototype.setFile = function(value) {
+proto.scos_refurb.v1.PpSetRequest.prototype.setValue = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -3344,12 +3957,12 @@ proto.grpc.UpdatePartRequest.prototype.setFile = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.UpdatePartResponse = function(opt_data) {
+proto.scos_refurb.v1.PpSetResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.UpdatePartResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpSetResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.UpdatePartResponse.displayName = 'proto.grpc.UpdatePartResponse';
+  proto.scos_refurb.v1.PpSetResponse.displayName = 'proto.scos_refurb.v1.PpSetResponse';
 }
 
 
@@ -3364,8 +3977,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.UpdatePartResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.UpdatePartResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpSetResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpSetResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3374,13 +3987,13 @@ proto.grpc.UpdatePartResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.UpdatePartResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpSetResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.UpdatePartResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PpSetResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
   };
 
   if (includeInstance) {
@@ -3394,33 +4007,29 @@ proto.grpc.UpdatePartResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.UpdatePartResponse}
+ * @return {!proto.scos_refurb.v1.PpSetResponse}
  */
-proto.grpc.UpdatePartResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpSetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.UpdatePartResponse();
-  return proto.grpc.UpdatePartResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpSetResponse;
+  return proto.scos_refurb.v1.PpSetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.UpdatePartResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpSetResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.UpdatePartResponse}
+ * @return {!proto.scos_refurb.v1.PpSetResponse}
  */
-proto.grpc.UpdatePartResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpSetResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -3434,9 +4043,9 @@ proto.grpc.UpdatePartResponse.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.UpdatePartResponse.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpSetResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.UpdatePartResponse.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpSetResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3444,34 +4053,12 @@ proto.grpc.UpdatePartResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.UpdatePartResponse} message
+ * @param {!proto.scos_refurb.v1.PpSetResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.UpdatePartResponse.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpSetResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.UpdatePartResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.UpdatePartResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -3486,12 +4073,12 @@ proto.grpc.UpdatePartResponse.prototype.setStatus = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.BackupPartRequest = function(opt_data) {
+proto.scos_refurb.v1.PpSwapRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.BackupPartRequest, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpSwapRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.BackupPartRequest.displayName = 'proto.grpc.BackupPartRequest';
+  proto.scos_refurb.v1.PpSwapRequest.displayName = 'proto.scos_refurb.v1.PpSwapRequest';
 }
 
 
@@ -3506,8 +4093,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.BackupPartRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.BackupPartRequest.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpSwapRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpSwapRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3516,13 +4103,14 @@ proto.grpc.BackupPartRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.BackupPartRequest} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpSwapRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.BackupPartRequest.toObject = function(includeInstance, msg) {
-  var obj = {
-    partition: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PpSwapRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    a: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    b: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -3536,23 +4124,23 @@ proto.grpc.BackupPartRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.BackupPartRequest}
+ * @return {!proto.scos_refurb.v1.PpSwapRequest}
  */
-proto.grpc.BackupPartRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpSwapRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.BackupPartRequest();
-  return proto.grpc.BackupPartRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpSwapRequest;
+  return proto.scos_refurb.v1.PpSwapRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.BackupPartRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpSwapRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.BackupPartRequest}
+ * @return {!proto.scos_refurb.v1.PpSwapRequest}
  */
-proto.grpc.BackupPartRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpSwapRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3561,7 +4149,11 @@ proto.grpc.BackupPartRequest.deserializeBinaryFromReader = function(msg, reader)
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setPartition(value);
+      msg.setA(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setB(value);
       break;
     default:
       reader.skipField();
@@ -3576,9 +4168,9 @@ proto.grpc.BackupPartRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.BackupPartRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpSwapRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.BackupPartRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpSwapRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3586,16 +4178,23 @@ proto.grpc.BackupPartRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.BackupPartRequest} message
+ * @param {!proto.scos_refurb.v1.PpSwapRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.BackupPartRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpSwapRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getPartition();
+  f = message.getA();
   if (f.length > 0) {
     writer.writeString(
       1,
+      f
+    );
+  }
+  f = message.getB();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
       f
     );
   }
@@ -3603,17 +4202,32 @@ proto.grpc.BackupPartRequest.serializeBinaryToWriter = function(message, writer)
 
 
 /**
- * optional string partition = 1;
+ * optional string a = 1;
  * @return {string}
  */
-proto.grpc.BackupPartRequest.prototype.getPartition = function() {
+proto.scos_refurb.v1.PpSwapRequest.prototype.getA = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.BackupPartRequest.prototype.setPartition = function(value) {
+proto.scos_refurb.v1.PpSwapRequest.prototype.setA = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string b = 2;
+ * @return {string}
+ */
+proto.scos_refurb.v1.PpSwapRequest.prototype.getB = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.PpSwapRequest.prototype.setB = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -3628,12 +4242,12 @@ proto.grpc.BackupPartRequest.prototype.setPartition = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.BackupPartResponse = function(opt_data) {
+proto.scos_refurb.v1.PpSwapResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.BackupPartResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpSwapResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.BackupPartResponse.displayName = 'proto.grpc.BackupPartResponse';
+  proto.scos_refurb.v1.PpSwapResponse.displayName = 'proto.scos_refurb.v1.PpSwapResponse';
 }
 
 
@@ -3648,8 +4262,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.BackupPartResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.BackupPartResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpSwapResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpSwapResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3658,13 +4272,14 @@ proto.grpc.BackupPartResponse.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.BackupPartResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpSwapResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.BackupPartResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PpSwapResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    before: (f = msg.getBefore()) && proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.toObject(includeInstance, f),
+    after: (f = msg.getAfter()) && proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3678,23 +4293,23 @@ proto.grpc.BackupPartResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.BackupPartResponse}
+ * @return {!proto.scos_refurb.v1.PpSwapResponse}
  */
-proto.grpc.BackupPartResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpSwapResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.BackupPartResponse();
-  return proto.grpc.BackupPartResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpSwapResponse;
+  return proto.scos_refurb.v1.PpSwapResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.BackupPartResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpSwapResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.BackupPartResponse}
+ * @return {!proto.scos_refurb.v1.PpSwapResponse}
  */
-proto.grpc.BackupPartResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpSwapResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3702,8 +4317,14 @@ proto.grpc.BackupPartResponse.deserializeBinaryFromReader = function(msg, reader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      var value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+      reader.readMessage(value,proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader);
+      msg.setBefore(value);
+      break;
+    case 2:
+      var value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+      reader.readMessage(value,proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader);
+      msg.setAfter(value);
       break;
     default:
       reader.skipField();
@@ -3718,9 +4339,9 @@ proto.grpc.BackupPartResponse.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.BackupPartResponse.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpSwapResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.BackupPartResponse.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpSwapResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3728,34 +4349,28 @@ proto.grpc.BackupPartResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.BackupPartResponse} message
+ * @param {!proto.scos_refurb.v1.PpSwapResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.BackupPartResponse.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpSwapResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStatus();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getBefore();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.serializeBinaryToWriter
     );
   }
-};
-
-
-/**
- * optional string status = 1;
- * @return {string}
- */
-proto.grpc.BackupPartResponse.prototype.getStatus = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.grpc.BackupPartResponse.prototype.setStatus = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  f = message.getAfter();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -3770,12 +4385,12 @@ proto.grpc.BackupPartResponse.prototype.setStatus = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.PpUpdateRequest = function(opt_data) {
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.PpUpdateRequest, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpUpdateRequest.displayName = 'proto.grpc.PpUpdateRequest';
+  proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.displayName = 'proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple';
 }
 
 
@@ -3790,8 +4405,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.PpUpdateRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpUpdateRequest.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.toObject(opt_includeInstance, this);
 };
 
 
@@ -3800,12 +4415,275 @@ proto.grpc.PpUpdateRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpUpdateRequest} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpUpdateRequest.toObject = function(includeInstance, msg) {
-  var obj = {
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    first: (f = msg.getFirst()) && proto.scos_refurb.v1.PermanentParam.toObject(includeInstance, f),
+    second: (f = msg.getSecond()) && proto.scos_refurb.v1.PermanentParam.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+  return proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.scos_refurb.v1.PermanentParam;
+      reader.readMessage(value,proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader);
+      msg.setFirst(value);
+      break;
+    case 2:
+      var value = new proto.scos_refurb.v1.PermanentParam;
+      reader.readMessage(value,proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader);
+      msg.setSecond(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getFirst();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.scos_refurb.v1.PermanentParam.serializeBinaryToWriter
+    );
+  }
+  f = message.getSecond();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.scos_refurb.v1.PermanentParam.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional PermanentParam first = 1;
+ * @return {?proto.scos_refurb.v1.PermanentParam}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.getFirst = function() {
+  return /** @type{?proto.scos_refurb.v1.PermanentParam} */ (
+    jspb.Message.getWrapperField(this, proto.scos_refurb.v1.PermanentParam, 1));
+};
+
+
+/** @param {?proto.scos_refurb.v1.PermanentParam|undefined} value */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.setFirst = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.clearFirst = function() {
+  this.setFirst(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.hasFirst = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional PermanentParam second = 2;
+ * @return {?proto.scos_refurb.v1.PermanentParam}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.getSecond = function() {
+  return /** @type{?proto.scos_refurb.v1.PermanentParam} */ (
+    jspb.Message.getWrapperField(this, proto.scos_refurb.v1.PermanentParam, 2));
+};
+
+
+/** @param {?proto.scos_refurb.v1.PermanentParam|undefined} value */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.setSecond = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.clearSecond = function() {
+  this.setSecond(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.prototype.hasSecond = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional PermanentParamTuple before = 1;
+ * @return {?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple}
+ */
+proto.scos_refurb.v1.PpSwapResponse.prototype.getBefore = function() {
+  return /** @type{?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple} */ (
+    jspb.Message.getWrapperField(this, proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple, 1));
+};
+
+
+/** @param {?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple|undefined} value */
+proto.scos_refurb.v1.PpSwapResponse.prototype.setBefore = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.scos_refurb.v1.PpSwapResponse.prototype.clearBefore = function() {
+  this.setBefore(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.PpSwapResponse.prototype.hasBefore = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional PermanentParamTuple after = 2;
+ * @return {?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple}
+ */
+proto.scos_refurb.v1.PpSwapResponse.prototype.getAfter = function() {
+  return /** @type{?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple} */ (
+    jspb.Message.getWrapperField(this, proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple, 2));
+};
+
+
+/** @param {?proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple|undefined} value */
+proto.scos_refurb.v1.PpSwapResponse.prototype.setAfter = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.scos_refurb.v1.PpSwapResponse.prototype.clearAfter = function() {
+  this.setAfter(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.PpSwapResponse.prototype.hasAfter = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.PpUpdateRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.PpUpdateRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.PpUpdateRequest.displayName = 'proto.scos_refurb.v1.PpUpdateRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.PpUpdateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpUpdateRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.PpUpdateRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpUpdateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
     file: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -3820,23 +4698,23 @@ proto.grpc.PpUpdateRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpUpdateRequest}
+ * @return {!proto.scos_refurb.v1.PpUpdateRequest}
  */
-proto.grpc.PpUpdateRequest.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpUpdateRequest();
-  return proto.grpc.PpUpdateRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpUpdateRequest;
+  return proto.scos_refurb.v1.PpUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.PpUpdateRequest} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpUpdateRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpUpdateRequest}
+ * @return {!proto.scos_refurb.v1.PpUpdateRequest}
  */
-proto.grpc.PpUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3860,9 +4738,9 @@ proto.grpc.PpUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.PpUpdateRequest.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.PpUpdateRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.PpUpdateRequest.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.PpUpdateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3870,11 +4748,11 @@ proto.grpc.PpUpdateRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpUpdateRequest} message
+ * @param {!proto.scos_refurb.v1.PpUpdateRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpUpdateRequest.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.PpUpdateRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getFile();
   if (f.length > 0) {
@@ -3890,13 +4768,13 @@ proto.grpc.PpUpdateRequest.serializeBinaryToWriter = function(message, writer) {
  * optional string file = 1;
  * @return {string}
  */
-proto.grpc.PpUpdateRequest.prototype.getFile = function() {
+proto.scos_refurb.v1.PpUpdateRequest.prototype.getFile = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpUpdateRequest.prototype.setFile = function(value) {
+proto.scos_refurb.v1.PpUpdateRequest.prototype.setFile = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3912,12 +4790,12 @@ proto.grpc.PpUpdateRequest.prototype.setFile = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.grpc.PpUpdateResponse = function(opt_data) {
+proto.scos_refurb.v1.PpUpdateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.grpc.PpUpdateResponse, jspb.Message);
+goog.inherits(proto.scos_refurb.v1.PpUpdateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.grpc.PpUpdateResponse.displayName = 'proto.grpc.PpUpdateResponse';
+  proto.scos_refurb.v1.PpUpdateResponse.displayName = 'proto.scos_refurb.v1.PpUpdateResponse';
 }
 
 
@@ -3932,8 +4810,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.grpc.PpUpdateResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.grpc.PpUpdateResponse.toObject(opt_includeInstance, this);
+proto.scos_refurb.v1.PpUpdateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.PpUpdateResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3942,13 +4820,13 @@ proto.grpc.PpUpdateResponse.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.grpc.PpUpdateResponse} msg The msg instance to transform.
+ * @param {!proto.scos_refurb.v1.PpUpdateResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpUpdateResponse.toObject = function(includeInstance, msg) {
-  var obj = {
-    status: jspb.Message.getFieldWithDefault(msg, 1, "")
+proto.scos_refurb.v1.PpUpdateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
   };
 
   if (includeInstance) {
@@ -3962,23 +4840,139 @@ proto.grpc.PpUpdateResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.grpc.PpUpdateResponse}
+ * @return {!proto.scos_refurb.v1.PpUpdateResponse}
  */
-proto.grpc.PpUpdateResponse.deserializeBinary = function(bytes) {
+proto.scos_refurb.v1.PpUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.grpc.PpUpdateResponse();
-  return proto.grpc.PpUpdateResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.scos_refurb.v1.PpUpdateResponse;
+  return proto.scos_refurb.v1.PpUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.grpc.PpUpdateResponse} msg The message object to deserialize into.
+ * @param {!proto.scos_refurb.v1.PpUpdateResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.grpc.PpUpdateResponse}
+ * @return {!proto.scos_refurb.v1.PpUpdateResponse}
  */
-proto.grpc.PpUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.scos_refurb.v1.PpUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.PpUpdateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.PpUpdateResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.PpUpdateResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.PpUpdateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SboxApplyRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SboxApplyRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SboxApplyRequest.displayName = 'proto.scos_refurb.v1.SboxApplyRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SboxApplyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SboxApplyRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SboxApplyRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SboxApplyRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    url: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SboxApplyRequest}
+ */
+proto.scos_refurb.v1.SboxApplyRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SboxApplyRequest;
+  return proto.scos_refurb.v1.SboxApplyRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SboxApplyRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SboxApplyRequest}
+ */
+proto.scos_refurb.v1.SboxApplyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3987,7 +4981,7 @@ proto.grpc.PpUpdateResponse.deserializeBinaryFromReader = function(msg, reader) 
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setStatus(value);
+      msg.setUrl(value);
       break;
     default:
       reader.skipField();
@@ -4002,9 +4996,9 @@ proto.grpc.PpUpdateResponse.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.grpc.PpUpdateResponse.prototype.serializeBinary = function() {
+proto.scos_refurb.v1.SboxApplyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.grpc.PpUpdateResponse.serializeBinaryToWriter(this, writer);
+  proto.scos_refurb.v1.SboxApplyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4012,13 +5006,13 @@ proto.grpc.PpUpdateResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.grpc.PpUpdateResponse} message
+ * @param {!proto.scos_refurb.v1.SboxApplyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.grpc.PpUpdateResponse.serializeBinaryToWriter = function(message, writer) {
+proto.scos_refurb.v1.SboxApplyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getStatus();
+  f = message.getUrl();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -4029,18 +5023,1122 @@ proto.grpc.PpUpdateResponse.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * optional string status = 1;
+ * optional string url = 1;
  * @return {string}
  */
-proto.grpc.PpUpdateResponse.prototype.getStatus = function() {
+proto.scos_refurb.v1.SboxApplyRequest.prototype.getUrl = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.grpc.PpUpdateResponse.prototype.setStatus = function(value) {
+proto.scos_refurb.v1.SboxApplyRequest.prototype.setUrl = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
-goog.object.extend(exports, proto.grpc);
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SboxApplyResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SboxApplyResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SboxApplyResponse.displayName = 'proto.scos_refurb.v1.SboxApplyResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SboxApplyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SboxApplyResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SboxApplyResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SboxApplyResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SboxApplyResponse}
+ */
+proto.scos_refurb.v1.SboxApplyResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SboxApplyResponse;
+  return proto.scos_refurb.v1.SboxApplyResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SboxApplyResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SboxApplyResponse}
+ */
+proto.scos_refurb.v1.SboxApplyResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.SboxApplyResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.SboxApplyResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.SboxApplyResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SboxApplyResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SysExecRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SysExecRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SysExecRequest.displayName = 'proto.scos_refurb.v1.SysExecRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SysExecRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SysExecRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SysExecRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysExecRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    command: jspb.Message.getFieldWithDefault(msg, 1, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SysExecRequest}
+ */
+proto.scos_refurb.v1.SysExecRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SysExecRequest;
+  return proto.scos_refurb.v1.SysExecRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SysExecRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SysExecRequest}
+ */
+proto.scos_refurb.v1.SysExecRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCommand(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.SysExecRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.SysExecRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.SysExecRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysExecRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getCommand();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string command = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.SysExecRequest.prototype.getCommand = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.SysExecRequest.prototype.setCommand = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SysExecResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SysExecResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SysExecResponse.displayName = 'proto.scos_refurb.v1.SysExecResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SysExecResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SysExecResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SysExecResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysExecResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    output: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SysExecResponse}
+ */
+proto.scos_refurb.v1.SysExecResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SysExecResponse;
+  return proto.scos_refurb.v1.SysExecResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SysExecResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SysExecResponse}
+ */
+proto.scos_refurb.v1.SysExecResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOutput(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.SysExecResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.SysExecResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.SysExecResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysExecResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getOutput();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional string output = 2;
+ * @return {string}
+ */
+proto.scos_refurb.v1.SysExecResponse.prototype.getOutput = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.SysExecResponse.prototype.setOutput = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SysRebootRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SysRebootRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SysRebootRequest.displayName = 'proto.scos_refurb.v1.SysRebootRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SysRebootRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SysRebootRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SysRebootRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysRebootRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    delay: jspb.Message.getFieldWithDefault(msg, 1, 0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SysRebootRequest}
+ */
+proto.scos_refurb.v1.SysRebootRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SysRebootRequest;
+  return proto.scos_refurb.v1.SysRebootRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SysRebootRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SysRebootRequest}
+ */
+proto.scos_refurb.v1.SysRebootRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setDelay(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.SysRebootRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.SysRebootRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.SysRebootRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysRebootRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getDelay();
+  if (f !== 0) {
+    writer.writeUint64(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional uint64 delay = 1;
+ * @return {number}
+ */
+proto.scos_refurb.v1.SysRebootRequest.prototype.getDelay = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+};
+
+
+/** @param {number} value */
+proto.scos_refurb.v1.SysRebootRequest.prototype.setDelay = function(value) {
+  jspb.Message.setProto3IntField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.SysRebootResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.SysRebootResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.SysRebootResponse.displayName = 'proto.scos_refurb.v1.SysRebootResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.SysRebootResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.SysRebootResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.SysRebootResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysRebootResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.SysRebootResponse}
+ */
+proto.scos_refurb.v1.SysRebootResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.SysRebootResponse;
+  return proto.scos_refurb.v1.SysRebootResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.SysRebootResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.SysRebootResponse}
+ */
+proto.scos_refurb.v1.SysRebootResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.SysRebootResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.SysRebootResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.SysRebootResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.SysRebootResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.DryRunEnableRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.DryRunEnableRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.DryRunEnableRequest.displayName = 'proto.scos_refurb.v1.DryRunEnableRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.DryRunEnableRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.DryRunEnableRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    enabled: jspb.Message.getFieldWithDefault(msg, 1, false)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.DryRunEnableRequest}
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.DryRunEnableRequest;
+  return proto.scos_refurb.v1.DryRunEnableRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.DryRunEnableRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.DryRunEnableRequest}
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setEnabled(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.DryRunEnableRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.DryRunEnableRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getEnabled();
+  if (f) {
+    writer.writeBool(
+      1,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional bool enabled = 1;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.scos_refurb.v1.DryRunEnableRequest.prototype.getEnabled = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 1, false));
+};
+
+
+/** @param {boolean} value */
+proto.scos_refurb.v1.DryRunEnableRequest.prototype.setEnabled = function(value) {
+  jspb.Message.setProto3BooleanField(this, 1, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.WifiNvramUpdateRequest, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.WifiNvramUpdateRequest.displayName = 'proto.scos_refurb.v1.WifiNvramUpdateRequest';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.WifiNvramUpdateRequest.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    src: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    dst: (f = msg.getDst()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.WifiNvramUpdateRequest}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.WifiNvramUpdateRequest;
+  return proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.WifiNvramUpdateRequest}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setSrc(value);
+      break;
+    case 2:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setDst(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.WifiNvramUpdateRequest.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateRequest} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getSrc();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getDst();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string src = 1;
+ * @return {string}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.getSrc = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.setSrc = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional google.protobuf.StringValue dst = 2;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.getDst = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 2));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.setDst = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.clearDst = function() {
+  this.setDst(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateRequest.prototype.hasDst = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.scos_refurb.v1.WifiNvramUpdateResponse, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.scos_refurb.v1.WifiNvramUpdateResponse.displayName = 'proto.scos_refurb.v1.WifiNvramUpdateResponse';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.scos_refurb.v1.WifiNvramUpdateResponse.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateResponse} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
+  var f, obj = {
+
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.scos_refurb.v1.WifiNvramUpdateResponse}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.scos_refurb.v1.WifiNvramUpdateResponse;
+  return proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateResponse} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.scos_refurb.v1.WifiNvramUpdateResponse}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.scos_refurb.v1.WifiNvramUpdateResponse.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.scos_refurb.v1.WifiNvramUpdateResponse} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.scos_refurb.v1.WifiNvramUpdateResponse.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+};
+
+
+goog.object.extend(exports, proto.scos_refurb.v1);

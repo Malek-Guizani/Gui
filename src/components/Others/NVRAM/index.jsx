@@ -8,7 +8,7 @@ export const NVRAM = () => {
   const handleFileChange1 = (event) => {
     setSelectedFileSrc(event.target.files[0]);
   };
-  
+
   const WifiNvramUpdateRequest = () => {
     if (!selectedFileSrc?.name) {
       toast.warning(" input is empty");
