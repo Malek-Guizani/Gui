@@ -13,7 +13,6 @@ import { Upgrade } from "components/Upgrade";
 import { SoftwareUpgrade } from "components/Upgrade/SoftwareUpgrade";
 import { FirmwareUpgrade } from "components/Upgrade/FirmwareUpgrade";
 import { StartPage } from "components/StartPage";
-//import { Loader } from "shared/Loader";
 import { Partition } from "components/Partition";
 import { PpUpdate } from "components/PermanentParameters/ppUpdate";
 import { MakePartition } from "components/Partition/MakePartition";
@@ -22,6 +21,9 @@ import "react-toastify/dist/ReactToastify.min.css";
 import { DeletePartition } from "components/Partition/DeletePartition";
 import { PpIf } from "components/PermanentParameters/PpIf";
 import { NVRAM } from "components/Others/NVRAM";
+import { SboxApply } from "components/Others/SboxApply ";
+import { PpSwap } from "components/PermanentParameters/PpSwap";
+import { PpList } from "components/PermanentParameters/PpList";
 
 function App() {
   return (
@@ -34,10 +36,13 @@ function App() {
               <Route path="ppSet" element={<Ppset />} />
               <Route path="ppUpdate" element={<PpUpdate />} />
               <Route path="ppIf" element={<PpIf />} />
+              <Route path="PpSwap" element={<PpSwap />} />
+              <Route path="PpList" element={<PpList />} />
             </Route>
             <Route path="other" element={<Other />}>
               <Route path="cmd" element={<Cmd />} />
               <Route path="NVRAM" element={<NVRAM />} />
+              <Route path="SboxApply" element={<SboxApply />} />
             </Route>
             <Route path="Upgrade" element={<Upgrade />}>
               <Route path="softwareUpgrade" element={<SoftwareUpgrade />} />

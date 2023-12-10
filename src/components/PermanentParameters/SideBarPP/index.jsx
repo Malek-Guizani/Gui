@@ -40,9 +40,25 @@ const SidebarData = ({ service }) => {
       >
         <div className={` text-[1rem] text-brown whitespace-pre`}>ppIf</div>
       </NavLink>
+      <NavLink
+        to={`/home/${service}/PpSwap`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
+      >
+        <div className={` text-[1rem] text-brown whitespace-pre`}>PpSwap</div>
+      </NavLink>
+
+      <NavLink
+        to={`/home/${service}/PpList`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
+      >
+        <div className={` text-[1rem] text-brown whitespace-pre`}>PpList</div>
+      </NavLink>
     </React.Fragment>
   );
 };
 
 export default SidebarData;
-

@@ -29,6 +29,15 @@ const SidebarData = ({ toggle, service }) => {
       >
         <div className="text-[1rem] text-brown whitespace-pre">NVRAM</div>
       </NavLink>
+
+      <NavLink
+        to={`/home/${service}/SboxApply`}
+        className={({ isActive }) =>
+          isActive ? activeClasses : pendingClasses
+        }
+      >
+        <div className="text-[1rem] text-brown whitespace-pre">SboxApply</div>
+      </NavLink>
     </React.Fragment>
   );
 };
