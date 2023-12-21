@@ -1,0 +1,95 @@
+import React, { useState } from "react";
+import { Loader } from "Shared/Loader";
+
+import { toast, ToastContainer } from "react-toastify";
+const { client, proto } = require("../../../Services/grpcClient");
+
+export const SboxApply = () => {
+  const [selectedFile, setSelectedFile] = useState([]);
+  const [isLoaderActive, setLoaderActive] = useState(false);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+  const SboxApplyRequest = () => {
+    if (!selectedFile?.name) {
+      toast.warning(" input is empty");
+      return;
+    }
+    const request = new proto.grpc.SboxApplyRequest();
+    request.setUrl("depot:" + selectedFile?.name);
+
+    setLoaderActive(true);
+    client.sboxApply(request, {}, (err, response) => {
+      if (err) {
+        console.error(err);
+        setLoaderActive(false);
+        toast.error("Error !!!");
+        return;
+      }
+
+      toast.success("Updated !!!");
+      setLoaderActive(false);
+    });
+  };
+
+  /* useEffect(() => {
+    if (Status === "Success") {
+      setLoaderActive(false);
+      toast.success("Permanent Parameter Updated !!!");
+    }
+    setStatus("Null");
+  }, [Status]); */
+
+  return (
+    <React.Fragment>
+      {isLoaderActive && (
+        <div>
+          <Loader />
+        </div>
+      )}
+      <div
+        className={
+          isLoaderActive
+            ? "opacity-70 backdrop-blur-sm flex flex-col gap-6"
+            : "opacity-100 flex flex-col gap-6"
+        }
+        style={isLoaderActive ? { filter: "blur(4px)" } : {}}
+      >
+        <div className="">
+          <label
+            htmlFor="device"
+            className="block text-gray-700 font-semibold mb-2"
+          >
+            Device:
+          </label>
+          <input
+            type="file"
+            id="device"
+            className="w-[90%] md:w-1/2 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            placeholder="Enter device"
+            onChange={handleFileChange}
+          />
+        </div>
+        <div>
+          <button
+            type="button"
+            onClick={() => {
+              SboxApplyRequest();
+            }}
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            SboxApply
+          </button>
+        </div>
+      </div>
+      {
+        <ToastContainer
+          position="top-center"
+          hideProgressBar={true}
+          autoClose={3000}
+        />
+      }
+    </React.Fragment>
+  );
+};

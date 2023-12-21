@@ -16,6 +16,16 @@ export const options = [
   { value: "VENDOR_INFO1", label: "VENDOR_INFO1" },
   { value: "VENDOR_INFO2", label: "VENDOR_INFO2" },
   { value: "VENDOR_INFO3", label: "VENDOR_INFO3" },
+  { value: "VENDOR_INFO4", label: "VENDOR_INFO4" },
+  { value: "VENDOR_INFO5", label: "VENDOR_INFO5" },
+  { value: "VENDOR_INFO6", label: "VENDOR_INFO6" },
+  { value: "VENDOR_INFO7", label: "VENDOR_INFO7" },
+  { value: "VENDOR_INFO8", label: "VENDOR_INFO8" },
+  { value: "VENDOR_INFO9", label: "VENDOR_INFO9" },
+  { value: "VENDOR_INFO10", label: "VENDOR_INFO10" },
+  { value: "PRIVATE_KEY", label: "PRIVATE_KEY" },
+  { value: "ZIGBEE_MAC1", label: "ZIGBEE_MAC1" },
+  { value: "ZIGBEE_SSID1", label: "ZIGBEE_SSID1" },
 ];
 
 export const options2 = [
