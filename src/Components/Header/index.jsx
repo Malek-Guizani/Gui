@@ -24,7 +24,7 @@ const Header = () => {
   }, []);
   return (
     <header>
-      <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6">
+      <div className="bg-gray-200 w-full fixed flex flex-row justify-around py-6 z-50">
         {}
       </div>
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-10 left-0 border border-gray-200 dark:border-gray-600">
