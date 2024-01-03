@@ -13,7 +13,7 @@ proto.scos_refurb = {};
 proto.scos_refurb.v1 = {};
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = Function('return this')();
+var global = (function() { return this; })();
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.scos_refurb.v1.BoardInspectRequest', null, global);
@@ -103,7 +103,7 @@ proto.scos_refurb.v1.BoardInspectRequest.prototype.toObject = function(opt_inclu
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardInspectRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var  obj = {
 
   };
 
@@ -122,7 +122,7 @@ proto.scos_refurb.v1.BoardInspectRequest.toObject = function(includeInstance, ms
  */
 proto.scos_refurb.v1.BoardInspectRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.BoardInspectRequest;
+  var msg = new proto.scos_refurb.v1.BoardInspectRequest();
   return proto.scos_refurb.v1.BoardInspectRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -169,7 +169,6 @@ proto.scos_refurb.v1.BoardInspectRequest.prototype.serializeBinary = function() 
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardInspectRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -238,7 +237,7 @@ proto.scos_refurb.v1.BoardInspectResponse.toObject = function(includeInstance, m
  */
 proto.scos_refurb.v1.BoardInspectResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.BoardInspectResponse;
+  var msg = new proto.scos_refurb.v1.BoardInspectResponse();
   return proto.scos_refurb.v1.BoardInspectResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -258,7 +257,7 @@ proto.scos_refurb.v1.BoardInspectResponse.deserializeBinaryFromReader = function
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo;
+      var value = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo();
       reader.readMessage(value,proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader);
       msg.setInfo(value);
       break;
@@ -348,18 +347,27 @@ proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.prototype.toObject = functio
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    versionsMap: (f = msg.getVersionsMap()) ? f.toObject(includeInstance, undefined) : [],
-    parametersMap: (f = msg.getParametersMap()) ? f.toObject(includeInstance, undefined) : []
-  };
+  var f, obj = {};
+
+  if ((f = msg.getVersionsMap())) {
+    obj.versionsMap = f.toObject(includeInstance, undefined);
+  } else {
+    obj.versionsMap = [];
+  }
+
+  if ((f = msg.getParametersMap())) {
+    obj.parametersMap = f.toObject(includeInstance, undefined);
+  } else {
+    obj.parametersMap = [];
+  }
 
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
   }
+
   return obj;
 };
 }
-
 
 /**
  * Deserializes binary data (in protobuf wire format).
@@ -368,7 +376,7 @@ proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.toObject = function(includeI
  */
 proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo;
+  var msg = new proto.scos_refurb.v1.BoardInspectResponse.BoardInfo();
   return proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -386,15 +394,16 @@ proto.scos_refurb.v1.BoardInspectResponse.BoardInfo.deserializeBinaryFromReader 
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = msg.getVersionsMap();
+      value = msg.getVersionsMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
          });
       break;
     case 2:
-      var value = msg.getParametersMap();
+      value = msg.getParametersMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
          });
@@ -551,7 +560,7 @@ proto.scos_refurb.v1.BoardVersionsRequest.prototype.toObject = function(opt_incl
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardVersionsRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -570,7 +579,7 @@ proto.scos_refurb.v1.BoardVersionsRequest.toObject = function(includeInstance, m
  */
 proto.scos_refurb.v1.BoardVersionsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.BoardVersionsRequest;
+  var msg = new proto.scos_refurb.v1.BoardVersionsRequest();
   return proto.scos_refurb.v1.BoardVersionsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -617,7 +626,6 @@ proto.scos_refurb.v1.BoardVersionsRequest.prototype.serializeBinary = function()
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardVersionsRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -667,13 +675,15 @@ proto.scos_refurb.v1.BoardVersionsResponse.prototype.toObject = function(opt_inc
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.BoardVersionsResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    versionsMap: (f = msg.getVersionsMap()) ? f.toObject(includeInstance, undefined) : []
-  };
+  var obj = {};
+  var f = msg.getVersionsMap();
+
+  obj.versionsMap = (f) ? f.toObject(includeInstance, undefined) : [];
 
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
   }
+
   return obj;
 };
 }
@@ -686,7 +696,7 @@ proto.scos_refurb.v1.BoardVersionsResponse.toObject = function(includeInstance, 
  */
 proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.BoardVersionsResponse;
+  var msg = new proto.scos_refurb.v1.BoardVersionsResponse();
   return proto.scos_refurb.v1.BoardVersionsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -811,7 +821,7 @@ proto.scos_refurb.v1.DepotGetRequest.prototype.toObject = function(opt_includeIn
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DepotGetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -830,7 +840,7 @@ proto.scos_refurb.v1.DepotGetRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.DepotGetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.DepotGetRequest;
+  var msg = new proto.scos_refurb.v1.DepotGetRequest();
   return proto.scos_refurb.v1.DepotGetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -877,7 +887,6 @@ proto.scos_refurb.v1.DepotGetRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DepotGetRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -927,7 +936,7 @@ proto.scos_refurb.v1.DepotGetResponse.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DepotGetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     address: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -946,7 +955,7 @@ proto.scos_refurb.v1.DepotGetResponse.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.DepotGetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.DepotGetResponse;
+  var msg = new proto.scos_refurb.v1.DepotGetResponse();
   return proto.scos_refurb.v1.DepotGetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1069,7 +1078,7 @@ proto.scos_refurb.v1.DryRunEnableResponse.prototype.toObject = function(opt_incl
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DryRunEnableResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -1088,7 +1097,7 @@ proto.scos_refurb.v1.DryRunEnableResponse.toObject = function(includeInstance, m
  */
 proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.DryRunEnableResponse;
+  var msg = new proto.scos_refurb.v1.DryRunEnableResponse();
   return proto.scos_refurb.v1.DryRunEnableResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1135,7 +1144,6 @@ proto.scos_refurb.v1.DryRunEnableResponse.prototype.serializeBinary = function()
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DryRunEnableResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -1185,7 +1193,7 @@ proto.scos_refurb.v1.FwUpdateRequest.prototype.toObject = function(opt_includeIn
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.FwUpdateRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     component: jspb.Message.getFieldWithDefault(msg, 1, ""),
     url: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -1205,7 +1213,7 @@ proto.scos_refurb.v1.FwUpdateRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.FwUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.FwUpdateRequest;
+  var msg = new proto.scos_refurb.v1.FwUpdateRequest();
   return proto.scos_refurb.v1.FwUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1223,13 +1231,14 @@ proto.scos_refurb.v1.FwUpdateRequest.deserializeBinaryFromReader = function(msg,
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setComponent(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setUrl(value);
       break;
     default:
@@ -1354,7 +1363,7 @@ proto.scos_refurb.v1.FwUpdateResponse.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.FwUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -1373,7 +1382,7 @@ proto.scos_refurb.v1.FwUpdateResponse.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.FwUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.FwUpdateResponse;
+  var msg = new proto.scos_refurb.v1.FwUpdateResponse();
   return proto.scos_refurb.v1.FwUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1420,7 +1429,6 @@ proto.scos_refurb.v1.FwUpdateResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.FwUpdateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -1470,7 +1478,7 @@ proto.scos_refurb.v1.PartBackupRequest.prototype.toObject = function(opt_include
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartBackupRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -1489,7 +1497,7 @@ proto.scos_refurb.v1.PartBackupRequest.toObject = function(includeInstance, msg)
  */
 proto.scos_refurb.v1.PartBackupRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartBackupRequest;
+  var msg = new proto.scos_refurb.v1.PartBackupRequest();
   return proto.scos_refurb.v1.PartBackupRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1612,7 +1620,7 @@ proto.scos_refurb.v1.PartBackupResponse.prototype.toObject = function(opt_includ
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartBackupResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -1631,7 +1639,7 @@ proto.scos_refurb.v1.PartBackupResponse.toObject = function(includeInstance, msg
  */
 proto.scos_refurb.v1.PartBackupResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartBackupResponse;
+  var msg = new proto.scos_refurb.v1.PartBackupResponse();
   return proto.scos_refurb.v1.PartBackupResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1678,7 +1686,6 @@ proto.scos_refurb.v1.PartBackupResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartBackupResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -1749,7 +1756,7 @@ proto.scos_refurb.v1.PartDeleteRequest.toObject = function(includeInstance, msg)
  */
 proto.scos_refurb.v1.PartDeleteRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartDeleteRequest;
+  var msg = new proto.scos_refurb.v1.PartDeleteRequest();
   return proto.scos_refurb.v1.PartDeleteRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -1767,17 +1774,18 @@ proto.scos_refurb.v1.PartDeleteRequest.deserializeBinaryFromReader = function(ms
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {boolean} */ (reader.readBool());
+      value = /** @type {boolean} */ (reader.readBool());
       msg.setRequired(value);
       break;
     case 3:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setDevice(value);
       break;
@@ -1943,7 +1951,7 @@ proto.scos_refurb.v1.PartDeleteResponse.prototype.toObject = function(opt_includ
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartDeleteResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -1962,7 +1970,7 @@ proto.scos_refurb.v1.PartDeleteResponse.toObject = function(includeInstance, msg
  */
 proto.scos_refurb.v1.PartDeleteResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartDeleteResponse;
+  var msg = new proto.scos_refurb.v1.PartDeleteResponse();
   return proto.scos_refurb.v1.PartDeleteResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2009,7 +2017,6 @@ proto.scos_refurb.v1.PartDeleteResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartDeleteResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -2059,7 +2066,7 @@ proto.scos_refurb.v1.PartMakeRequest.prototype.toObject = function(opt_includeIn
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartMakeRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
     device: jspb.Message.getFieldWithDefault(msg, 2, ""),
     size: jspb.Message.getFieldWithDefault(msg, 3, "")
@@ -2080,7 +2087,7 @@ proto.scos_refurb.v1.PartMakeRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PartMakeRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartMakeRequest;
+  var msg = new proto.scos_refurb.v1.PartMakeRequest();
   return proto.scos_refurb.v1.PartMakeRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2098,17 +2105,18 @@ proto.scos_refurb.v1.PartMakeRequest.deserializeBinaryFromReader = function(msg,
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setDevice(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setSize(value);
       break;
     default:
@@ -2255,7 +2263,7 @@ proto.scos_refurb.v1.PartMakeResponse.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartMakeResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -2274,7 +2282,7 @@ proto.scos_refurb.v1.PartMakeResponse.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.PartMakeResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartMakeResponse;
+  var msg = new proto.scos_refurb.v1.PartMakeResponse();
   return proto.scos_refurb.v1.PartMakeResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2321,7 +2329,6 @@ proto.scos_refurb.v1.PartMakeResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartMakeResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -2371,7 +2378,7 @@ proto.scos_refurb.v1.PartUpdateRequest.prototype.toObject = function(opt_include
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartUpdateRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     partition: jspb.Message.getFieldWithDefault(msg, 1, ""),
     file: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -2391,7 +2398,7 @@ proto.scos_refurb.v1.PartUpdateRequest.toObject = function(includeInstance, msg)
  */
 proto.scos_refurb.v1.PartUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartUpdateRequest;
+  var msg = new proto.scos_refurb.v1.PartUpdateRequest();
   return proto.scos_refurb.v1.PartUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2409,13 +2416,14 @@ proto.scos_refurb.v1.PartUpdateRequest.deserializeBinaryFromReader = function(ms
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setPartition(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setFile(value);
       break;
     default:
@@ -2540,7 +2548,7 @@ proto.scos_refurb.v1.PartUpdateResponse.prototype.toObject = function(opt_includ
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -2559,7 +2567,7 @@ proto.scos_refurb.v1.PartUpdateResponse.toObject = function(includeInstance, msg
  */
 proto.scos_refurb.v1.PartUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PartUpdateResponse;
+  var msg = new proto.scos_refurb.v1.PartUpdateResponse();
   return proto.scos_refurb.v1.PartUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2606,7 +2614,6 @@ proto.scos_refurb.v1.PartUpdateResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PartUpdateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -2656,7 +2663,7 @@ proto.scos_refurb.v1.PermanentParam.prototype.toObject = function(opt_includeIns
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PermanentParam.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -2676,7 +2683,7 @@ proto.scos_refurb.v1.PermanentParam.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PermanentParam.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PermanentParam;
+  var msg = new proto.scos_refurb.v1.PermanentParam();
   return proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2694,13 +2701,14 @@ proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader = function(msg, 
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setValue(value);
       break;
     default:
@@ -2825,7 +2833,7 @@ proto.scos_refurb.v1.PpGetRequest.prototype.toObject = function(opt_includeInsta
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpGetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -2844,7 +2852,7 @@ proto.scos_refurb.v1.PpGetRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpGetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpGetRequest;
+  var msg = new proto.scos_refurb.v1.PpGetRequest();
   return proto.scos_refurb.v1.PpGetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -2967,7 +2975,7 @@ proto.scos_refurb.v1.PpGetResponse.prototype.toObject = function(opt_includeInst
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpGetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -2986,7 +2994,7 @@ proto.scos_refurb.v1.PpGetResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpGetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpGetResponse;
+  var msg = new proto.scos_refurb.v1.PpGetResponse();
   return proto.scos_refurb.v1.PpGetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3134,7 +3142,7 @@ proto.scos_refurb.v1.PpIfRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpIfRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpIfRequest;
+  var msg = new proto.scos_refurb.v1.PpIfRequest();
   return proto.scos_refurb.v1.PpIfRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3152,34 +3160,35 @@ proto.scos_refurb.v1.PpIfRequest.deserializeBinaryFromReader = function(msg, rea
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setTestName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setTestOp(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setTestValue(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setBodyName(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setBodyValue(value);
       break;
     case 6:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setAltName(value);
       break;
     case 7:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setAltValue(value);
       break;
@@ -3447,7 +3456,7 @@ proto.scos_refurb.v1.PpIfResponse.prototype.toObject = function(opt_includeInsta
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpIfResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -3466,7 +3475,7 @@ proto.scos_refurb.v1.PpIfResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpIfResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpIfResponse;
+  var msg = new proto.scos_refurb.v1.PpIfResponse();
   return proto.scos_refurb.v1.PpIfResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3513,7 +3522,6 @@ proto.scos_refurb.v1.PpIfResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpIfResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -3563,7 +3571,7 @@ proto.scos_refurb.v1.PpListRequest.prototype.toObject = function(opt_includeInst
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpListRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -3582,7 +3590,7 @@ proto.scos_refurb.v1.PpListRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpListRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpListRequest;
+  var msg = new proto.scos_refurb.v1.PpListRequest();
   return proto.scos_refurb.v1.PpListRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3629,7 +3637,6 @@ proto.scos_refurb.v1.PpListRequest.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpListRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -3679,15 +3686,18 @@ proto.scos_refurb.v1.PpListResponse.prototype.toObject = function(opt_includeIns
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpListResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    parametersMap: (f = msg.getParametersMap()) ? f.toObject(includeInstance, undefined) : []
-  };
+  var obj = {};
+  var f = msg.getParametersMap();
+
+  obj.parametersMap = (f) ? f.toObject(includeInstance, undefined) : [];
 
   if (includeInstance) {
     obj.$jspbMessageInstance = msg;
   }
+
   return obj;
 };
+
 }
 
 
@@ -3698,7 +3708,7 @@ proto.scos_refurb.v1.PpListResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpListResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpListResponse;
+  var msg = new proto.scos_refurb.v1.PpListResponse();
   return proto.scos_refurb.v1.PpListResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3823,7 +3833,7 @@ proto.scos_refurb.v1.PpSetRequest.prototype.toObject = function(opt_includeInsta
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpSetRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -3843,7 +3853,7 @@ proto.scos_refurb.v1.PpSetRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpSetRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpSetRequest;
+  var msg = new proto.scos_refurb.v1.PpSetRequest();
   return proto.scos_refurb.v1.PpSetRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -3861,13 +3871,14 @@ proto.scos_refurb.v1.PpSetRequest.deserializeBinaryFromReader = function(msg, re
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setValue(value);
       break;
     default:
@@ -3992,7 +4003,7 @@ proto.scos_refurb.v1.PpSetResponse.prototype.toObject = function(opt_includeInst
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpSetResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -4011,7 +4022,7 @@ proto.scos_refurb.v1.PpSetResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpSetResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpSetResponse;
+  var msg = new proto.scos_refurb.v1.PpSetResponse();
   return proto.scos_refurb.v1.PpSetResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4058,7 +4069,6 @@ proto.scos_refurb.v1.PpSetResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpSetResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -4108,7 +4118,7 @@ proto.scos_refurb.v1.PpSwapRequest.prototype.toObject = function(opt_includeInst
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpSwapRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     a: jspb.Message.getFieldWithDefault(msg, 1, ""),
     b: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
@@ -4128,7 +4138,7 @@ proto.scos_refurb.v1.PpSwapRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpSwapRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpSwapRequest;
+  var msg = new proto.scos_refurb.v1.PpSwapRequest();
   return proto.scos_refurb.v1.PpSwapRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4146,13 +4156,14 @@ proto.scos_refurb.v1.PpSwapRequest.deserializeBinaryFromReader = function(msg, r
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setA(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setB(value);
       break;
     default:
@@ -4297,7 +4308,7 @@ proto.scos_refurb.v1.PpSwapResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpSwapResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpSwapResponse;
+  var msg = new proto.scos_refurb.v1.PpSwapResponse();
   return proto.scos_refurb.v1.PpSwapResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4315,14 +4326,15 @@ proto.scos_refurb.v1.PpSwapResponse.deserializeBinaryFromReader = function(msg, 
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+      value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple();
       reader.readMessage(value,proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader);
       msg.setBefore(value);
       break;
     case 2:
-      var value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+      value = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple();
       reader.readMessage(value,proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader);
       msg.setAfter(value);
       break;
@@ -4440,7 +4452,7 @@ proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.toObject = function(incl
  */
 proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple;
+  var msg = new proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple();
   return proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4458,14 +4470,15 @@ proto.scos_refurb.v1.PpSwapResponse.PermanentParamTuple.deserializeBinaryFromRea
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = new proto.scos_refurb.v1.PermanentParam;
+      value = new proto.scos_refurb.v1.PermanentParam();
       reader.readMessage(value,proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader);
       msg.setFirst(value);
       break;
     case 2:
-      var value = new proto.scos_refurb.v1.PermanentParam;
+      value = new proto.scos_refurb.v1.PermanentParam();
       reader.readMessage(value,proto.scos_refurb.v1.PermanentParam.deserializeBinaryFromReader);
       msg.setSecond(value);
       break;
@@ -4683,7 +4696,7 @@ proto.scos_refurb.v1.PpUpdateRequest.prototype.toObject = function(opt_includeIn
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpUpdateRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     file: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -4702,7 +4715,7 @@ proto.scos_refurb.v1.PpUpdateRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.PpUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpUpdateRequest;
+  var msg = new proto.scos_refurb.v1.PpUpdateRequest();
   return proto.scos_refurb.v1.PpUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4825,7 +4838,7 @@ proto.scos_refurb.v1.PpUpdateResponse.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -4844,7 +4857,7 @@ proto.scos_refurb.v1.PpUpdateResponse.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.PpUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.PpUpdateResponse;
+  var msg = new proto.scos_refurb.v1.PpUpdateResponse();
   return proto.scos_refurb.v1.PpUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -4891,7 +4904,6 @@ proto.scos_refurb.v1.PpUpdateResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.PpUpdateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -4941,7 +4953,7 @@ proto.scos_refurb.v1.SboxApplyRequest.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SboxApplyRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     url: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -4960,7 +4972,7 @@ proto.scos_refurb.v1.SboxApplyRequest.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.SboxApplyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SboxApplyRequest;
+  var msg = new proto.scos_refurb.v1.SboxApplyRequest();
   return proto.scos_refurb.v1.SboxApplyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5083,7 +5095,7 @@ proto.scos_refurb.v1.SboxApplyResponse.prototype.toObject = function(opt_include
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SboxApplyResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -5102,7 +5114,7 @@ proto.scos_refurb.v1.SboxApplyResponse.toObject = function(includeInstance, msg)
  */
 proto.scos_refurb.v1.SboxApplyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SboxApplyResponse;
+  var msg = new proto.scos_refurb.v1.SboxApplyResponse();
   return proto.scos_refurb.v1.SboxApplyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5149,7 +5161,6 @@ proto.scos_refurb.v1.SboxApplyResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SboxApplyResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -5199,7 +5210,7 @@ proto.scos_refurb.v1.SysExecRequest.prototype.toObject = function(opt_includeIns
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SysExecRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     command: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
@@ -5218,7 +5229,7 @@ proto.scos_refurb.v1.SysExecRequest.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.SysExecRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SysExecRequest;
+  var msg = new proto.scos_refurb.v1.SysExecRequest();
   return proto.scos_refurb.v1.SysExecRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5341,7 +5352,7 @@ proto.scos_refurb.v1.SysExecResponse.prototype.toObject = function(opt_includeIn
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SysExecResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     output: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -5360,7 +5371,7 @@ proto.scos_refurb.v1.SysExecResponse.toObject = function(includeInstance, msg) {
  */
 proto.scos_refurb.v1.SysExecResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SysExecResponse;
+  var msg = new proto.scos_refurb.v1.SysExecResponse();
   return proto.scos_refurb.v1.SysExecResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5483,7 +5494,7 @@ proto.scos_refurb.v1.SysRebootRequest.prototype.toObject = function(opt_includeI
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SysRebootRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     delay: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
@@ -5502,7 +5513,7 @@ proto.scos_refurb.v1.SysRebootRequest.toObject = function(includeInstance, msg) 
  */
 proto.scos_refurb.v1.SysRebootRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SysRebootRequest;
+  var msg = new proto.scos_refurb.v1.SysRebootRequest();
   return proto.scos_refurb.v1.SysRebootRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5625,7 +5636,7 @@ proto.scos_refurb.v1.SysRebootResponse.prototype.toObject = function(opt_include
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SysRebootResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -5644,7 +5655,7 @@ proto.scos_refurb.v1.SysRebootResponse.toObject = function(includeInstance, msg)
  */
 proto.scos_refurb.v1.SysRebootResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.SysRebootResponse;
+  var msg = new proto.scos_refurb.v1.SysRebootResponse();
   return proto.scos_refurb.v1.SysRebootResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5691,7 +5702,6 @@ proto.scos_refurb.v1.SysRebootResponse.prototype.serializeBinary = function() {
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.SysRebootResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 
@@ -5741,7 +5751,7 @@ proto.scos_refurb.v1.DryRunEnableRequest.prototype.toObject = function(opt_inclu
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.DryRunEnableRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
     enabled: jspb.Message.getFieldWithDefault(msg, 1, false)
   };
 
@@ -5760,7 +5770,7 @@ proto.scos_refurb.v1.DryRunEnableRequest.toObject = function(includeInstance, ms
  */
 proto.scos_refurb.v1.DryRunEnableRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.DryRunEnableRequest;
+  var msg = new proto.scos_refurb.v1.DryRunEnableRequest();
   return proto.scos_refurb.v1.DryRunEnableRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5905,7 +5915,7 @@ proto.scos_refurb.v1.WifiNvramUpdateRequest.toObject = function(includeInstance,
  */
 proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.WifiNvramUpdateRequest;
+  var msg = new proto.scos_refurb.v1.WifiNvramUpdateRequest();
   return proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -5923,13 +5933,14 @@ proto.scos_refurb.v1.WifiNvramUpdateRequest.deserializeBinaryFromReader = functi
       break;
     }
     var field = reader.getFieldNumber();
+    var value;
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      value = /** @type {string} */ (reader.readString());
       msg.setSrc(value);
       break;
     case 2:
-      var value = new google_protobuf_wrappers_pb.StringValue;
+      value = new google_protobuf_wrappers_pb.StringValue();
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setDst(value);
       break;
@@ -6071,7 +6082,7 @@ proto.scos_refurb.v1.WifiNvramUpdateResponse.prototype.toObject = function(opt_i
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.WifiNvramUpdateResponse.toObject = function(includeInstance, msg) {
-  var f, obj = {
+  var obj = {
 
   };
 
@@ -6090,7 +6101,7 @@ proto.scos_refurb.v1.WifiNvramUpdateResponse.toObject = function(includeInstance
  */
 proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.scos_refurb.v1.WifiNvramUpdateResponse;
+  var msg = new proto.scos_refurb.v1.WifiNvramUpdateResponse();
   return proto.scos_refurb.v1.WifiNvramUpdateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
@@ -6137,7 +6148,6 @@ proto.scos_refurb.v1.WifiNvramUpdateResponse.prototype.serializeBinary = functio
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.scos_refurb.v1.WifiNvramUpdateResponse.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
 };
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { options, options2 } from "../../../DB/PP_data";
+import { options } from "../../../DB/PP_data";
 import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../Services/grpcClient");
 
@@ -39,8 +39,8 @@ export const PpSwap = () => {
             }}
             value={selectedParam1}
           >
-            {options.map((option) => (
-              <option key={option.value} value={option.value}>
+            {options.map((option, index) => (
+              <option key={index} value={option.value}>
                 {option.label}
               </option>
             ))}
@@ -56,8 +56,8 @@ export const PpSwap = () => {
               onChange={(e) => setSelectedParam2(e.target.value)}
               value={selectedParam2}
             >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
+              {options.map((option, index) => (
+                <option key={index} value={option.value}>
                   {option.label}
                 </option>
               ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { Loader } from "Shared/Loader";
 
@@ -6,7 +6,6 @@ const { client, proto } = require("../../../Services/grpcClient");
 
 export const BackupPartition = () => {
   const [selectedText, setSelectedText] = useState("");
-  const [status, setStatus] = useState(null);
   const [ppMessage, SetppMessage] = useState(null);
   const [isLoaderActive, setLoaderActive] = useState(false);
 
@@ -48,14 +47,6 @@ export const BackupPartition = () => {
       SetppMessage(response.getValue());
     });
   };
-
-  /* useEffect(() => {
-    if (status === "Success") {
-      setLoaderActive(false);
-      toast.success("Backup completed !!! ");
-    }
-    setStatus("Null");
-  }, [status]); */
 
   return (
     <div>

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Loader } from "Shared/Loader";
 import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../Services/grpcClient");
 export const FirmwareUpgrade = () => {
-  const [Status, setStatus] = useState(null);
   const [selectedFile, setSelectedFile] = useState([]);
   const [isLoaderActive, setLoaderActive] = useState(false);
 

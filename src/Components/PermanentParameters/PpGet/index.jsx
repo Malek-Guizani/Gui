@@ -28,7 +28,6 @@ export const PpGet = () => {
         toast.error("Error !!!");
         return;
       }
-
       SetppMessage(response.getValue());
     });
   };
@@ -44,8 +43,8 @@ export const PpGet = () => {
               onChange={handleChange}
               value={selectedParam}
             >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
+              {options.map((option, index) => (
+                <option key={index} value={option.value}>
                   {option.label}
                 </option>
               ))}
@@ -65,48 +64,7 @@ export const PpGet = () => {
             <h1 className="text-xl mb-2">Result :</h1>
             <div className="flex flex-row   gap-1">
               <div className="bg-gray-200 w-[90%] md:max-w-md rounded-md p-4 max-h-[calc(50vh - 25px)] overflow-y-auto">
-                {ppMessage}ffffffffffffffffffffffffffffffff frfrgrgrt grt gtr
-                htr rtgh rt tr hgiut hrgiuthrg iuthrg iuhg iuhg
-                iuthguthgiurehgiuhgi udfhgi uhgiudfhgi ufdhg iuhti
-                guhfdiughighidfughiufd ghiufh giu hgiuhg iuhihfilughdfi gs
-                iughtrsliughrghdsigur hgiut ughtiughiutshguthr uht
-                giuhfuidghiurhg tuihgiuthg iushgiuhrsuilghiurhg riusgh
-                guhsuighuigh uihg uimsrhtsuhgihfb iumhtrgiusm bsmg gbsg
-                ghuaqjgninmifdqinbin in ffffffffffffffffffffffffffffffffdf dfd f
-                dfgfd f dfgfddfg dfgfddfgg dfgfddfgdf guhfdiughighidfughiufddf g
-                fffffffffffffffffffffffffffffff frfrgrgrt grt gtr htr rtgh rt tr
-                hgiut hrgiuthrg iuthrg iuhg iuhg iuthguthgiurehgiuhgi udfhgi
-                uhgiudfhgi ufdhg iuhti guhfdiughighidfughiufd ghiufh giu hgiuhg
-                iuhihfilughdfi gs iughtrsliughrghdsigur hgiut ughtiughiutshguthr
-                uht giuhfuidghiurhg tuihgiuthg iushgiuhrsuilghiurhg riusgh
-                guhsuighuigh uihg uimsrhtsuhgihfb iumhtrgiusm bsmg gbsg
-                ghuaqjgninmifdqinbin in ffffffffffffffffffffffffffffffffdf dfd f
-                dfgfd f dfgfddfg dfgfddfgg dfgfddfgdf guhfdiughighidfughiufddf g
-                fffffffffffffffffffffffffffffff frfrgrgrt grt gtr htr rtgh rt tr
-                hgiut hrgiuthrg iuthrg iuhg iuhg iuthguthgiurehgiuhgi udfhgi
-                uhgiudfhgi ufdhg iuhti guhfdiughighidfughiufd ghiufh giu hgiuhg
-                iuhihfilughdfi gs iughtrsliughrghdsigur hgiut ughtiughiutshguthr
-                uht giuhfuidghiurhg tuihgiuthg iushgiuhrsuilghiurhg riusgh
-                guhsuighuigh uihg uimsrhtsuhgihfb iumhtrgiusm bsmg gbsg
-                ghuaqjgninmifdqinbin in ffffffffffffffffffffffffffffffffdf dfd f
-                dfgfd f dfgfddfg dfgfddfgg dfgfddfgdf guhfdiughighidfughiufddf g
-                fffffffffffffffffffffffffffffff frfrgrgrt grt gtr htr rtgh rt tr
-                hgiut hrgiuthrg iuthrg iuhg iuhg iuthguthgiurehgiuhgi udfhgi
-                uhgiudfhgi ufdhg iuhti guhfdiughighidfughiufd ghiufh giu hgiuhg
-                iuhihfilughdfi gs iughtrsliughrghdsigur hgiut ughtiughiutshguthr
-                uht giuhfuidghiurhg tuihgiuthg iushgiuhrsuilghiurhg riusgh
-                guhsuighuigh uihg uimsrhtsuhgihfb iumhtrgiusm bsmg gbsg
-                ghuaqjgninmifdqinbin in ffffffffffffffffffffffffffffffffdf dfd f
-                dfgfd f dfgfddfg dfgfddfgg dfgfddfgdf guhfdiughighidfughiufddf g
-                fffffffffffffffffffffffffffffff frfrgrgrt grt gtr htr rtgh rt tr
-                hgiut hrgiuthrg iuthrg iuhg iuhg iuthguthgiurehgiuhgi udfhgi
-                uhgiudfhgi ufdhg iuhti guhfdiughighidfughiufd ghiufh giu hgiuhg
-                iuhihfilughdfi gs iughtrsliughrghdsigur hgiut ughtiughiutshguthr
-                uht giuhfuidghiurhg tuihgiuthg iushgiuhrsuilghiurhg riusgh
-                guhsuighuigh uihg uimsrhtsuhgihfb iumhtrgiusm bsmg gbsg
-                ghuaqjgninmifdqinbin in ffffffffffffffffffffffffffffffffdf dfd f
-                dfgfd f dfgfddfg dfgfddfgg dfgfddfgdf guhfdiughighidfughiufddf g
-                monta
+                {ppMessage}
               </div>
               <button
                 className="bg-transparent text-gray-600 hover:text-gray-800 focus:outline-none"

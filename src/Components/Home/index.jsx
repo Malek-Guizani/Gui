@@ -17,12 +17,3 @@ const Home = () => {
 };
 
 export default Home;
-//.parent-container {
-//  position: relative;
-//  overflow: hidden;
-//  min-height: 93vh; /* Or set height as needed */
-//}
-//.content {
-//  max-height: calc(68vh - 50px); /* Adjust height based on footer size */
-//  overflow-y: auto; /* Enable vertical scroll */
-//}

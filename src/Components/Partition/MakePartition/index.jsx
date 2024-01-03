@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 const { client, proto } = require("../../../Services/grpcClient");
 
@@ -6,7 +6,6 @@ export const MakePartition = () => {
   const [selectedPartition, setSelectedPartition] = useState(null);
   const [selectedDevice, setSelectedDevice] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
-  const [status, setStatus] = useState(null);
 
   const handleChange1 = (e) => {
     setSelectedPartition(e.target.value);

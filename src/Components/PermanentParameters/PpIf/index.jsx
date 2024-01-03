@@ -3,7 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Equal from "../../../Assets/svg/equal-svgrepo-com.svg";
 import NotEqual from "../../../Assets/svg/not-equal-svgrepo-com.svg";
 import Fleche from "../../../Assets/icons8-flèche-100.png";
-import { options, options2 } from "../../../DB/PP_data";
+import { options } from "../../../DB/PP_data";
 const { client, proto } = require("../../../Services/grpcClient");
 
 export const PpIf = () => {
@@ -104,8 +104,8 @@ export const PpIf = () => {
             }}
             value={selectedParam1}
           >
-            {options.map((option) => (
-              <option key={option.value} value={option.value}>
+            {options.map((option, index) => (
+              <option key={index} value={option.value}>
                 {option.label}
               </option>
             ))}
@@ -154,8 +154,8 @@ export const PpIf = () => {
               onChange={(e) => setSelectedParam2(e.target.value)}
               value={selectedParam2}
             >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
+              {options.map((option, index) => (
+                <option key={index} value={option.value}>
                   {option.label}
                 </option>
               ))}

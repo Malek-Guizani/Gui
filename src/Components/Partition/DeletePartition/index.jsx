@@ -5,20 +5,9 @@ const { client, proto } = require("../../../Services/grpcClient");
 
 export const DeletePartition = () => {
   const [selectedPartition, setSelectedPartition] = useState(null);
-  const [status, setStatus] = useState(null);
-  const [isLoaderActive, setLoaderActive] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
   const handleChange1 = (e) => {
     setSelectedPartition(e.target.value);
   };
-  const Optionchange = (e) => {
-    setSelectedOption(e.target.value);
-  };
-  const options = [
-    { value: "", label: "Select an Option" },
-    { value: "1", label: "ubi" },
-    { value: "2", label: "mmcblk0" },
-  ];
   const PartDeleteRequest = () => {
     const request = new proto.grpc.PartDeleteRequest();
     request.setPartition(selectedPartition);
@@ -38,10 +27,8 @@ export const DeletePartition = () => {
   return (
     <>
       <div
-        className={` w-full flex items-center flex-col  justify-center gap-6 ${
-          isLoaderActive ? "opacity-70 backdrop-blur-sm" : "opacity-100"
-        }`}
-        style={isLoaderActive ? { filter: "blur(4px)" } : {}}
+        className={` w-full flex items-center flex-col justify-center gap-6 opacity-100`}
+        style={{ filter: "blur(4px)" }}
       >
         <div className="rounded-lg  p-6 w-full flex  md:flex-row  flex-col items-start justify-start gap-5">
           <div className=" mx-auto	">

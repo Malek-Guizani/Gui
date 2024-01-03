@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { options } from "../../../DB/PP_data";
 const { client, proto } = require("../../../Services/grpcClient");
 
 export const PpSet = () => {
-  const [ppStatus, SetppStatus] = useState(null);
   const [selectedParam, setSelectedParam] = useState("");
   const [selectedValue, setSelectedValue] = useState("");
 
@@ -35,14 +34,7 @@ export const PpSet = () => {
       toast.success("New Value !!! ");
     });
   };
-  /*
-  useEffect(() => {
-    if (ppStatus === "Success") {
-      toast.success("New Value !!! ");
-    }
-    SetppStatus("Null");
-  }, [ppStatus]);
-  */
+
   return (
     <main>
       <div className="flex flex-col gap-6">
@@ -52,8 +44,8 @@ export const PpSet = () => {
             onChange={handleChange1}
             value={selectedParam}
           >
-            {options.map((option) => (
-              <option key={option.value} value={option.value}>
+            {options.map((option, index) => (
+              <option key={index} value={option.value}>
                 {option.label}
               </option>
             ))}
