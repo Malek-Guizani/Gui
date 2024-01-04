@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+  const handleNavigation = () => {
+    localStorage.clear(); // Clear local storage before navigation
+  };
+
   return (
     <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]">
       <h1 className="text-9xl font-extrabold text-white tracking-widest">
@@ -16,7 +20,8 @@ const NotFound = () => {
 
           <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
             <Link
-              to="/home/PermanentParameters"
+              to="/home/PermanentParameters/ppGet"
+              onClick={handleNavigation}
               className="bg-info  mb-2 flex mx-auto	hover:bg-Primary text-white font-bold py-3 px-10 rounded-md text-xs max-w-max"
             >
               Go Home
