@@ -28,7 +28,6 @@ export const DeletePartition = () => {
     <>
       <div
         className={` w-full flex items-center flex-col justify-center gap-6 opacity-100`}
-        style={{ filter: "blur(4px)" }}
       >
         <div className="rounded-lg  p-6 w-full flex  md:flex-row  flex-col items-start justify-start gap-5">
           <div className=" mx-auto	">
@@ -46,27 +45,6 @@ export const DeletePartition = () => {
               placeholder="Enter partition"
             />
           </div>
-
-          {/*           <div className="w-1/2 mx-auto	">
-            <label
-              htmlFor="param-select"
-              className=" text-gray-700 font-semibold mb-2 hidden md:block"
-            >
-              Select Option:
-            </label>
-            <select
-              id="param-select"
-              className="p-2 border border-gray-300 rounded-md w-full"
-              onChange={Optionchange}
-              value={selectedOption}
-            >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
-              ))}
-            </select>
-          </div> */}
         </div>
         <button
           type="button"

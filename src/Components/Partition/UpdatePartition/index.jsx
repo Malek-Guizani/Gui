@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { Loader } from "Shared/Loader";
 
@@ -6,7 +6,6 @@ const { client, proto } = require("../../../Services/grpcClient");
 
 export const UpdatePartition = () => {
   const [selectedText, setSelectedText] = useState("");
-  const [status, setStatus] = useState(null);
   const [selectedFile, setSelectedFile] = useState([]);
   const [isLoaderActive, setLoaderActive] = useState(false);
 
@@ -18,34 +17,26 @@ export const UpdatePartition = () => {
     setSelectedText(e.target.value);
   };
 
-  const UpdatePartRequest = () => {
+  const PartUpdateRequest = () => {
     if (!selectedText || !selectedFile?.name) {
       toast.warning(" input is empty");
       return;
     }
-    const request = new proto.grpc.UpdatePartRequest();
+    const request = new proto.grpc.PartUpdateRequest();
     request.setPartition(selectedText);
     request.setFile(selectedFile?.name);
     setLoaderActive(true);
-    client.updatePart(request, {}, (err, response) => {
+    client.partUpdate(request, {}, (err, response) => {
       if (err) {
         console.error(err);
         setLoaderActive(false);
         toast.error("Error !!!");
         return;
       }
-
-      setStatus(response.getStatus());
+      toast.success("Update completed !!! ");
+      setLoaderActive(false);
     });
   };
-
-  useEffect(() => {
-    if (status === "Success") {
-      setLoaderActive(false);
-      toast.success("update completed !!!");
-    }
-    setStatus("Null");
-  }, [status]);
 
   return (
     <>
@@ -95,7 +86,7 @@ export const UpdatePartition = () => {
         <button
           type="button"
           onClick={() => {
-            UpdatePartRequest();
+            PartUpdateRequest();
           }}
           className="w-[20rem] bg-blue-500 text-white font-semibold px-4 py-2 rounded-lg"
         >
