@@ -3,6 +3,10 @@ import { Link, NavLink } from "react-router-dom";
 import LogoSagemcom from "../../Assets/Logo/logo-sagemcom-new-charte-header.png";
 
 const Header = () => {
+  const handleNavigation = () => {
+    setActiveButton("ppGet");
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeButton, setActiveButton] = useState("ppGet");
   const toggleMenu = () => {
@@ -33,7 +37,12 @@ const Header = () => {
             to="/home/PermanentParameters/ppGet"
             className="flex items-center"
           >
-            <img src={LogoSagemcom} className="h-8 mr-2" alt="sagem Logo" />
+            <img
+              src={LogoSagemcom}
+              className="h-8 mr-2"
+              alt="sagem Logo"
+              onClick={handleNavigation}
+            />
           </Link>
           <div className="flex md:order-2">
             <button
