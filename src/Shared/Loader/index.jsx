@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 export const Loader = (props) => {
   const text = props.message;
   return (
@@ -11,7 +12,10 @@ export const Loader = (props) => {
           left: "calc( 50% - ( 80px / 2) )",
         }}
       >
-        <i className="fas fa-circle-notch fa-spin fa-5x  text-sky-500"></i>
+        <FontAwesomeIcon
+          className="fa-spin fa-5x  text-sky-500"
+          icon={faCircleNotch}
+        />
         <p className="mt-2 ml-1">{text}</p>
       </span>
     </div>
